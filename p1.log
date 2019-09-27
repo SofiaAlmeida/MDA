@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.3.11)  26 SEP 2019 18:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.23)  27 SEP 2019 19:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**p1.tex -o p1.pdf
+**p1.tex
 (./p1.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 3 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
@@ -23,34 +23,10 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2018/02/14 3.18 The Babel package
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2018/02/14 3.18 Babel switching mechanism
-)
-(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
-Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2018/02/14 3.18 Babel common definitions
-\babel@savecnt=\count87
-\U@D=\dimen103
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count88
-)
-\es@quottoks=\toks14
-\es@quotdepth=\count89
-Package babel Info: Making " an active character on input line 561.
-Package babel Info: Making . an active character on input line 662.
-Package babel Info: Making < an active character on input line 707.
-Package babel Info: Making > an active character on input line 707.
-))
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
@@ -368,25 +344,25 @@ Now handling font encoding U ...
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
+\KV@toks@=\toks16
 )
-\lst@mode=\count90
+\lst@mode=\count87
 \lst@gtempboxa=\box26
-\lst@token=\toks18
-\lst@length=\count91
-\lst@currlwidth=\dimen104
-\lst@column=\count92
-\lst@pos=\count93
-\lst@lostspace=\dimen105
-\lst@width=\dimen106
-\lst@newlines=\count94
-\lst@lineno=\count95
-\lst@maxwidth=\dimen107
+\lst@token=\toks17
+\lst@length=\count88
+\lst@currlwidth=\dimen103
+\lst@column=\count89
+\lst@pos=\count90
+\lst@lostspace=\dimen104
+\lst@width=\dimen105
+\lst@newlines=\count91
+\lst@lineno=\count92
+\lst@maxwidth=\dimen106
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count96
-\lst@skipnumbers=\count97
+\c@lstnumber=\count93
+\lst@skipnumbers=\count94
 \lst@framebox=\box27
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -411,8 +387,8 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen108
-\Gin@req@width=\dimen109
+\Gin@req@height=\dimen107
+\Gin@req@width=\dimen108
 )
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
 Package: typearea 2017/09/07 v3.24 KOMA-Script package (type area)
@@ -429,7 +405,7 @@ basics and keyval usage)
 Package: scrlfile 2017/09/07 v3.24 KOMA-Script package (loading files)
 )))
 \ta@bcor=\skip43
-\ta@div=\count98
+\ta@div=\count95
 \ta@hblk=\skip44
 \ta@vblk=\skip45
 \ta@temp=\skip46
@@ -455,10 +431,7 @@ Package typearea Info: These are the values describing the layout:
 (/usr/share/texlive/texmf-dist/tex/latex/titlepic/titlepic.sty
 Package: titlepic 2017/03/14 1.2 Package to display a picture on the title page
 
-) (./p1.aux
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
-)
+) (./p1.aux)
 \openout1 = `p1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -473,23 +446,21 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
-LaTeX Info: Redefining \. on input line 13.
-LaTeX Info: Redefining \% on input line 13.
-\c@lstlisting=\count99
+\c@lstlisting=\count96
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count100
-\scratchdimen=\dimen110
+\scratchcounter=\count97
+\scratchdimen=\dimen109
 \scratchbox=\box28
-\nofMPsegments=\count101
-\nofMParguments=\count102
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count103
-\MPscratchDim=\dimen111
-\MPnumerator=\count104
-\makeMPintoPDFobject=\count105
-\everyMPtoPDFconversion=\toks20
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count100
+\MPscratchDim=\dimen110
+\MPnumerator=\count101
+\makeMPintoPDFobject=\count102
+\everyMPtoPDFconversion=\toks19
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -559,8 +530,15 @@ Overfull \hbox (36.98853pt too wide) in paragraph at lines 21--22
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Imagenes/Logo.png>]
-[1]
-<Imagenes/MapaMentalp1.png, id=16, 1141.26375pt x 457.71pt>
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 56.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 56.
+ [1]
+<Imagenes/MapaMentalp1.png, id=17, 1141.26375pt x 457.71pt>
 File: Imagenes/MapaMentalp1.png Graphic file (type png)
 <use Imagenes/MapaMentalp1.png>
 Package pdftex.def Info: Imagenes/MapaMentalp1.png  used on input line 69.
@@ -570,26 +548,25 @@ Overfull \hbox (293.06473pt too wide) in paragraph at lines 69--70
  [][] 
  []
 
-[2 <./Imagenes/MapaMentalp1.png>] (./p1.aux
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
-) ) 
+[2 <./Imagenes/MapaMentalp1.png>] (./p1.aux) ) 
 Here is how much of TeX's memory you used:
- 4672 strings out of 492982
- 66306 string characters out of 6134896
- 161425 words of memory out of 5000000
- 8190 multiletter control sequences out of 15000+600000
- 5756 words of font info for 21 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 51i,5n,47p,468b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on p1.pdf (3 pages, 117941 bytes).
+ 3799 strings out of 494923
+ 54984 string characters out of 6180742
+ 134836 words of memory out of 5000000
+ 7081 multiletter control sequences out of 15000+600000
+ 6013 words of font info for 22 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 51i,5n,47p,458b,229s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb>
+Output written on p1.pdf (3 pages, 124962 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 39 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
