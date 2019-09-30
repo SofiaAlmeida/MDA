@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{Imagenes/}}
+
+\usepackage[paper=portrait, pagesize]{typearea}
+\usepackage{titlepic}
+
+%%% Tablas
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.7}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+{\scshape\LARGE Descripción inicial del sistema. Modelado de usuarios y escenarios \par}
+\vspace{1.5cm}
+
+\includegraphics[width=16cm] {../Imagenes/Logo}
+
+\vspace{3cm}
+{\scshape\large \par}
+\vspace{1cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+\end{titlepage}
+
+
+\newpage
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.2\linewidth}|p{0.3\linewidth}p{0.475\linewidth}}
+    \toprule
+    \textbf{Nombre} & Javier Martín Parra &\multirow{4}{*}{\begin{minipage}{1.\textwidth}\includegraphics[width=0.2\textwidth, height=30mm]{../Imagenes/Javier}\end{minipage}}\\
+    \textbf{Edad} & 23 & \\
+    \textbf{Sexo} & Hombre & \\
+    \textbf{Educación} & Graduado en Historia & \\
+    \bottomrule
+  \end{tabular}
+
+  \begin{tabular}{l}
+    \textbf{Contexto de uso} 
+  \end{tabular}
+  
+  \begin{tabular}{p{0.2\linewidth}|p{0.8\linewidth}}
+    \toprule
+    \textbf{Cuándo} & El domingo, ya que es su día libre en la preparación de las oposiciones\\
+    \textbf{Dónde}  & En su casa\\
+    \textbf{Tipo de ordenador} & En este caso, utiliza su dispositivo móvil\\
+    \bottomrule
+  \end{tabular}
+
+  \begin{tabular}{l}
+    \textbf{Misión} 
+  \end{tabular}
+  
+  \begin{tabular}{p{0.2\linewidth}|p{0.8\linewidth}}
+    \toprule
+    \textbf{Objetivo} & Organizar un viaje a Turquía\\
+    \textbf{Expectativas}  & Espera aprovechar las experiencias de otros usuarios para que su viaje sea inolvidable \\
+    \bottomrule
+  \end{tabular}
+
+  \begin{tabular}{l}
+    \textbf{Motivación} 
+  \end{tabular}
+
+  \begin{tabular}{p{0.2\linewidth}|p{0.8\linewidth}}
+    \toprule
+    \textbf{Urgencia} & Como quiere realizar el viaje cuando termine las oposiciones, no tiene mucha prisa\\
+    \textbf{Deseo}  & Le gustaría hacer este viaje para aprender más sobre el imperio bizantino \\
+    \bottomrule
+  \end{tabular}
+
+  \begin{tabular}{p{1.028\linewidth}}
+    \textbf{Actitud hacia la tecnología}\\
+    \midrule
+    Ha nacido en la época digital y utiliza con total confianza todo tipo de dispositivos y aplicaciones, tanto nuevas como ya conocidas
+  \end{tabular}
+\end{table}
+
+\end{document}
