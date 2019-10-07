@@ -46,6 +46,7 @@ Lidia Martín Chica
   \begin{tabular}{p{0.1\linewidth}p{0.15\linewidth}p{0.4\linewidth}p{0.25\linewidth}}
     \toprule
     \textbf{Fecha} & \textbf{Versión} & \textbf{Descripción} & \textbf{Autor}\\
+    07/Oct/2019 & 1.0 & Propuesta inicial del documento & MVG LMC MAP\\
     \midrule
     \bottomrule
   \end{tabular}
@@ -60,13 +61,23 @@ Lidia Martín Chica
 
 \section{Introducción}
 \subsection{Propósito}
-[Definir el propósito de este documento de Visión. Podría ser algo como:]
-Este documento proporciona una visión sobre el proyecto <Nombre> desarrollado para <Empresa>.
+Este documento proporciona una visión general sobre la aplicación MakeATravel, recogiendo las necesidades y características del sistema de gestión de actividades y viajes. Esta aplicación se desarrollará para empresa Platilla.
+
+El documento se centra en definir el alcance, oportunidades de negocio, identificar los stakeholders y sus perfiles para poder llevar a cabo un desarrollo ajustado de la aplicación.
+
+Además encontraremos un apartado donde definiremos detalladamente el producto (punto 4).
+
 
 \subsection{Alcance}
-[Definir una descripcion corta del alcance del software]
+Nuestro producto constará de un entregable, una aplicación movil, dicha aplicación servirá para planificar viajes y actividades telemáticamente.
 
+Esta app la encontraremos en los sistemas operativos de Android e iOS, para su descarga habrá que acceder a Play Store o a App Store. 
+
+%%COMPLETAR
 \subsection{Definición, Acrónimos y Abreviaciones}
+UOA : Usuarios que ofrecen actividades\\
+
+USEA : Usuarios que seleccionan actividades 
 
 \subsection{Resumen}
 \newpage
@@ -76,7 +87,10 @@ Este documento proporciona una visión sobre el proyecto <Nombre> desarrollado p
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Posicionamiento}
 \subsection{Oportunidad de Negocio}
-[Dar una descripción concisa de los procesos de negocio actuales, que deje claro por qué la aplicación prevista sería una solución para el problema planteado. Prestar atención al entorno de trabajo de los usuarios finales]
+Actualmente si se quiere organizar un viaje o buscar una actividad,  requiere mucho tiempo y la visita de muchas web para poder tener un viaje personalizado, o bien acudir a una agencia de viajes y pagar un precio excesivo para lo que te ofrecen.
+
+Con MakeATravel estos dos problemas son inexistentes, en una misma aplicación tendrás miles de opciones donde elegir y pagar con un solo click, sin ningún coste extra.
+
 
 \subsection{Declaración del Problema}
 [Describa el problema que afecta a los stakeholders interesados, el impacto que tendria en ellos y lo que le beneficiaría una solución. Se puede usar la siguiente tabla:]
@@ -86,16 +100,24 @@ El siguiente cuadro detalla el problema así como los afectados por este.
   \centering
   \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
     \toprule
-    \textbf{El problema de} & Descripción concisa del problema\\
-    \textbf{Afecta} & Stakeholders afectados por el problema \\
-    \textbf{El impacto del problema es} & Impacto sobre el problema \\
-    \textbf{Una solución exitosa sería} & Qué beneficios obtendrían con la solución\\
+    \textbf{El problema de} & Tener que visitar muchas páginas web
+    
+    Elevados costes de las agencias de viajes
+    
+    Desconocer empresas locales y pequeñas, que ofrecen actividades más económicas por la baja demanda\\
+    \textbf{Afecta} & Usuarios finales 
+    
+    Pequeño comercio\\
+    \textbf{El impacto del problema es} & Organizar tu viaje con total comodidad, ofreciendo actividades únicas a través de las experiencias de otras personas.\\
+    \textbf{Una solución exitosa sería} & Encontrar viajes más baratos de los que puedes encontrar en el mercado actualmente. Además de ayudar a la promoción de pequeñas empresas que oferten actividades\\
     \bottomrule
   \end{tabular}
 \end{table}
 
 \subsection{Solución propuesta}
 [Proporcionar posibles soluciones alternativas que las partes interesadas consideran viables. Enumere estas alternativas, agrupadas por las partes interesadas, y proporcionar una visión general de su fuerza y su debilidad (desde la perspectiva de que las partes interesadas)].
+
+RELLENAAAR
 
 \newpage
 
@@ -113,6 +135,11 @@ Esta sección proporciona una visión general de las partes interesadas, sus int
     \toprule
     \textbf{Nombre} & \textbf{Descripción} & \textbf{Responsabilidades} \\
     \midrule
+    Lidia Martín & Coordinadora del proyecto & Asegurarse que la aplicación cumpla los plazo de entrega\\
+    María Victoria Granados & Catalogadora & Encargada de la documentación del proyecto\\
+    Miguel Albertí & Moderador & Asegurar del correcto funcionamiento del equipo\\
+    Sofía Almeida & Presentadora & Encargada del marketing de la aplicación\\
+    Pedro Manuel Flores & Gestor de Calidad & Asegurarse de que el producto cumpla los estándares\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -123,6 +150,9 @@ Esta sección proporciona una visión general de las partes interesadas, sus int
   \begin{tabular}{p{0.2\linewidth}p{0.4\linewidth}p{0.4\linewidth}}
     \toprule
     \textbf{Nombre} & \textbf{Descripción} & \textbf{Stakeholder} \\
+    ACT\_1 UOA & Usuarios que ofertan viajes o actividades & STK1 UOA\\
+    ACT\_2 USEA & Usuarios que seleccionan una actividad o viaje, que haya realizado el usuario ACT\_1 & STK2 USEA\\
+    ACT\_3  Empleado de Marketing& Responsable de ofertas de lanzamiento, publicidad, política de ventas y otros aspectos relacionados con el marketing &\\
     \midrule
     \bottomrule
   \end{tabular}
@@ -176,6 +206,7 @@ Esta sección proporciona una visión general de las partes interesadas, sus int
 \section{Resumen del producto}
 \subsection{Perspectiva del producto}
 [Describir el producto en relación a otros productos del entorno del cliente. Si el producto es independiente, indicarlo aquí. Si el producto es un componente de un sistema más grande o se conecta a otros sistemas, mostrar cómo estos sistemas interactúan entre si. Se puede facilitar un diagrama para mostrar las relaciones.]
+
 
 \subsection{Resumen de capacidades}
 [Proporcionar una lista de características y dar prioridad a la lista. Se puede utilizar parte del modelo de casos de uso cómo descripción de este apartado. La lista de características o el modelo de casos de uso proporcionan la base para describir el alcance del proyecto.]
