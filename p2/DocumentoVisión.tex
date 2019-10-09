@@ -61,11 +61,11 @@ Lidia Martín Chica
 
 \section{Introducción}
 \subsection{Propósito}
-Este documento proporciona una visión general sobre la aplicación MakeATravel, recogiendo las necesidades y características del sistema de gestión de actividades y viajes. Esta aplicación se desarrollará para empresa Platilla.
+Este documento proporciona una visión general sobre la aplicación MakeATravel, recogiendo las necesidades y características del sistema de gestión de actividades y viajes. Así como alguna funcionalidades opcinales como consejos para hacer la maleta, dependiendo del tiempo que vaya a hacer en el destino o la duración del viaje, y mapas de las ciudades con explicaciones de las mismas.
 
 El documento se centra en definir el alcance, oportunidades de negocio, identificar los stakeholders y sus perfiles para poder llevar a cabo un desarrollo ajustado de la aplicación.
 
-Además encontraremos un apartado donde definiremos detalladamente el producto (punto 4).
+Además encontraremos un apartado donde definiremos detalladamente el producto (punto 4) que será desarrollado para empresa Platilla.
 
 
 \subsection{Alcance}
@@ -75,9 +75,12 @@ Esta app la encontraremos en los sistemas operativos de Android e iOS, para su d
 
 %%COMPLETAR
 \subsection{Definición, Acrónimos y Abreviaciones}
-UOA : Usuarios que ofrecen actividades\\
 
-USEA : Usuarios que seleccionan actividades 
+UOA: Usuarios que ofrecen actividades\\
+
+USEA: Usuarios que seleccionan actividades\\
+
+UC: Usuarios que comentan.
 
 \subsection{Resumen}
 \newpage
@@ -150,61 +153,95 @@ Esta sección proporciona una visión general de las partes interesadas, sus int
   \begin{tabular}{p{0.2\linewidth}p{0.4\linewidth}p{0.4\linewidth}}
     \toprule
     \textbf{Nombre} & \textbf{Descripción} & \textbf{Stakeholder} \\
-    ACT\_1 UOA & Usuarios que ofertan viajes o actividades & STK1 UOA\\
-    ACT\_2 USEA & Usuarios que seleccionan una actividad o viaje, que haya realizado el usuario ACT\_1 & STK2 USEA\\
-    ACT\_3  Empleado de Marketing& Responsable de ofertas de lanzamiento, publicidad, política de ventas y otros aspectos relacionados con el marketing &\\
     \midrule
+    ACT\_1 UOA & Usuarios que ofertan viajes o actividades & STK1 Ofertar\\
+    ACT\_2 USEA & Usuarios que seleccionan una actividad o viaje, que haya realizado el usuario ACT\_1 & STK2 Seleccionar\\
+    ACT\_3 UC & Usuarios que comentan los post, ya sea por que tengan dudas sobre el paquete de viaje o por que la han realizado y desean dejar su experiencia & STK3 Comentar/Valorar\\
+    ACT\_4 UV & Usuarios que valoran una actividad o viaje. Para ello deberán de haberla realizado. & STK3 Comentar/Valorar\\
+    ACT\_5  Empleado de Marketing & Responsable de ofertas de lanzamiento, publicidad y otros aspectos relacionados con el marketing & STK4 Marketing\\
     \bottomrule
   \end{tabular}
 \end{table}
 
 \subsection{Perfil de los Stakeholders}
+[Describir cada grupo (rol), que tiene un interés en el sistema. Rellenar el siguiente cuadro para cada interesado.]
 
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
-    \toprule
-    \textbf{Descripción} & Empresas del sector, este stakeholder son reticentes a la hora de conocer nuestra aplicación, dentro de este grupo el mayor exponente son las empresas de viaje.\\ 
-    \textbf{Responsabilidades} & Este stakeholder no tiene ninguna responsabilidad, aunque intentarán espfrzarse para mejorar sus paquetes de viajes y actividades para que nuestra app no tenga lugar en el mercado. \\
-    \textbf{Criterios de éxito} & Las empresas competidoras podrán decir que tienen éxito en el momento que nuestra app salga al mercado y ellos no piedan a sus clientes. \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
-    \toprule
-    \textbf{Descripción} & Los programadores son el grupo encargado de realizar la parte técnica de la aplicación, es decir, tanto el frontend como el backend, aunque dentro de estas dos categorias encontramos varios grupos su éxito y responsabilidades son parecidas\\ 
-    \textbf{Responsabilidades} & Este stakeholder se encargará de programar todas las funcionalidades que se hayan definido. \\
-    \textbf{Criterios de éxito} & Podremos asegurar que han cubierto sus responsabilidades una vez se puedan usar todas las funcionalidades de la aplicación sin ningún problema. \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
-    \toprule
-    \textbf{Descripción} & Departamento de Markting.\\ 
-    \textbf{Responsabilidades} & Este conjunto de usuarios tiene la misión de llevar a cabo una buena campaña publicitaría del producto \\
-    \textbf{Criterios de éxito} & Su éxito se medirá una vez salga el producto, si en un breve período de tiempo un gran número de personas estan registradas y usan la app querra decir que la camapaña causo efecto sobre los usuarios. \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\subsection{Perfil de los Usuarios}
 \begin{table}[H]
   \centering
   \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
     \toprule
     \textbf{Descripción} &\\
-    \textbf{Responsabilidades} &  \\
+    \textbf{Responsabilidades} & Mencione las responsabilidades más importantes de este stakeholders con respecto al sistema. Por ejemplo,
+- Este stakeholders asegura de que el sistema sea fácil de mantener;
+- Este stakeholders asegura que el sistema coincide con la demanda del mercado. \\
+    \textbf{Criterios de éxito} & ¿Cuándo, de acuerdo con este rol podemos decir que hay éxito del proyecto? Tenga en cuenta que los criterios de éxito varían entre los roles de los stakeholders. \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Perfil de los Usuarios}
+%STK1
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & STK1 Ofertar\\
+    \textbf{Responsabilidades} & Usuarios que durante la realización del viaje o al finalizar, publican los lugares que han visitado, con fotos e indicaciones de los lugares\\
     \textbf{Criterios de éxito} &  \\
     \bottomrule
   \end{tabular}
 \end{table}
+
+%STK2
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & STK2 Seleccionar\\
+    \textbf{Responsabilidades} & Usuarios que seleccionan las publicaciones que se obtienen tras una filtración según lo que busque el usuario. Estas publicaciones son las de otros usuarios que ya han realizado la ruta, el viaje o la actividad\\
+    \textbf{Criterios de éxito} &  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%STK3.1
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & STK3 Comentar\\
+    \textbf{Responsabilidades} & Usuarios que comentan las publicaciones, para recomendarla o para preguntar las dudas que tengan sobre la misma.\\
+    \textbf{Criterios de éxito} &  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%STK3.2
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & STK3 Valorar\\
+    \textbf{Responsabilidades} & Usuarios que tras la realización de la ruta o actividad, valoran la actividad de 1 a 5. Si no se realiza no se podrá valorar\\
+    \textbf{Criterios de éxito} &  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%STK4
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & STK4 Marketing\\
+    \textbf{Responsabilidades} & Responsable de la publicidad de la aplicación.\\
+    \textbf{Criterios de éxito} &  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+
 
 \subsection{Necesidades clave de los Stakeholders o usuarios}
 [Proporcionar las necesidades o problemas percibidos por los diferentes roles de los stakeholders. Esta visión general se utiliza a continuación para dar prioridad a las necesidades.]
@@ -225,31 +262,23 @@ Esta sección proporciona una visión general de las partes interesadas, sus int
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Resumen del producto}
 \subsection{Perspectiva del producto}
- El sistema a desarrollar es una aplicación para la empresa \textit{Platilla}. Con ella se podrán seleccionar, ofertar y valorar tanto rutas de viajes como actividades culturales.
+[Describir el producto en relación a otros productos del entorno del cliente. Si el producto es independiente, indicarlo aquí. Si el producto es un componente de un sistema más grande o se conecta a otros sistemas, mostrar cómo estos sistemas interactúan entre si. Se puede facilitar un diagrama para mostrar las relaciones.]
 
 
 \subsection{Resumen de capacidades}
-A continuación se muestra una lista con los principales beneficios que obtendrá el cliente:
+[Proporcionar una lista de características y dar prioridad a la lista. Se puede utilizar parte del modelo de casos de uso cómo descripción de este apartado. La lista de características o el modelo de casos de uso proporcionan la base para describir el alcance del proyecto.]
 
 \begin{table}[H]
   \centering
   \begin{tabular}{p{0.4\linewidth}p{0.6\linewidth}}
     \toprule
     \textbf{Beneficion del Cliente} & \textbf{Características de Soporte} \\
-     Facilidad en la búsqueda de actividades y rutas & Mecanismo de búsqueda con diferentes filtros \\
-     Personalización & Posibilidad de edición de los paquetes ofertados por la aplicación \\
-     Conocer opinión de otros usuarios & Sección específica con comentarios de otras personas y valoraciones\\
-     Benefio económico & Sistema de recompensas para los usuarios que suban las actividades/rutas más realizadas \\
     \midrule
     \bottomrule
   \end{tabular}
 \end{table}
 
 \subsection{Supuestos y dependencias}
-
-
-Para cumplir unos estandares de desarrollo de software utilizaremos la ISO 9001, además para la realización se este proyecto se ha asumido que la app  se utilizará en los sistemas IOS o android, por otro lado también se ha supuesto que la mayor parte de usuarios estarán entre los 20-50 años, hecho que hará que no haya ningún tutorial extenso, únicamente contará con una pequeña guía.
-
-Dependeremos de páginas web o aplicaciones externas para realizar los pagos y las reservas, la aplicación únicamente vinculará publicaciones de los usuarios con las páginas oficiales. 
+[Proporcionar una lista de requisitos no funcionales, como la calidad, robustez, facilidad de uso, rendimiento, escalabilidad y facilidad de mantenimiento y priorizar la lista.]
 
 \end{document}
