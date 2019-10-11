@@ -43,7 +43,7 @@ Lidia Martín Chica
 \section*{Historial de Cambios}
 \begin{table}[H]
   \centering
-  \begin{tabular}{p{0.1\linewidth}p{0.15\linewidth}p{0.4\linewidth}p{0.25\linewidth}}
+  \begin{tabular}{p{0.15\linewidth}p{0.1\linewidth}p{0.4\linewidth}p{0.25\linewidth}}
     \toprule
     \textbf{Fecha} & \textbf{Versión} & \textbf{Descripción} & \textbf{Autor}\\
     07/Oct/2019 & 1.0 & Propuesta inicial del documento & MVG LMC MAP\\
@@ -61,11 +61,11 @@ Lidia Martín Chica
 
 \section{Introducción}
 \subsection{Propósito}
-Este documento proporciona una visión general sobre la aplicación MakeATravel, recogiendo las necesidades y características del sistema de gestión de actividades y viajes. Así como alguna funcionalidades opcinales como consejos para hacer la maleta, dependiendo del tiempo que vaya a hacer en el destino o la duración del viaje, y mapas de las ciudades con explicaciones de las mismas.
+Este documento proporciona una visión general sobre la aplicación MakeATravel, recogiendo las necesidades y características del sistema de gestión de actividades y viajes. Así como algunas funcionalidades opcinales como consejos para hacer la maleta, dependiendo del tiempo que vaya a hacer en el destino o la duración del viaje, y mapas de las ciudades con explicaciones de las mismas.
 
 El documento se centra en definir el alcance, oportunidades de negocio, identificar los stakeholders y sus perfiles para poder llevar a cabo un desarrollo ajustado de la aplicación.
 
-Además encontraremos un apartado donde definiremos detalladamente el producto (punto 4) que será desarrollado para empresa Platilla.
+Además, encontraremos un apartado donde definiremos detalladamente el producto (sección \ref{4}) que será desarrollado para empresa Platilla.
 
 
 \subsection{Alcance}
@@ -83,6 +83,16 @@ USEA: Usuarios que seleccionan actividades\\
 UC: Usuarios que comentan.
 
 \subsection{Resumen}
+Actualmente, viajar está en auge y los paquetes de las compañías están anticuados y poco personalizados. Además, si no quieres acudir a una agencia de viajes, ya que podría incrementar el precio, o dedicar muchas horas a organizar un viaje que se adapte a ti, con esta app pretendemos que a través de las experiencia vividas por otros usuarios puedas planear tu viaje ideal sin salir de la aplicación.
+
+En esta aplicación los usuarios tienen un papel principal, en primer lugar serán ellos los que \textbf{ofertan} sus experiencias y sus actividades, mediante fotos y descripciones, que otros usuarios podrán \textbf{valorar, comentar, seleccionar y personalizar} el viaje.
+
+Las publicaciones de los usuarios podrán ser de distintos tipos como \textbf{rutas} (gastronómicas, turísticas, ...), \textbf{eventos} (musicales, obras de teatro, ...) y \textbf{actividades} (deportivas, culturales, ...). Asímismo un usuario puede crear un \textbf{paquete} en el que agrupe varias publicaciones o seleccionar paquetes hechos y adaptarlos a sus intereses.
+
+Los principales objetivos que queremos cubrir son: la \textbf{facilidad} a la hora de organizar un viaje usando filtros que se amolden a lo que buscamos y basándonos en los comentarios y valoraciones de otros usuarios; \textbf{beneficiar económicamente} a aquellos usuarios cuyas publicaciones sean las mejor valoradas; el \textbf{acceso} a todo tipo de usuarios (con discapacidad, de cualquier edad, ...) a usar la aplicación.
+
+Otras funcionalidades que se podrían incorporar son: \textbf{audioguías} para las actividades culturales; recomendaciones para \textbf{hacer la maleta} según las actividades que se vayan a realizar, el destino o el tiempo.
+
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,14 +100,11 @@ UC: Usuarios que comentan.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Posicionamiento}
 \subsection{Oportunidad de Negocio}
-Actualmente si se quiere organizar un viaje o buscar una actividad,  requiere mucho tiempo y la visita de muchas web para poder tener un viaje personalizado, o bien acudir a una agencia de viajes y pagar un precio excesivo para lo que te ofrecen.
+Actualmente si se quiere organizar un viaje o buscar una actividad,  requiere mucho tiempo y la visita de muchas páginas web para poder tener un viaje personalizado, o bien acudir a una agencia de viajes y pagar un precio excesivo para lo que te ofrecen.
 
 Con MakeATravel estos dos problemas son inexistentes, en una misma aplicación tendrás miles de opciones donde elegir y pagar con un solo click, sin ningún coste extra.
 
-
 \subsection{Declaración del Problema}
-[Describa el problema que afecta a los stakeholders interesados, el impacto que tendria en ellos y lo que le beneficiaría una solución. Se puede usar la siguiente tabla:]
-El siguiente cuadro detalla el problema así como los afectados por este.
 
 \begin{table}[H]
   \centering
@@ -111,17 +118,16 @@ El siguiente cuadro detalla el problema así como los afectados por este.
     \textbf{Afecta} & Usuarios finales 
     
     Pequeño comercio\\
-    \textbf{El impacto del problema es} & Organizar tu viaje con total comodidad, ofreciendo actividades únicas a través de las experiencias de otras personas.\\
+    \textbf{El impacto del problema es} & Organizar tu viaje con total comodidad, ofreciendo actividades únicas a través de las experiencias de otras personas\\
     \textbf{Una solución exitosa sería} & Encontrar viajes más baratos de los que puedes encontrar en el mercado actualmente. Además de ayudar a la promoción de pequeñas empresas que oferten actividades\\
     \bottomrule
   \end{tabular}
 \end{table}
 
 \subsection{Solución propuesta}
-[Proporcionar posibles soluciones alternativas que las partes interesadas consideran viables. Enumere estas alternativas, agrupadas por las partes interesadas, y proporcionar una visión general de su fuerza y su debilidad (desde la perspectiva de que las partes interesadas)].
+Para los usuarios finales que quieran organizar un viaje y se encuentran con las opciones de visitar muchas páginas web o pagar excesivos costes en agencias de viajes una opción sería utilizar una única aplicación móvil en la que puedan encontrar agrupada toda la información que necesiten en base a las experiencias y opiniones de otros usuarios. La aplicación a desarrollar, además de esto, permite la personalización de dichos viajes y actividades desde una interfaz gráfica sencilla disponible siempre que se tenga conexión a internet.
 
-RELLENAAAR
-
+Para los pequeños comercios que resultan desconocidos para los turistas y que por este hecho ofertan actividades a menor precio nuestra apliación les permitirá darse a conocer. Lo harán mediante las publicaciones de usuarios que sí se hayan detenido a encontrar estas empresas organizadoras de actividades.
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -284,7 +290,7 @@ Esta sección proporciona una visión general de las partes interesadas, sus int
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%               RESUMEN DEL PRODUCTO                  %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Resumen del producto}
+\section{Resumen del producto}\label{4}
 \subsection{Perspectiva del producto}
 [Describir el producto en relación a otros productos del entorno del cliente. Si el producto es independiente, indicarlo aquí. Si el producto es un componente de un sistema más grande o se conecta a otros sistemas, mostrar cómo estos sistemas interactúan entre si. Se puede facilitar un diagrama para mostrar las relaciones.]
 
