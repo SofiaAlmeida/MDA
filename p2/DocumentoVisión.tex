@@ -84,6 +84,8 @@ UC: Usuarios que comentan.
 
 UV: Usuarios que valoran una actividad que han realizado.
 
+US: Usuarios del sistema, engloba a todo el conjunto de usuarios.
+
 MAP: Miguel Albertí Pons
 
 SAB: Sofía Almeida Bruno
@@ -158,6 +160,15 @@ Para los pequeños comercios que resultan desconocidos para los turistas y que p
     \midrule
     Pequeñas empresas de actividades & A través de publicidad que hagan los clientes de las actividades realizadas en sus establecimientos, saldrán beneficiados & Atraer a los turistas con sus ofertas\\
     \bottomrule
+    \midrule
+    Equipo de Marketing& Grupo de personas que se encargarán de publicitar nuestro producto & Atraer a los futuros suaurios de la aplicación\\
+    \bottomrule
+    \midrule
+    Equipo de Desarrollo& Grupo de personas que se encargarán de desarrollar nuestra aplicación & Programar todas las funcionalidades del sistema y cumplir todo los requisitos\\
+    \bottomrule
+    \midrule
+    Compañias de viajes& Grupo de empresas asentadas en el sector que no ven con buenos ojos nuestra app por la posible perdida de ingresos & Ninguna\\
+    \bottomrule
   \end{tabular}
 \end{table}
 
@@ -172,7 +183,9 @@ Para los pequeños comercios que resultan desconocidos para los turistas y que p
     ACT\_2 USEA & Usuarios que seleccionan una actividad o viaje, que haya realizado el usuario ACT\_1 & STK2 Seleccionar\\
     ACT\_3 UC & Usuarios que comentan los post, ya sea por que tengan dudas sobre el paquete de viaje o por que la han realizado y desean compartir su experiencia & STK3 Comentar/Valorar\\
     ACT\_4 UV & Usuarios que valoran una actividad o viaje. Para ello deberán de haberla realizado & STK3 Comentar/Valorar\\
-    ACT\_5  Empleado de Marketing & Responsable de ofertas de lanzamiento, publicidad y otros aspectos relacionados con el marketing & STK4 Marketing\\
+    ACT\_5 UOA & Usuarios que ofertan viajes o actividades & STK1 Ofertar\\
+    ACT\_6 US & Usuarios que se registrán para usar la aplicación &US \\
+    ACT\_7  Empleado de Marketing & Responsable de ofertas de lanzamiento, publicidad y otros aspectos relacionados con el marketing & STK4 Marketing\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -193,7 +206,7 @@ Para los pequeños comercios que resultan desconocidos para los turistas y que p
 \end{table}
 
 %PERFIL2
-\subsubsection{Programadores}
+\subsubsection{Equipo de desarrollo}
 \begin{table}[H]
   \centering
   \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
@@ -217,6 +230,20 @@ Para los pequeños comercios que resultan desconocidos para los turistas y que p
     \bottomrule
   \end{tabular}
 \end{table}
+
+%PERFIL4
+\subsubsection{Usuarios finales}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & Los usuarios finales son aquellos que usarán la aplicación.\\ 
+    \textbf{Responsabilidades} & Este conjunto de usuarios o tiene ninguna responsabilidad sobre el producto. \\
+    \textbf{Criterios de éxito} & Una vez nos descarguemos la aplicación como usuarios podremos decir que ha sido un éxito si organizamos un viaje a través de la app o si algún viaje/actividad ha sido seleccionada.\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
 
 
 \subsection{Perfil de los Usuarios}
@@ -361,7 +388,7 @@ A continuación se muestra una lista con los principales beneficios que obtendr�
 
 \subsection{Supuestos y dependencias}
 
-Para cumplir unos estándares de desarrollo de software utilizaremos la ISO 9001, además para la realización de este proyecto se ha asumido que la aplicación  se utilizará en los sistemas iOS o android, por otro lado también se ha supuesto que cualquier persona puede utilizar la aplicación centrándonos en los usuarios de entre 20 y 50 años y personas duchas con las tecnologías, hecho que hará que no haya ningún tutorial extenso, únicamente contará con una pequeña guía.
+Para cumplir unos estándares de desarrollo de software utilizaremos la ISO 9001, además para la realización de este proyecto se ha asumido que la aplicación  se utilizará en los sistemas iOS o android, por otro lado también se ha supuesto que cualquier persona puede utilizar la aplicación centrándonos en los usuarios de entre 20 y 50 años y personas ágiles con las tecnologías, hecho que hará que no haya ningún tutorial extenso, únicamente contará con una pequeña guía.
 
 Dependeremos de las páginas web o aplicaciones externas, para realizar los pagos y las reservas. La aplicación únicamente vinculará publicaciones de los usuarios con las páginas oficiales de, por ejemplo, actividades específicas u hoteles. 
 
