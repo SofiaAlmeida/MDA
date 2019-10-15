@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{../Imagenes/}}
+
+\usepackage{titlepic}
+
+%%% Tablas
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.7}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+{\scshape\LARGE Historias de Usuario Peña de Fútbol\par}
+\vspace{1.5cm}
+
+%\includegraphics[width=16cm]{Granada}
+
+\vspace{3cm}
+{\scshape\large \par}
+\vspace{1cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+\end{titlepage}
+\newpage
+
+\section{Listado de Historias de Usuario}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.1\linewidth}p{0.7\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
+    \toprule
+    \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
+    \midrule
+    HU. & Un usuario directivo quiere registrarse & 2 & 1\\
+    HU. & Un usuario directivo quiere identificarse & 2 & 1\\
+    HU. & Un usuario directivo quiere dar de alta a un socio para que la peña crezaca & 2 & 1\\
+    HU. & Un usuario directivo quiere controlar las cuotas para saber el estado económico de la peña & 2 & 2\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Historias que se han dividido en varias}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.1\linewidth}p{0.7\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
+    \toprule
+    \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
+    \midrule
+    HU. & Un usuario directivo quiere controlar las cuotas para saber el estado económico de la peña & 2 & 2\\
+	HU..1 & Un usuario directivo quiere consultar las cuotas de los socios para saber si alguien debe dinero & 1 & 2\\
+	HU..2 & Un usuario directivo quiere modificar las cuotas de los socios cuando alguien salde las deudas & 1 & 2\\
+    \bottomrule
+  \end{tabular}
+  
+\end{table}
+\end{document}
