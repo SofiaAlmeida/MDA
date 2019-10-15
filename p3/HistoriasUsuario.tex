@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{../Imagenes/}}
+
+\usepackage{titlepic}
+
+%%% Tablas
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.7}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+{\scshape\LARGE Historias de Usuario \par}
+\vspace{1.5cm}
+
+\includegraphics[width=16cm]{Logo}
+
+\vspace{3cm}
+{\scshape\large \par}
+\vspace{1cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+\end{titlepage}
+\newpage
+
+\section{Listado de Historias de Usuario}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.1\linewidth}p{0.7\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
+    \toprule
+    \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
+    \midrule
+    HU. & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 4 & 6\\
+    HU. & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3 & 6\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Historias que se han dividido en varias}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.1\linewidth}p{0.7\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
+    \toprule
+    \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
+    \midrule
+
+    \bottomrule
+  \end{tabular}
+  
+\end{table}
+\end{document}
