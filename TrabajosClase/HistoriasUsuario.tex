@@ -47,18 +47,21 @@ Lidia Martín Chica
 \section{Listado de Historias de Usuario}
 \begin{table}[H]
   \centering
-  \begin{tabular}{p{0.1\linewidth}p{0.7\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
+  \begin{tabular}{p{0.12\linewidth}p{0.68\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
     \toprule
     \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
     \midrule
     \hu{} & Un usuario directivo quiere registrarse & 2 & 1\\
     \hu{} & Un usuario directivo quiere identificarse & 2 & 1\\
     \hu{} & Un usuario directivo quiere dar de alta a un socio para que la peña crezaca & 2 & 1\\
+    \hu{} & Un socio de la peña quiere identificarse para entrar en la aplicación & 1 & 1\\
     \hu{hu:cuotas} & Un usuario directivo quiere controlar las cuotas para saber el estado económico de la peña & 2 & 2\\
     \hu{hu:actividad} & Un usuario directivo quiere publicar y eliminar una actividad para que esté, o deje de estar, disponible para el resto de usuarios & & 2\\ 
     \hu{} & Un usuario directivo quiere poner los resultados de los partidos para que los aficionados los puedan consultar & & 2\\
-    \hu{} & Un usuario directivo quiere dar de baja a un socio & & 3\\
     \hu{} & Un usuario directivo quiere listar los socios & & 3\\
+    \hu{hu:consultarInfo} & Un socio de la peña quiere ver in información  del Granada para saber cómo va el equipo esta temporada. & 2 & 2\\
+    \hu{} & Un usuario directivo quiere listar los socios & & 3\\
+    \hu{} & Un socio de la peña quiere apuntarse a un viaje para ver jugar al equipo & 3 & 3\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -78,6 +81,10 @@ Lidia Martín Chica
 	\textbf{HU-\ref{hu:actividad}} & Un usuario directivo quiere publicar y eliminar una actividad para que esté, o deje de estar, disponible para el resto de usuarios & & 2\\
 	\textbf{HU-\ref{hu:actividad}.1} & Un usuario directivo quiere publicar una actividad para que los otros usuarios la puedan consultar & & 2\\
 	\textbf{HU-\ref{hu:actividad}.2} & Un usuario directivo quiere eliminar una actividad para que no aparezca al resto de usuarios & & 2\\
+    
+    \midrule
+    \textbf{HU-\ref{hu:consultarInfo}} & Un socio de la peña quiere consultar información acerca de los resultados de los partidos anteriores & 2 & 3\\
+    \textbf{HU-\ref{hu:consultarInfo}.1} & Un socio de la peña quiere saber cuáles van a ser los próximos partidos que va a jugar el equipo & 2 & 3\\
     \bottomrule
   \end{tabular}
   
