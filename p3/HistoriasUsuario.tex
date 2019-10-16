@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
+\usepackage{fontspec}
 \usepackage[spanish]{babel}
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
 \usepackage{listings}
 \usepackage{graphicx}
 \graphicspath{{../Imagenes/}}
@@ -15,6 +16,10 @@
 \usepackage{multirow}
 \renewcommand{\arraystretch}{1.7}
 
+%%%%%%%%%% Contador HU
+\newcounter{HUCounter}
+\newcommand{\hu}[1]{\refstepcounter{HUCounter}\textbf{\rmfamily HU-\theHUCounter}\label{#1}}
+
 \begin{document}
 
 \begin{titlepage}
@@ -23,7 +28,7 @@
 {\scshape\LARGE Historias de Usuario \par}
 \vspace{1.5cm}
 
-\includegraphics[width=16cm]{Logo}
+\includegraphics[width=10cm]{Logo}
 
 \vspace{3cm}
 {\scshape\large \par}
@@ -47,11 +52,14 @@ En el apartado de prioridad hemos escogido una escala del 1 al 6 siendo el 1: m�
     \toprule
     \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
     \midrule
-    HU1. & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 4 & 6\\
-    HU2. & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3 & 6\\
-    HU3. & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 4 & 5\\
-     HU4. & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 4 & 5\\
-      HU5. & Un usuario quiere gestionar su maleta. (ver tiempo, tipo de actividad, duración, ver comentarios de otros usuarios, etc). & 4 & 6\\
+    \hu{} & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 4 & 6\\
+    \hu{} & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3 & 6\\
+    \hu{}. & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 4 & 5\\
+    \hu{} & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 4 & 5\\
+    \hu{} & Un usuario quiere gestionar su maleta. (ver tiempo, tipo de actividad, duración, ver comentarios de otros usuarios, etc). & 4 & 6\\
+    \hu{} & Un usuario quiere ofertar un viaje/actividad para compartir su experiencia & & 2\\
+    \hu{} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & & 4\\
+    \hu{} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & & 4\\ 
     \bottomrule
   \end{tabular}
 \end{table}

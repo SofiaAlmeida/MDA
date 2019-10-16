@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage[spanish]{babel}
-\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+%\usepackage[utf8]{inputenc}
 \usepackage{listings}
 \usepackage{graphicx}
 \graphicspath{{../Imagenes/}}
@@ -14,6 +15,10 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \renewcommand{\arraystretch}{1.7}
+
+%%%%%%%%%% Contador HU
+\newcounter{HUCounter}
+\newcommand{\hu}[1]{\refstepcounter{HUCounter}\textbf{\rmfamily HU-\theHUCounter}\label{#1}}
 
 \begin{document}
 
@@ -46,10 +51,14 @@ Lidia Martín Chica
     \toprule
     \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
     \midrule
-    HU. & Un usuario directivo quiere registrarse & 2 & 1\\
-    HU. & Un usuario directivo quiere identificarse & 2 & 1\\
-    HU. & Un usuario directivo quiere dar de alta a un socio para que la peña crezaca & 2 & 1\\
-    HU. & Un usuario directivo quiere controlar las cuotas para saber el estado económico de la peña & 2 & 2\\
+    \hu{} & Un usuario directivo quiere registrarse & 2 & 1\\
+    \hu{} & Un usuario directivo quiere identificarse & 2 & 1\\
+    \hu{} & Un usuario directivo quiere dar de alta a un socio para que la peña crezaca & 2 & 1\\
+    \hu{hu:cuotas} & Un usuario directivo quiere controlar las cuotas para saber el estado económico de la peña & 2 & 2\\
+    \hu{hu:actividad} & Un usuario directivo quiere publicar y eliminar una actividad para que esté, o deje de estar, disponible para el resto de usuarios & & 2\\ 
+    \hu{} & Un usuario directivo quiere poner los resultados de los partidos para que los aficionados los puedan consultar & & 2\\
+    \hu{} & Un usuario directivo quiere dar de baja a un socio & & 3\\
+    \hu{} & Un usuario directivo quiere listar los socios & & 3\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -57,13 +66,18 @@ Lidia Martín Chica
 \subsection{Historias que se han dividido en varias}
 \begin{table}[H]
   \centering
-  \begin{tabular}{p{0.1\linewidth}p{0.7\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
+  \begin{tabular}{p{0.12\linewidth}p{0.6\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
     \toprule
     \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
     \midrule
-    HU. & Un usuario directivo quiere controlar las cuotas para saber el estado económico de la peña & 2 & 2\\
-	HU..1 & Un usuario directivo quiere consultar las cuotas de los socios para saber si alguien debe dinero & 1 & 2\\
-	HU..2 & Un usuario directivo quiere modificar las cuotas de los socios cuando alguien salde las deudas & 1 & 2\\
+    \textbf{HU-\ref{hu:cuotas}} & Un usuario directivo quiere controlar las cuotas para saber el estado económico de la peña & 2 & 2\\
+	\textbf{HU-\ref{hu:cuotas}.1} & Un usuario directivo quiere consultar las cuotas de los socios para saber si alguien debe dinero & 1 & 2\\
+	\textbf{HU-\ref{hu:cuotas}.2} & Un usuario directivo quiere modificar las cuotas de los socios cuando alguien salde las deudas & 1 & 2\\
+	
+	\midrule
+	\textbf{HU-\ref{hu:actividad}} & Un usuario directivo quiere publicar y eliminar una actividad para que esté, o deje de estar, disponible para el resto de usuarios & & 2\\
+	\textbf{HU-\ref{hu:actividad}.1} & Un usuario directivo quiere publicar una actividad para que los otros usuarios la puedan consultar & & 2\\
+	\textbf{HU-\ref{hu:actividad}.2} & Un usuario directivo quiere eliminar una actividad para que no aparezca al resto de usuarios & & 2\\
     \bottomrule
   \end{tabular}
   
