@@ -9,6 +9,7 @@
 \usepackage{titlepic}
 
 %%% Tablas
+\usepackage{longtable}
 \usepackage{tabularx}
 \usepackage{float}
 \usepackage{adjustbox}
@@ -25,12 +26,12 @@
 \begin{titlepage}
 \centering
 \vspace{4.5cm}
-\scshape\LARGE Historias de Usuario Peña de Fútbol\par}
+\scshape\LARGE{Historias de Usuario Peña de Fútbol\par}
 \vspace{1.5cm}
 
 \includegraphics[width=5cm]{escudoGR}
 
-\vspace{3cm}
+\vspace{1.5cm}
 {\scshape\large \par}
 \vspace{1cm}
 
@@ -47,33 +48,33 @@ Lidia Martín Chica
 \newpage
 
 \section{Listado de Historias de Usuario}
-\begin{table}[H]
-  \centering
-  \begin{tabular}{p{0.12\linewidth}p{0.68\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
+  \begin{longtable}{p{0.12\linewidth}p{0.68\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
     \toprule
     \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
     \midrule
-    \hu{} & Un usuario directivo quiere registrarse & 2 & 1\\
-    \hu{} & Un usuario directivo quiere identificarse & 2 & 1\\
-    \hu{} & Un usuario directivo quiere dar de alta a un socio para que la peña crezaca & 2 & 1\\
-    \hu{hu:cuotas} & Un usuario directivo quiere controlar las cuotas para saber el estado económico de la peña & 2 & 2\\
-    
-    \hu{hu:actividad} & Un usuario directivo quiere publicar y eliminar una actividad para que esté, o deje de estar, disponible para el resto de usuarios & & 2\\ 
+    \hu{} & Un usuario directivo quiere registrarse &  & 1\\
+    \hu{} & Un usuario directivo quiere identificarse &  & 1\\
+    \hu{} & Un usuario directivo quiere dar de alta a un socio para que la peña crezca &  & 1\\
+    \hu{hu:cuotas} & Un usuario directivo quiere controlar las cuotas para saber el estado económico de la peña &  & 2\\
+    \hu{hu:actividad} & Un usuario directivo quiere gestionar una actividad para que esté, o deje de estar, disponible para el resto de usuarios & & 2\\
+    \hu{} & Un usuario directivo quiere actualizar la clasificación de los equipos para que los aficionados los puedan consultar & & 2\\
     \hu{} & Un usuario directivo quiere poner los resultados de los partidos para que los aficionados los puedan consultar & & 2\\
     \hu{} & Un usuario directivo quiere listar los socios & & 3\\
-    \hu{hu:consultarInfo} & Un socio de la peña quiere ver in información  del Granada para saber cómo va el equipo esta temporada. & 2 & 2\\
+    \hu{hu:consultarInfo} & Un socio de la peña quiere ver información  del Granada para saber cómo va el equipo esta temporada. &  & 2\\
     \hu{} & Un usuario directivo quiere listar los socios & & 3\\
-    \hu{} & Un socio de la peña quiere identificarse para entrar en la aplicación & 1 & 1\\
-    \hu{} & Un socio de la peña quiere apuntarse a un viaje para ver jugar al equipo & 3 & 3\\
-    \hu{} & Como socio quiero ver la fecha de los partidos del equipo & 1 & 2\\
-    \hu{} & Como socio de la peña quiero ver información de las actividades que se realizan para ver si alguna es de mi interés & 3 & 2\\
-    \hu{} & Como socio quiero estar al tanto de mis pagos para saber si tengo que pagar alguna cuota o estoy al dia & 1 & 3\\
-    \hu{} & Un aficionado quiere ver información del Granada FC para estar al tanto & 1 & 2\\
-    \hu{} & Como aficionado quiero entrar en la APP para ver si he ganado la quiniela & 1 & 2 mejor 3??\\
-    \hu{} & Como aficionado quiero ver los viajes que tiene previsto la peña para acompañar al club & 2 & 3\\
+    \hu{} & Un socio de la peña quiere identificarse para entrar en la aplicación &  & 1\\
+    \hu{} & Un socio de la peña quiere apuntarse a un viaje/evento para ver jugar al equipo &  & 3\\
+    \hu{} & Como socio quiero anular una reserva de viaje/evento & &3\\
+    \hu{} & Como socio quiero ver la fecha de los partidos del equipo & & 2\\
+    \hu{} & Como socio de la peña quiero ver información de las actividades que se realizan para ver si alguna es de mi interés & & 2\\
+    \hu{} & Como socio quiero consultar la información de mi perfil & &3\\
+    \hu{} & Como socio quiero estar al tanto de mis pagos para saber si tengo que pagar alguna cuota o estoy al dia & & 3\\
+    \hu{} & Un aficionado quiere ver información del Granada FC para estar al tanto & & 2\\
+    \hu{} & Como aficionado quiero entrar en la aplicación y ver los resultados para saber si he ganado la quiniela & & 3\\
+    \hu{} & Como aficionado quiero ver los viajes que tiene previsto la peña para acompañar al club & & 3\\
+    \hu{} & Como simpatizante quiero ver la información sobre los eventos &&3\\
     \bottomrule
-  \end{tabular}
-\end{table}
+  \end{longtable}
 
 \subsection{Historias que se han dividido en varias}
 \begin{table}[H]
@@ -82,18 +83,19 @@ Lidia Martín Chica
     \toprule
     \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
     \midrule
-    \textbf{HU-\ref{hu:cuotas}} & Un usuario directivo quiere controlar las cuotas para saber el estado económico de la peña & 2 & 2\\
-	\textbf{HU-\ref{hu:cuotas}.1} & Un usuario directivo quiere consultar las cuotas de los socios para saber si alguien debe dinero & 1 & 2\\
-	\textbf{HU-\ref{hu:cuotas}.2} & Un usuario directivo quiere modificar las cuotas de los socios cuando alguien salde las deudas & 1 & 2\\
+    \textbf{HU-\ref{hu:cuotas}} & Un usuario directivo quiere controlar las cuotas para saber el estado económico de la peña & & 2\\
+	\textbf{HU-\ref{hu:cuotas}.1} & Un usuario directivo quiere consultar las cuotas de los socios para saber si alguien debe dinero & & 2\\
+	\textbf{HU-\ref{hu:cuotas}.2} & Un usuario directivo quiere modificar las cuotas de los socios cuando alguien salde las deudas & & 2\\
 	
 	\midrule
-	\textbf{HU-\ref{hu:actividad}} & Un usuario directivo quiere publicar y eliminar una actividad para que esté, o deje de estar, disponible para el resto de usuarios & & 2\\
+	\textbf{HU-\ref{hu:actividad}} & Un usuario directivo quiere gestionar una actividad para que esté, o deje de estar, disponible para el resto de usuarios & & 2\\
 	\textbf{HU-\ref{hu:actividad}.1} & Un usuario directivo quiere publicar una actividad para que los otros usuarios la puedan consultar & & 2\\
 	\textbf{HU-\ref{hu:actividad}.2} & Un usuario directivo quiere eliminar una actividad para que no aparezca al resto de usuarios & & 2\\
-    
+        \textbf{HU-\ref{hu:actividad}.2} & Un usuario directivo quiere modificar una actividad para que esté actualizada & & 2\\
+        \textbf{HU-\ref{hu:actividad}.2} & Un usuario directivo quiere listar las actividades para que los usuarios las puedan consultar & & 2\\
     \midrule
-    \textbf{HU-\ref{hu:consultarInfo}} & Un socio de la peña quiere consultar información acerca de los resultados de los partidos anteriores & 2 & 3\\
-    \textbf{HU-\ref{hu:consultarInfo}.1} & Un socio de la peña quiere saber cuáles van a ser los próximos partidos que va a jugar el equipo & 2 & 3\\
+    \textbf{HU-\ref{hu:consultarInfo}} & Un socio de la peña quiere consultar información acerca de los resultados de los partidos anteriores & & 3\\
+    \textbf{HU-\ref{hu:consultarInfo}.1} & Un socio de la peña quiere saber cuáles van a ser los próximos partidos que va a jugar el equipo & & 3\\
     \bottomrule
   \end{tabular}
   
