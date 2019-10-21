@@ -51,35 +51,72 @@ En el apartado de prioridad hemos escogido una escala del 1 al 6 siendo el 1: m�
     \toprule
     \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
     \midrule
-     \hu{} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & & 1\\
-     \hu{} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & & 1\\
-     \hu{} & Un usuario quiere listar las publicaciones para ver cuáles le pueden interesar & & \\
-    \hu{} & Un usuario quiere ofertar un viaje/actividad para compartir su experiencia & & 2\\
-    \hu{} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & & 4\\
-    \hu{} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & & 4\\ 
-    \hu{} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & 5 & 2\\ 
-    \hu{} & Un usuario quiere personalizar/gestionar un viaje para adaptarlo a sus gustos (quitando o añadiendo actividades) & 5 & 3\\ 
-    \hu{} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3 & 2\\ 
-    \hu{} & Un usuario quiere guardar un viaje/actividad para verlo en otro momento & 5 & 5\\ 
-    \hu{}. & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 4 & 5\\
-    \hu{} & Un usuario quiere gestionar su maleta. (ver tiempo, tipo de actividad, duración, ver comentarios de otros usuarios, etc). & 4 & 6\\
-    \hu{} & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 4 & 6\\
-    \hu{} & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3 & 6\\
+     \hu{} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2 & 1\\
+     \hu{} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1 & 1\\
+     \hu{} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2 & 2\\
+    \hu{} & Un usuario quiere ofertar un viaje/actividad para compartir su experiencia & 3 & 2\\
+    \hu{} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 4\\
+    \hu{} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 4\\ 
+    \hu{} & Un usuario quiere ver los comentarios de una publicación para conocer las experiencias y opiniones de otros usuarios & 1 & 4\\ 
+    \hu{} & Un usuario quiere ver las valoraciones de una publicación para tenerlo en cuenta a la hora de tomar una decisión & 1 & 4\\ 
+    \hu{hu:filtrar} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & - & -\\ 
+    \hu{hu:personalizar} & Un usuario quiere personalizar un paquete para adaptarlo a sus gustos & - & - \\ 
+    \hu{} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 & 2\\ 
+    \hu{} & Un usuario quiere guardar un viaje/actividad para verlo en otro momento & 1 & 5\\ 
+    \hu{}. & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 1 & 5\\
+    \hu{hu:maleta} & Un usuario quiere gestionar su maleta & - & -\\
+    \hu{} & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 2 & 6\\
+    \hu{} & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3/2 & 6\\
 
     
     \bottomrule
 \end{longtable}
 
 \subsection{Historias que se han dividido en varias}
-\begin{table}[H]
-  \centering
-  \begin{tabular}{p{0.1\linewidth}p{0.7\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
+
+  \begin{longtable}{p{0.13\linewidth}p{0.67\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
     \toprule
     \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
     \midrule
-
+    
+    \textbf{HU-\ref{hu:filtrar}} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & - & -\\ 
+	\textbf{HU-\ref{hu:filtrar}.1} & Un usuario quiere filtrar la búsqueda de las publicaciones por lugar & 1/2 & 3\\ 
+	\textbf{HU-\ref{hu:filtrar}.2} & Un usuario quiere filtrar la búsqueda de las publicaciones por fecha & 1/2 & 3\\ 
+	\textbf{HU-\ref{hu:filtrar}.3} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta, actividad, evento) & 1/2 & 3\\ 
+	\textbf{HU-\ref{hu:filtrar}.4} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de actividad (cultural, deportiva, etc)) & 1/2 & 3\\ 
+	\textbf{HU-\ref{hu:filtrar}.5} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más visitadas & 1/2 & 4\\ 
+	\textbf{HU-\ref{hu:filtrar}.6} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más realizadas & 1/2 & 4\\ 
+	\midrule
+	\textbf{HU-\ref{hu:personalizar}} & Un usuario quiere personalizar un paquete para adaptarlo a sus gustos y presupuesto & - & - \\
+	\textbf{HU-\ref{hu:personalizar}.1} & Un usuario quiere eliminar una actividad de un paquete & 1/2 & 3 \\ 
+	\textbf{HU-\ref{hu:personalizar}.2} & Un usuario quiere añadir una actividad de un paquete & 1 & 3 \\ 
+	\textbf{HU-\ref{hu:personalizar}.3} & Un usuario quiere modificar el orden de las actividades de un paquete & 3/2 & 4 \\
+	\midrule 
+	\textbf{HU-\ref{hu:maleta}} & Un usuario quiere gestionar su maleta & - & -\\
+	\textbf{HU-\ref{hu:maleta}.1} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el pronóstico meteorológico & 5 & 6\\
+	\textbf{HU-\ref{hu:maleta}.2} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el tipo de actividad que va a realizar & 4 & 6\\
+	\textbf{HU-\ref{hu:maleta}.3} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según la duración del viaje & 4 & 6\\
     \bottomrule
-  \end{tabular}
-  
-\end{table}
+  \end{longtable}
+
+\section{Cálculo de la velocidad del equipo}
+Partimos de	un equipo de desarrollo	  formado	  por	  5	  programadores	  que	  van	  a	  dedicar	  un	  60\%	  de	  su	  trabajo	  al	  proyecto, ya que el resto del tiempo lo utilizan para avanzar otros proyectos.	  
+
+La	  duración	  de	  cada	  una	  de	  las	  iteraciones	  que	  vamos	  a	  realizar	  en	  el	  proyecto	  van	  a	  ser	  de	  2	  semanas.	  
+La	  estimación	  realizada	  del	  esfuerzo	  de	  cada	  una	  de	  las	  historias	  de	  usuario	  se	  ha	  expresado	  en	  días	  ideales	  de	  programación.	  En	  nuestro	  
+entorno	  de	  trabajo	  estimamos	  que	  un	  día	  ideal	  de	  programación	  se	  va	  a	  corresponder	  con	  2	  a	  3	  días	  reales	  de	  trabajo.	  
+
+La	   duración	  de	  una	  iteración	  va	  a	  ser:	  
+
+1	iteración	  =	  2	  semanas	  =	  6 días	  reales	  
+
+La	   velocidad	  del	  equipo	  de	  desarrollo	  medido	  en	  punto	  de	  historia	  es:	  	  
+
+5	  programadores	  *	  6	  = 30	  	  días	  reales	  por	  iteración $\Longrightarrow$	  de	  10	  a	  15	  PH	  por	  iteración.	  	  	  	  	  
+Se	  ha	  decidido	  usar	   12	  Puntos	  de	  historia	  como	  la	  velocidad	  estimada	  del	  equipo.	  
+
+\section{Descripción de las entregas}
+Esfuerzo total del proyecto = 40 PH \\
+Velocidad del equipo = 12 PH (por iteración) 
+
 \end{document}
