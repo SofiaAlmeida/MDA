@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage[spanish]{babel}
 \usepackage{fontspec}
-%\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{listings}
 \usepackage{graphicx}
 \graphicspath{{../Imagenes/}}
@@ -17,9 +17,7 @@
 \usepackage{multirow}
 \renewcommand{\arraystretch}{1.7}
 
-%%%%%%%%%% Contador HU
-\newcounter{HUCounter}
-\newcommand{\hu}[1]{\refstepcounter{HUCounter}\textbf{\rmfamily HU-\theHUCounter}\label{#1}}
+
 
 \begin{document}
 
@@ -57,7 +55,7 @@ Lidia Martín Chica
 \begin{itemize}
 	\item  Comprobar que se completan todos los campos
 	\item  Comprobar que el nombre y apellidos no superen una longitud máxima
-	\item  Comprobar que la edad es mayor o igual que 18
+	\item  Comprobar que la edad es mayor o igual que 18 y si la edad es menor de 18 años entonces tiene que tener un tutor asociado
 	\item Comprobar que el teléfono sigue el formato correcto (9 números + 2 opcionales)
 	\item  Comprobar que la dirección existe 
 	\item  Comprobar que el correo electrónico está en el formato correcto (correo@compañia.loquesea)
