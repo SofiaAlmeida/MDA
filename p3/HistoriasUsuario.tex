@@ -161,5 +161,108 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \end{table}
 
 
+%%Registro
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.3\linewidth}|p{0.7\linewidth}}
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:}}\\
+    Un usuario quiere registrarse en la aplicación para poder planificar su viaje
+    \bottomrule
+  \end{tabular}
+
+  \begin{tabular}{p{1.028\linewidth}}
+    \textbf{Descripción}
+    \midrule
+    Un usuario quiere registrarse en la aplicación para poder planificar su viaje. Cuando un usuario quiere registrarse debe introducir su nombre, que debe tener entre 2 y 20 caracteres, sus apellidos que deben tener entre 2 y 50 caracteres, su nombre de usuario que consta de un mínimo de 4 caracteres alfanuméricos y un máximo de 15 caracteres alfanuméricos, la contraseña, que deberá repetir y que consta de un mínimo de 8 caracteres alfanuméricos y un máximo de 15 caracteres alfanuméricos y un e-mail.
+  \end{tabular}
+
+  \begin{tabular}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+    \toprule
+    \textbf{Estimación} & & \textbf{Prioridad} & & \textbf{Entrega} & \\
+    2 && 1 && \\
+    \bottomrule
+  \end{tabular}
+
+  \begin{tabular}{p{1.028\linewidth}}
+    \textbf{Pruebas de aceptación}\\
+  \midrule
+  \begin{itemize}
+  \item No introducir algún campo del registro y comprobar que informa que no se han rellenado todos los campos, ya que son obligatorios
+  \item Introducir todos los datos de usuario correctos y comprobar que se crea el usuario en la base de datos con su contraseña asociada y que recibe un e-mail de confirmación
+  \item Introducir un nombre con más de 20 caracteres y comprobar que nos informa que el nombre es demasiado largo
+  \item Introducir un nombre con menos de 2 caracteres y comprobar que nos informa que el nombre es demasiado corto
+  \item Introducir unos apellidos con más de 50 caracteres y comprobar que nos informa que los apellidos son demasiado largos
+  \item Introducir unos apellidos con menos de 2 caracteres y comprobar que nos informa que los apellidos son demasiado corto
+  \item Introducir un nombre de usuario con más de 15 caracteres y comprobar que nos informa que el nombre de usuario es demasiado largo
+  \item Introducir un nombre de usuario con menos de 4 caracteres y comprobar que nos informa que el nombre de usuario es demasiado corto
+  \item Introducir un nombre de usuario con caracteres no alfanuméricos y comprobar que nos informa que el nombre de usuario incluye caracteres no permitidos
+  \item Introducir un nombre de usuario en formato correcto y existente, con los demás datos introducidos correctamente y comprobar que no se vuelve a crear el usuario y que informa que ya hay un usuario con ese nombre de usuario
+  \item Introducir una contraseña con más de 15 caracteres y comprobar que nos informa que la contraseña es demasiado larga
+  \item Introducir una contraseña con menos de  8 caracteres y comprobar que nos informa que la contraseña es demasiado corta
+  \item Introducir una contraseña en formato correcto y al repetirla escribir una en formato incorrecto y comprobar que informa que la contraseña no cumple el formato
+  \item Introducir una contraseña con caracteres no alfanuméricos y comprobar que nos informa que la contraseña incluye caracteres no permitidos
+  \item Introducir una contraseña en formato correcto y al repetirla escribir una contraseña distinta en formato correcto y comprobar que informa que las contraseñas no coinciden
+  \item Introducir contraseña/nombre usuario incorrectos varias veces. A la tercera indica que no podemos volver a intentarlo hasta dentro de cierto tiempo
+  \item Introducir un e-mail en formato correcto y que no existe y comprobar que al intentar enviar el correo, al no existir no lo envía y que informa que el e-mail introducido no existe
+  \item Introducir un e-mail en formato no correcto y que por tanto, no existe y comprobar informa que el e-mail introducido no es correcto
+  \end{itemize}
+\end{tabular}
+\begin{tabular}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+\end{tabular}
+\end{table}
+
+%%Identificación 
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.3\linewidth}|p{0.7\linewidth}}
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:}}\\
+    Un usuario quiere identificarse en la aplicación para acceder a su contenido
+    \bottomrule
+  \end{tabular}
+
+  \begin{tabular}{p{1.028\linewidth}}
+    \textbf{Descripción}
+    \midrule
+    Un usuario quiere identificarse en la aplicación para acceder a su contenido. Para iniciar sesión es necesario introducir el nombre de usuario y la contraseña. El nombre de usuario consta de un mínimo de 4 caracteres alfanuméricos y un máximo de 15 caracteres alfanuméricos. La contraseña consta de un mínimo de 8 caracteres alfanuméricos y un máximo de 15 caracteres alfanuméricos.
+  \end{tabular}
+
+  \begin{tabular}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+    \toprule
+    \textbf{Estimación} & & \textbf{Prioridad} & & \textbf{Entrega} & \\
+    1 && 1 && \\
+    \bottomrule
+  \end{tabular}
+
+  \begin{tabular}{p{1.028\linewidth}}
+    \textbf{Pruebas de aceptación}\\
+  \midrule
+  \begin{itemize}
+  \item Comprobar que la contraseña no se muestra al escribirla
+  \item Introducir un nombre de usuario existente con su contraseña correcta y comprobar que se inicia la sesión con ese usuario
+  \item Introducir un nombre de usuario con más de 15 caracteres y la contraseña correcta y comprobar que nos informa que no podemos acceder
+  \item Introducir un nombre de usuario con menos de 4 caracteres y la contraseña correcta y comprobar que nos informa que no podemos acceder
+  \item Introducir un nombre de usuario con una longitud entre 4 y 15 caracteres pero no todos alfanuméricos y la contraseña correcta y comprobar que nos informa que no podemos acceder
+  \item Introducir un nombre de usuario correcto y una contraseña incorrecta, una que no cumpla restricciones y comprobar que nos informa que no podemos entrar
+  \item Introducir un nombre de usuario correcto y una contraseña incorrecta, que cumpla restricciones pero no coincida con la asociada al usuario en la base de datos y comprobar que nos informa que no podemos entrar
+  \item Introducir un nombre de usuario que cumpla las restricciones pero no esté en la base de datos y contraseña correcta en formato y comprobar que no permite entrar en el sistema
+  \item No introducir nombre de usuario y ni contraseña e intentar entrar en el sistema, no debe permitirlo
+  \item Introducir nombre de usuario correcto y no introducir contraseña. Nos debe indicar que no hemos introducido contraseña
+  \item Introducir una contraseña correcta y no introducir un nombre de usuario. Nos debe indicar que no hemos introducido nombre de usuario
+  \item Introducir contraseña/nombre usuario incorrectos varias veces. A la tercera indica que no podemos volver a intentarlo hasta dentro de cierto tiempo
+  
+  \end{itemize}
+\end{tabular}
+\begin{tabular}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+\end{tabular}
+\end{table}
+
+
+
 
 \end{document}
