@@ -10,7 +10,8 @@
 
 %%% Tablas
 \usepackage{longtable}
-\usepackage{tabularx}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+%% \usepackage{longtablex}
 \usepackage{float}
 \usepackage{adjustbox}
 \usepackage{booktabs}
@@ -51,9 +52,9 @@ En el apartado de prioridad hemos escogido una escala del 1 al 6 siendo el 1: m�
     \toprule
     \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
     \midrule
-     \hu{} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2 & 1\\
-     \hu{} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1 & 1\\
-     \hu{} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2 & 2\\
+     \hu{hu:registro} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2 & 1\\
+     \hu{hu:identificarse} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1 & 1\\
+     \hu{hu:ver_publicaciones} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2 & 2\\
     \hu{} & Un usuario quiere subir una publicación para compartir su experiencia & 3 & 2\\
     \hu{} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 4\\
     \hu{} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 4\\ 
@@ -68,7 +69,6 @@ En el apartado de prioridad hemos escogido una escala del 1 al 6 siendo el 1: m�
     \hu{} & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 2 & 6\\
     \hu{} & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3/2 & 6\\
 
-    
     \bottomrule
 \end{longtable}
 
@@ -127,142 +127,175 @@ En base al esfuerzo necesario y la velocidad estimada del equipo, para el desarr
 
 \section{Tarjetas de las HU}
 Se incluye una descripción completa de las historias de usuario que se van a tratar en la primera iteración del desarrollo, incluyendo los criterios de aceptación de cada una de ellas.
-%%TABLA 
-\begin{table}[H]
-  \centering
-  \begin{tabular}{p{0.3\linewidth}|p{0.7\linewidth}}
-    \toprule
-    \textbf{Identificador} & \textbf{HU-\ref{hu:}}\\
-    \bottomrule
-  \end{tabular}
-
-  \begin{tabular}{p{1.028\linewidth}}
-    \textbf{Descripción}
-    \midrule
-  \end{tabular}
-
-  \begin{tabular}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
-    \toprule
-    \textbf{Estimación} & & \textbf{Prioridad} & & \textbf{Entrega} & \\
-    \bottomrule
-  \end{tabular}
-
-  \begin{tabular}{p{1.028\linewidth}}
-    \textbf{Pruebas de aceptación}\\
-  \midrule
-  \begin{itemize}
-  \item 
-  \end{itemize}
-\end{tabular}
-\begin{tabular}{p{1.028\linewidth}}
-  \textbf{Observaciones}\\
-  \midrule
-\end{tabular}
-\end{table}
-
 
 %%Registro
-\begin{table}[H]
   \centering
-  \begin{tabular}{p{0.3\linewidth}|p{0.7\linewidth}}
+  \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
     \toprule
-    \textbf{Identificador} & \textbf{HU-\ref{hu:}}\\
-    Un usuario quiere registrarse en la aplicación para poder planificar su viaje
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:registro}}. Un usuario quiere registrarse en la aplicación para poder planificar su viaje\\
     \bottomrule
-  \end{tabular}
+  \end{longtable}
 
-  \begin{tabular}{p{1.028\linewidth}}
-    \textbf{Descripción}
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Descripción}\\
     \midrule
     Un usuario quiere registrarse en la aplicación para poder planificar su viaje. Cuando un usuario quiere registrarse debe introducir su nombre, que debe tener entre 2 y 20 caracteres, sus apellidos que deben tener entre 2 y 50 caracteres, su nombre de usuario que consta de un mínimo de 4 caracteres alfanuméricos y un máximo de 15 caracteres alfanuméricos, la contraseña, que deberá repetir y que consta de un mínimo de 8 caracteres alfanuméricos y un máximo de 15 caracteres alfanuméricos y un e-mail.
-  \end{tabular}
+  \end{longtable}
 
-  \begin{tabular}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+  \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
     \toprule
-    \textbf{Estimación} & & \textbf{Prioridad} & & \textbf{Entrega} & \\
-    2 && 1 && \\
+    \textbf{Estimación} & 2 & \textbf{Prioridad} & 1 & \textbf{Entrega} & 1\\
     \bottomrule
-  \end{tabular}
+  \end{longtable}
 
-  \begin{tabular}{p{1.028\linewidth}}
+  \begin{longtable}{p{1.028\linewidth}}
     \textbf{Pruebas de aceptación}\\
   \midrule
-  \begin{itemize}
-  \item No introducir algún campo del registro y comprobar que informa que no se han rellenado todos los campos, ya que son obligatorios
-  \item Introducir todos los datos de usuario correctos y comprobar que se crea el usuario en la base de datos con su contraseña asociada y que recibe un e-mail de confirmación
-  \item Introducir un nombre con más de 20 caracteres y comprobar que nos informa que el nombre es demasiado largo
-  \item Introducir un nombre con menos de 2 caracteres y comprobar que nos informa que el nombre es demasiado corto
-  \item Introducir unos apellidos con más de 50 caracteres y comprobar que nos informa que los apellidos son demasiado largos
-  \item Introducir unos apellidos con menos de 2 caracteres y comprobar que nos informa que los apellidos son demasiado corto
-  \item Introducir un nombre de usuario con más de 15 caracteres y comprobar que nos informa que el nombre de usuario es demasiado largo
-  \item Introducir un nombre de usuario con menos de 4 caracteres y comprobar que nos informa que el nombre de usuario es demasiado corto
-  \item Introducir un nombre de usuario con caracteres no alfanuméricos y comprobar que nos informa que el nombre de usuario incluye caracteres no permitidos
-  \item Introducir un nombre de usuario en formato correcto y existente, con los demás datos introducidos correctamente y comprobar que no se vuelve a crear el usuario y que informa que ya hay un usuario con ese nombre de usuario
-  \item Introducir una contraseña con más de 15 caracteres y comprobar que nos informa que la contraseña es demasiado larga
-  \item Introducir una contraseña con menos de  8 caracteres y comprobar que nos informa que la contraseña es demasiado corta
-  \item Introducir una contraseña en formato correcto y al repetirla escribir una en formato incorrecto y comprobar que informa que la contraseña no cumple el formato
-  \item Introducir una contraseña con caracteres no alfanuméricos y comprobar que nos informa que la contraseña incluye caracteres no permitidos
-  \item Introducir una contraseña en formato correcto y al repetirla escribir una contraseña distinta en formato correcto y comprobar que informa que las contraseñas no coinciden
-  \item Introducir contraseña/nombre usuario incorrectos varias veces. A la tercera indica que no podemos volver a intentarlo hasta dentro de cierto tiempo
-  \item Introducir un e-mail en formato correcto y que no existe y comprobar que al intentar enviar el correo, al no existir no lo envía y que informa que el e-mail introducido no existe
-  \item Introducir un e-mail en formato no correcto y que por tanto, no existe y comprobar informa que el e-mail introducido no es correcto
-  \end{itemize}
-\end{tabular}
-\begin{tabular}{p{1.028\linewidth}}
+  \tabitem No introducir algún campo del registro y comprobar que informa que no se han rellenado todos los campos, ya que son obligatorios\\
+  \tabitem Introducir todos los datos de usuario correctos y comprobar que se crea el usuario en la base de datos con su contraseña asociada y que recibe un e-mail de confirmación\\
+  \tabitem Introducir un nombre con más de 20 caracteres y comprobar que nos informa que el nombre es demasiado largo\\
+  \tabitem Introducir un nombre con menos de 2 caracteres y comprobar que nos informa que el nombre es demasiado corto\\
+  \tabitem Introducir unos apellidos con más de 50 caracteres y comprobar que nos informa que los apellidos son demasiado largos\\
+  \tabitem Introducir unos apellidos con menos de 2 caracteres y comprobar que nos informa que los apellidos son demasiado corto\\
+  \tabitem Introducir un nombre de usuario con más de 15 caracteres y comprobar que nos informa que el nombre de usuario es demasiado largo\\
+  \tabitem Introducir un nombre de usuario con menos de 4 caracteres y comprobar que nos informa que el nombre de usuario es demasiado corto\\
+  \tabitem Introducir un nombre de usuario con caracteres no alfanuméricos y comprobar que nos informa que el nombre de usuario incluye caracteres no permitidos\\
+  \tabitem Introducir un nombre de usuario en formato correcto y existente, con los demás datos introducidos correctamente y comprobar que no se vuelve a crear el usuario y que informa que ya hay un usuario con ese nombre de usuario\\
+  \tabitem Introducir una contraseña con más de 15 caracteres y comprobar que nos informa que la contraseña es demasiado larga\\
+  \tabitem Introducir una contraseña con menos de  8 caracteres y comprobar que nos informa que la contraseña es demasiado corta\\
+  \tabitem Introducir una contraseña en formato correcto y al repetirla escribir una en formato incorrecto y comprobar que informa que la contraseña no cumple el formato\\
+  \tabitem Introducir una contraseña con caracteres no alfanuméricos y comprobar que nos informa que la contraseña incluye caracteres no permitidos\\
+  \tabitem Introducir una contraseña en formato correcto y al repetirla escribir una contraseña distinta en formato correcto y comprobar que informa que las contraseñas no coinciden\\
+  \tabitem Introducir contraseña/nombre usuario incorrectos varias veces. A la tercera indica que no podemos volver a intentarlo hasta dentro de cierto tiempo\\
+  \tabitem Introducir un e-mail en formato correcto y que no existe y comprobar que al intentar enviar el correo, al no existir no lo envía y que informa que el e-mail introducido no existe\\
+  \tabitem Introducir un e-mail en formato no correcto y que por tanto, no existe y comprobar informa que el e-mail introducido no es correcto\\
+
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
   \textbf{Observaciones}\\
   \midrule
-\end{tabular}
-\end{table}
+  \bottomrule
+  \bottomrule
+\end{longtable}
+\bigskip
 
 %%Identificación 
-\begin{table}[H]
-  \centering
-  \begin{tabular}{p{0.3\linewidth}|p{0.7\linewidth}}
-    \toprule
-    \textbf{Identificador} & \textbf{HU-\ref{hu:}}\\
-    Un usuario quiere identificarse en la aplicación para acceder a su contenido
-    \bottomrule
-  \end{tabular}
 
-  \begin{tabular}{p{1.028\linewidth}}
-    \textbf{Descripción}
+  \centering
+  \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+    \toprule
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:identificarse}}. Un usuario quiere identificarse en la aplicación para acceder a su contenido\\
+    
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Descripción}\\
     \midrule
     Un usuario quiere identificarse en la aplicación para acceder a su contenido. Para iniciar sesión es necesario introducir el nombre de usuario y la contraseña. El nombre de usuario consta de un mínimo de 4 caracteres alfanuméricos y un máximo de 15 caracteres alfanuméricos. La contraseña consta de un mínimo de 8 caracteres alfanuméricos y un máximo de 15 caracteres alfanuméricos.
-  \end{tabular}
-
-  \begin{tabular}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+  \end{longtable}
+  \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
     \toprule
-    \textbf{Estimación} & & \textbf{Prioridad} & & \textbf{Entrega} & \\
-    1 && 1 && \\
+    \textbf{Estimación} & 1 & \textbf{Prioridad} & 1 & \textbf{Entrega} & 1 \\
     \bottomrule
-  \end{tabular}
+  \end{longtable}
 
-  \begin{tabular}{p{1.028\linewidth}}
+  \begin{longtable}{p{1.028\linewidth}}
     \textbf{Pruebas de aceptación}\\
   \midrule
-  \begin{itemize}
-  \item Comprobar que la contraseña no se muestra al escribirla
-  \item Introducir un nombre de usuario existente con su contraseña correcta y comprobar que se inicia la sesión con ese usuario
-  \item Introducir un nombre de usuario con más de 15 caracteres y la contraseña correcta y comprobar que nos informa que no podemos acceder
-  \item Introducir un nombre de usuario con menos de 4 caracteres y la contraseña correcta y comprobar que nos informa que no podemos acceder
-  \item Introducir un nombre de usuario con una longitud entre 4 y 15 caracteres pero no todos alfanuméricos y la contraseña correcta y comprobar que nos informa que no podemos acceder
-  \item Introducir un nombre de usuario correcto y una contraseña incorrecta, una que no cumpla restricciones y comprobar que nos informa que no podemos entrar
-  \item Introducir un nombre de usuario correcto y una contraseña incorrecta, que cumpla restricciones pero no coincida con la asociada al usuario en la base de datos y comprobar que nos informa que no podemos entrar
-  \item Introducir un nombre de usuario que cumpla las restricciones pero no esté en la base de datos y contraseña correcta en formato y comprobar que no permite entrar en el sistema
-  \item No introducir nombre de usuario y ni contraseña e intentar entrar en el sistema, no debe permitirlo
-  \item Introducir nombre de usuario correcto y no introducir contraseña. Nos debe indicar que no hemos introducido contraseña
-  \item Introducir una contraseña correcta y no introducir un nombre de usuario. Nos debe indicar que no hemos introducido nombre de usuario
-  \item Introducir contraseña/nombre usuario incorrectos varias veces. A la tercera indica que no podemos volver a intentarlo hasta dentro de cierto tiempo
-  
-  \end{itemize}
-\end{tabular}
-\begin{tabular}{p{1.028\linewidth}}
+  \tabitem Comprobar que la contraseña no se muestra al escribirla\\
+  \tabitem Introducir un nombre de usuario existente con su contraseña correcta y comprobar que se inicia la sesión con ese usuario\\
+  \tabitem Introducir un nombre de usuario con más de 15 caracteres y la contraseña correcta y comprobar que nos informa que no podemos acceder\\
+  \tabitem Introducir un nombre de usuario con menos de 4 caracteres y la contraseña correcta y comprobar que nos informa que no podemos acceder\\
+  \tabitem Introducir un nombre de usuario con una longitud entre 4 y 15 caracteres pero no todos alfanuméricos y la contraseña correcta y comprobar que nos informa que no podemos acceder\\
+  \tabitem Introducir un nombre de usuario correcto y una contraseña incorrecta, una que no cumpla restricciones y comprobar que nos informa que no podemos entrar\\
+  \tabitem Introducir un nombre de usuario correcto y una contraseña incorrecta, que cumpla restricciones pero no coincida con la asociada al usuario en la base de datos y comprobar que nos informa que no podemos entrar\\
+  \tabitem Introducir un nombre de usuario que cumpla las restricciones pero no esté en la base de datos y contraseña correcta en formato y comprobar que no permite entrar en el sistema\\
+  \tabitem No introducir nombre de usuario y ni contraseña e intentar entrar en el sistema, no debe permitirlo\\
+  \tabitem Introducir nombre de usuario correcto y no introducir contraseña. Nos debe indicar que no hemos introducido contraseña\\
+  \tabitem Introducir una contraseña correcta y no introducir un nombre de usuario. Nos debe indicar que no hemos introducido nombre de usuario\\
+  \tabitem Introducir contraseña/nombre usuario incorrectos varias veces. A la tercera indica que no podemos volver a intentarlo hasta dentro de cierto tiempo\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
   \textbf{Observaciones}\\
   \midrule
-\end{tabular}
-\end{table}
+  \bottomrule
+  \bottomrule
+\end{longtable}
 
+%% Ver publicaciones
 
+  \centering
+  \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+    \toprule
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:ver_publicaciones}}. Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar\\
+    
+    \bottomrule
+  \end{longtable}
 
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Descripción}\\
+    \midrule
+    Un usuario al tocar el icono de nuestra aplicación accederá a la página principal donde verá un listado de las actividades que se realizan cerca de él.
+  \end{longtable}
+  \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+    \toprule
+    \textbf{Estimación} & 2 & \textbf{Prioridad} & 2 & \textbf{Entrega} & 1 \\
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Pruebas de aceptación}\\
+    \midrule
+    \tabitem Asegurarse de que el usuario ha dado permisos de localización a la aplicación\\
+    \tabitem Abrir la aplicación y comprobar que aparecen publicaciones\\
+    \tabitem Asegurarse de que las actividades que aparecen están cerca de su ubicación actual\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  Se ha considerado que el criterio para mostrar publicaciones cuando el usuario no ha establecido ningún filtro a su búsqueda es la localización.\\
+  \bottomrule
+  \bottomrule
+\end{longtable}
+
+%% Filtrar por fecha
+  \centering
+  \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+    \toprule
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:filtrar}.2}. Un usuario quiere filtrar la búsqueda de las publicaciones por fecha\\
+    
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Descripción}\\
+    \midrule
+    Un usuario podrá realizar búsquedas de actividades/paquetes en las fechas en las que las quiere realizar
+  \end{longtable}
+  \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+    \toprule
+    \textbf{Estimación} & 0.5 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 1 \\
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Pruebas de aceptación}\\
+    \midrule
+    \tabitem Al realizar una búsqueda filtrando por fecha, comprobar que la fecha de inicio sea anterior a la de finalización\\
+    \tabitem Al realizar una búsqueda filtrando por fecha, comprobar que las fechas introducidas son fechas futuras\\
+    \tabitem Al realizar una búsqueda filtrando por fecha, verificar que en las fechas introducidas haya actividades\\
+    \tabitem Realizar una búsqueda filtrando por una fecha correcta, comprobar que aparecen publicaciones y que, efectivamente, se realizan en esas fechas\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  \bottomrule
+  \bottomrule
+\end{longtable}
 
 \end{document}
