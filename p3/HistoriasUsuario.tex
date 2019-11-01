@@ -55,14 +55,14 @@ En el apartado de prioridad hemos escogido una escala del 1 al 6 siendo el 1: m�
      \hu{hu:registro} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2 & 1\\
      \hu{hu:identificarse} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1 & 1\\
      \hu{hu:ver_publicaciones} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2 & 2\\
-    \hu{} & Un usuario quiere subir una publicación para compartir su experiencia & 3 & 2\\
+    \hu{hu:subir} & Un usuario quiere subir una publicación para compartir su experiencia & 3 & 2\\
     \hu{} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 4\\
     \hu{} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 4\\ 
     \hu{} & Un usuario quiere ver los comentarios de una publicación para conocer las experiencias y opiniones de otros usuarios & 1 & 4\\ 
     \hu{} & Un usuario quiere ver las valoraciones de una publicación para tenerlo en cuenta a la hora de tomar una decisión & 1 & 4\\ 
     \hu{hu:filtrar} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & - & -\\ 
     \hu{hu:personalizar} & Un usuario quiere personalizar un paquete para adaptarlo a sus gustos & - & - \\ 
-    \hu{} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 & 2\\ 
+    \hu{hu:seleccionar} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 & 2\\ 
     \hu{} & Un usuario quiere guardar un viaje/actividad para verlo en otro momento & 1 & 5\\ 
     \hu{}. & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 1 & 5\\
     \hu{hu:maleta} & Un usuario quiere gestionar su maleta & - & -\\
@@ -217,6 +217,82 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
   \tabitem Introducir nombre de usuario correcto y no introducir contraseña. Nos debe indicar que no hemos introducido contraseña\\
   \tabitem Introducir una contraseña correcta y no introducir un nombre de usuario. Nos debe indicar que no hemos introducido nombre de usuario\\
   \tabitem Introducir contraseña/nombre usuario incorrectos varias veces. A la tercera indica que no podemos volver a intentarlo hasta dentro de cierto tiempo\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  \bottomrule
+  \bottomrule
+\end{longtable}
+%% Subir publicaciones
+
+  \centering
+  \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+    \toprule
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:subir}}. Un usuario quiere subir una publicación para compartir su experiencia\\
+    
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Descripción}\\
+    \midrule
+    Un usuario puede subir una publicación para que el resto de usuarios puedan verla. Para ello, tendrá que seleccionar el tipo de publicación que es: evento, actividad, ruta o paquete. Luego debe seleccionar en el mapa el sitio (o sitios en caso de rutas/paquetes) donde se llevará a cabo. Este campo se rellenará correctamente cuando en las actividades y eventos solo haya una dirección y en ruta y paquete haya al menos dos. También debe añadir una descripción. En principio la descripción no tiene ninguna restricción, solo que no debe estar vacía. Finalmente, tiene la opción de añadir fotografías. 
+  \end{longtable}
+  \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+    \toprule
+    \textbf{Estimación} & 3 & \textbf{Prioridad} & 2 & \textbf{Entrega} & 1 \\
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Pruebas de aceptación}\\
+    \midrule
+    \tabitem Rellenar todos los campos correctamente salvo indicar el de tipo de actividad. Comprobar que el sistema informa que se debe indicar el tipo de actividad\\
+    \tabitem Rellenar todos los campos correctamente salvo indicar alguna dirección en el mapa. Comprobar que el sistema informa que se debe seleccionar la dirección\\
+    \tabitem Indicar que el tipo de publicación es ''Actividad'' y comprobar que la aplicación no permite seleccionar  más de una dirección en el mapa.\\
+    \tabitem Indicar que el tipo de publicación es ''Evento'' y comprobar que la aplicación no permite seleccionar  más de una dirección en el mapa\\
+    \tabitem Indicar que el tipo de publicación es ''Ruta'' y seleccionar solamente una dirección. La aplicación debe indicar que al menos tiene que contener dos direcciones\\
+    \tabitem Indicar que el tipo de publicación es ''Paquete'' y seleccionar solamente una dirección. La aplicación debe indicar que al menos tiene que contener dos direcciones\\
+    \tabitem Rellenar todos los campos correctamente dejando vacío el de ''Descripción''. Comprobar que la aplicación indica que la publicación debe de tener una descripción\\
+    \tabitem Rellenar todos los campos correctamente sin subir ninguna fotografía. Comprobar que se puede subir la publicación correctamente\\
+    \tabitem Rellenar todos los campos correctamente y añadir alguna fotografía. Comprobar que se puede subir la publicación correctamente\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  \bottomrule
+  \bottomrule
+\end{longtable}
+
+
+%% Seleccionar publicaciones
+
+  \centering
+  \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+    \toprule
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:seleccionar}}. Un usuario quiere seleccionar un viaje/actividad para realizarlo\\
+    
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Descripción}\\
+    \midrule
+    Los usuarios pueden seleccionar una publicación para indicar que la van a realizar. 
+  \end{longtable}
+  \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+    \toprule
+    \textbf{Estimación} & 3/2 & \textbf{Prioridad} & 2 & \textbf{Entrega} & 1 \\
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Pruebas de aceptación}\\
+    \midrule
+    \tabitem Indicar que se va a realizar una actividad y comprobar que realmente se marca como tal.\\
 \end{longtable}
 \begin{longtable}{p{1.028\linewidth}}
   \textbf{Observaciones}\\
