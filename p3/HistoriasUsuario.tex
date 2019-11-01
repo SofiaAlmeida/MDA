@@ -374,4 +374,78 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
   \bottomrule
 \end{longtable}
 
+
+%% Filtrar por lugar
+\centering
+\begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+	\toprule
+	\toprule
+	\textbf{Identificador} & \textbf{HU-\ref{hu:filtrar}.1}. El usuario puede realizar una búsqueda simple indicando los lugares que quiere que aparezcan y los que no\\
+	
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Descripción}\\
+	\midrule
+	Un usuario podrá realizar búsquedas de actividades/paquetes en las fechas en las que las quiere realizar
+\end{longtable}
+\begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+	\toprule
+	\textbf{Estimación} & 0.5 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 1 \\
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Pruebas de aceptación}\\
+	\midrule
+	\tabitem Realizar una búsqueda seleccionando los lugares que quiere que aparezcan, obtendremos una lista de publicaciones situadas en esos lugares\\
+	\tabitem Realizar una búsqueda excluyendo algún lugar, obtendremos una lista de publicaciones entre las que ninguna se sitúa en ese lugar\\
+	\tabitem Realizar una búsqueda seleccionando una ciudad de la que no existen publicaciones, obtendremos un mensaje indicando que no existen publicaciones en esa localización\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Observaciones}\\
+	\midrule
+	\bottomrule
+	\bottomrule
+\end{longtable}
+
+%% Filtrar por tipo actividad
+\centering
+\begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+	\toprule
+	\toprule
+	\textbf{Identificador} & \textbf{HU-\ref{hu:filtrar}.4}. Un usuario quiere realizar una búsqueda seleccionando o excluyendo un tipo específico de actividad entre: deportivas, culturales, gastronómicas, musicales\\
+	
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Descripción}\\
+	\midrule
+	Un usuario podrá realizar búsquedas de actividades/paquetes en las fechas en las que las quiere realizar
+\end{longtable}
+\begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+	\toprule
+	\textbf{Estimación} & 0.5 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 1 \\
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Pruebas de aceptación}\\
+	\midrule
+	\tabitem Realizar una búsqueda seleccionando actividades de tipo deportivo, obtendremos un listado de actividades solo de tipo deportivo\\
+	\tabitem Realizar una búsqueda seleccionando actividades de tipo cultural, obtendremos un listado de actividades solo de tipo cultural\\
+	\tabitem Realizar una búsqueda seleccionando actividades de tipo gastronómico, obtendremos un listado de actividades solo de tipo gastronómico\\
+	\tabitem Realizar una búsqueda seleccionando actividades de tipo musical, obtendremos un listado de actividades solo de tipo musical\\
+	\tabitem Realizar una búsqueda excluyendo actividades de un tipo, obtendremos una lista de actividades en la que no aparecerán las de este tipo\\
+	\tabitem Realizar una búsqueda incluyendo actividades de 2 tipos, obtendremos un listado en el que las actividades sean solo de estos dos tipos\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Observaciones}\\
+	\midrule
+	\bottomrule
+	\bottomrule
+\end{longtable}
+
 \end{document}
