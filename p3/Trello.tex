@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\usepackage[spanish]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{../Imagenes/}}
+
+\usepackage{titlepic}
+\usepackage{hyperref}
+
+%%% Tablas
+\usepackage{longtable}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+%% \usepackage{longtablex}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.7}
+
+%%%%%%%%%% Contador HU
+\newcounter{HUCounter}
+\newcommand{\hu}[1]{\refstepcounter{HUCounter}\textbf{\rmfamily HU-\theHUCounter}\label{#1}}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+{\scshape\LARGE Información para acceder a Trello \par}
+\vspace{1.5cm}
+
+\includegraphics[width=10cm]{Logo}
+
+\vspace{3cm}
+{\scshape\large \par}
+\vspace{1cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+\end{titlepage}
+\newpage
+
+\section{Enlaces de Trello}
+Tal y como indica la práctica, hemos usado la aplicación Trello para gestionar las historias de usuario. 
+
+\begin{itemize}
+\item \url{https://trello.com/invite/b/u0lqtGCP/d3617d7d9e3abaf875f1df2f7a7ec28d/makeatravel} \\
+
+Este es un enlace de invitación donde se encuentran las historias de usuario agrupadas por iteración. Para cada historia de usuario aparecen tanto la prioridad (al comienzo del nombre de la historia) que se le ha asignado como los puntos de historia (en la etiqueta correspondiente)
+
+\item \url{https://trello.com/invite/b/5Wi2rqx5/4f7ea1658934d19280be9b60fb97ffc7/sprint1} \\
+
+Este enlace dirige a un tablero con las historias de usuario incluidas en la primera iteración del proyecto. Aparte de la información que ya teníamos en el tablero inicial, se ha  añadido una descripción y las pruebas de aceptación para cada historia. También tienen asignados los programadores encargados de la misma. Finalmente, tenemos ya creadas las listas con los posibles estados en los que se encontrará cada historia durante el desarrollo del primer sprint. 
+\end{itemize}
+\end{document}
