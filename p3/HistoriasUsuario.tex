@@ -48,38 +48,38 @@ Lidia Martín Chica
 
 \section{Listado de Historias de Usuario}
 En el apartado de prioridad hemos escogido una escala del 1 al 6 siendo el 1: máxima prioridad y el 6: prioridad mínima.
-  \begin{longtable}{p{0.12\linewidth}p{0.7\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
+  \begin{longtable}{p{0.12\linewidth}p{0.7\linewidth}p{0.07\linewidth}p{0.07\linewidth}}
     \toprule
-    \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
+    \textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Prio.}\\
     \midrule
-     \hu{hu:registro} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2 & 1\\
-     \hu{hu:identificarse} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1 & 1\\
-     \hu{hu:ver_publicaciones} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2 & 2\\
+    \hu{hu:registro} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2 & 1\\
+    \hu{hu:identificarse} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1 & 1\\
+    \hu{hu:ver_publicaciones} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2 & 2\\
     \hu{hu:subir} & Un usuario quiere subir una publicación para compartir su experiencia & 3 & 2\\
-    \hu{} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 4\\
-    \hu{} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 4\\ 
-    \hu{} & Un usuario quiere ver los comentarios de una publicación para conocer las experiencias y opiniones de otros usuarios & 1 & 4\\ 
-    \hu{} & Un usuario quiere ver las valoraciones de una publicación para tenerlo en cuenta a la hora de tomar una decisión & 1 & 4\\ 
+    \hu{hu:valorar} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 4\\
+    \hu{hu:comentar} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 4\\ 
+    \hu{hu:ver_coment} & Un usuario quiere ver los comentarios de una publicación para conocer las experiencias y opiniones de otros usuarios & 1 & 4\\ 
+    \hu{hu:ver_val} & Un usuario quiere ver las valoraciones de una publicación para tenerlo en cuenta a la hora de tomar una decisión & 1 & 4\\ 
     \hu{hu:filtrar} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & - & -\\ 
     \hu{hu:personalizar} & Un usuario quiere personalizar un paquete para adaptarlo a sus gustos & - & - \\ 
     \hu{hu:seleccionar} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 & 2\\ 
-    \hu{} & Un usuario quiere guardar un viaje/actividad para verlo en otro momento & 1 & 5\\ 
-    \hu{}. & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 1 & 5\\
+    \hu{hu:guardar} & Un usuario quiere guardar un viaje/actividad para verlo en otro momento & 1 & 5\\ 
+    \hu{hu:historial} & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 3/2 & 5\\
     \hu{hu:maleta} & Un usuario quiere gestionar su maleta & - & -\\
-    \hu{} & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 2 & 6\\
-    \hu{} & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3/2 & 6\\
+    \hu{hu:gaudio} & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 2 & 6\\
+    \hu{hu:eaudio} & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3/2 & 6\\
 
     \bottomrule
 \end{longtable}
 
 \subsection{Historias que se han dividido en varias}
 
-  \begin{longtable}{p{0.13\linewidth}p{0.67\linewidth}p{0.15\linewidth}p{0.15\linewidth}}
+  \begin{longtable}{p{0.13\linewidth}p{0.67\linewidth}p{0.07\linewidth}p{0.07\linewidth}}
     \toprule
-    \textbf{Id HU} & \textbf{Título} & \textbf{Estimación} & \textbf{Prioridad}\\
+    \textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Prio.}\\
     \midrule
     
-    \textbf{HU-\ref{hu:filtrar}} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & - & -\\ 
+  \textbf{HU-\ref{hu:filtrar}} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & - & -\\ 
 	\textbf{HU-\ref{hu:filtrar}.1} & Un usuario quiere filtrar la búsqueda de las publicaciones por lugar & 1/2 & 3\\ 
 	\textbf{HU-\ref{hu:filtrar}.2} & Un usuario quiere filtrar la búsqueda de las publicaciones por fecha & 1/2 & 3\\ 
 	\textbf{HU-\ref{hu:filtrar}.3} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta, actividad, evento) & 1/2 & 3\\ 
@@ -123,7 +123,44 @@ Velocidad del equipo = 12 PH (por iteración)
 En base al esfuerzo necesario y la velocidad estimada del equipo, para el desarrollo del proyecto se van a realizar 4 entregas, cada una de ellas corresponderá a una iteración.
 \begin{itemize}
 \item \textbf{Entrega 1:} (AQUÍ PONEMOS LA FECHA DE ENTREGA) AQUÍ ESCRIBIRÍAMOS EL OBJETIVO
+
+
 \end{itemize}
+\section{Listado inicial del producto (Product Backlog)}
+La lista del producto con las historias de usuario que se usarán en el inicio del desarrollo es el siguiente.
+
+ \begin{longtable}{p{0.13\linewidth}p{0.65\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}}
+	\toprule
+	\textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Itr.} & \textbf{Entr.}\\
+	\midrule
+	\textbf{HU-\ref{hu:registro}} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2  & 1 & 1\\
+	\textbf{HU-\ref{hu:identificarse}} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1 & 1 & 1\\
+	\textbf{HU-\ref{hu:ver_publicaciones}} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2 & 1 & 1\\
+	\textbf{HU-\ref{hu:subir}} & Un usuario quiere subir una publicación para compartir su experiencia & 3 & 1 & 1\\
+	\textbf{HU-\ref{hu:filtrar}.1} & Un usuario quiere filtrar la búsqueda de las publicaciones por lugar & 1/2 & 1 & 1\\ 
+	\textbf{HU-\ref{hu:filtrar}.2} & Un usuario quiere filtrar la búsqueda de las publicaciones por fecha & 1/2 & 1 & 1\\ 
+	\textbf{HU-\ref{hu:filtrar}.3} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta, actividad, evento) & 1/2 & 1 & 1\\ 
+	\textbf{HU-\ref{hu:filtrar}.4} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de actividad (cultural, deportiva, etc)) & 1/2 & 1 & 1\\ 
+	\textbf{HU-\ref{hu:personalizar}.1} & Un usuario quiere eliminar una actividad de un paquete & 1/2 & 1 & 1\\ 
+	\textbf{HU-\ref{hu:seleccionar}} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 & 1 & 1\\ 
+	\textbf{HU-\ref{hu:valorar}} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 2 & 2\\
+	\textbf{HU-\ref{hu:comentar}} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 2 & 2\\ 
+	\textbf{HU-\ref{hu:ver_coment}} & Un usuario quiere ver los comentarios de una publicación para conocer las experiencias y opiniones de otros usuarios & 1 & 2 & 2\\
+	\textbf{HU-\ref{hu:ver_val}} & Un usuario quiere ver las valoraciones de una publicación para tenerlo en cuenta a la hora de tomar una decisión & 1 & 2 & 2\\  
+	\textbf{HU-\ref{hu:filtrar}.5} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más visitadas & 1/2 & 2 & 2\\ 
+	\textbf{HU-\ref{hu:filtrar}.6} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más realizadas & 1/2 & 2 & 2\\
+	\textbf{HU-\ref{hu:personalizar}.2} & Un usuario quiere añadir una actividad de un paquete & 1 & 2 & 2 \\ 
+	\textbf{HU-\ref{hu:personalizar}.3} & Un usuario quiere modificar el orden de las actividades de un paquete & 3/2 & 2 & 2 \\
+	\textbf{HU-\ref{hu:guardar}} & Un usuario quiere guardar un viaje/actividad para verlo en otro momento & 1 & 2 & 2\\ 
+	\textbf{HU-\ref{hu:historial}} & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 3/2 & 2 & 2\\
+	\textbf{HU-\ref{hu:maleta}.1} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el pronóstico meteorológico & 5 & 3 & 3\\
+	\textbf{HU-\ref{hu:gaudio}} & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 2 & 3 & 3\\
+	\textbf{HU-\ref{hu:eaudio}} & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3/2 & 3 & 3\\
+	\textbf{HU-\ref{hu:maleta}.2} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el tipo de actividad que va a realizar & 4 & 4 & 4\\
+	\textbf{HU-\ref{hu:maleta}.3} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según la duración del viaje & 4 & 4 & 4\\
+	\bottomrule
+\end{longtable}
+
 
 \section{Tarjetas de las HU}
 Se incluye una descripción completa de las historias de usuario que se van a tratar en la primera iteración del desarrollo, incluyendo los criterios de aceptación de cada una de ellas.
@@ -175,6 +212,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{1.028\linewidth}}
   \textbf{Observaciones}\\
   \midrule
+  Ninguna\\
   \bottomrule
   \bottomrule
 \end{longtable}
@@ -221,6 +259,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{1.028\linewidth}}
   \textbf{Observaciones}\\
   \midrule
+   Ninguna\\
   \bottomrule
   \bottomrule
 \end{longtable}
@@ -262,6 +301,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{1.028\linewidth}}
   \textbf{Observaciones}\\
   \midrule
+  Ninguna\\
   \bottomrule
   \bottomrule
 \end{longtable}
@@ -297,6 +337,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{1.028\linewidth}}
   \textbf{Observaciones}\\
   \midrule
+  Ninguna\\
   \bottomrule
   \bottomrule
 \end{longtable}
@@ -333,7 +374,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{1.028\linewidth}}
   \textbf{Observaciones}\\
   \midrule
-  Se ha considerado que el criterio para mostrar publicaciones cuando el usuario no ha establecido ningún filtro a su búsqueda es la localización.\\
+  Se ha considerado que el criterio para mostrar publicaciones cuando el usuario no ha establecido ningún filtro a su búsqueda es la localización\\
   \bottomrule
   \bottomrule
 \end{longtable}
@@ -370,6 +411,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{1.028\linewidth}}
   \textbf{Observaciones}\\
   \midrule
+  Ninguna\\
   \bottomrule
   \bottomrule
 \end{longtable}
@@ -388,7 +430,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{1.028\linewidth}}
 	\textbf{Descripción}\\
 	\midrule
-	Un usuario podrá realizar búsquedas de actividades/paquetes en las fechas en las que las quiere realizar
+	El usuario puede realizar una búsqueda simple indicando los lugares que quiere que aparezcan y los que no
 \end{longtable}
 \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
 	\toprule
@@ -406,6 +448,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{1.028\linewidth}}
 	\textbf{Observaciones}\\
 	\midrule
+	Ninguna\\
 	\bottomrule
 	\bottomrule
 \end{longtable}
@@ -415,7 +458,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
 	\toprule
 	\toprule
-	\textbf{Identificador} & \textbf{HU-\ref{hu:filtrar}.4}. Un usuario quiere realizar una búsqueda seleccionando o excluyendo un tipo específico de actividad entre: deportivas, culturales, gastronómicas, musicales\\
+	\textbf{Identificador} & \textbf{HU-\ref{hu:filtrar}.4}. Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de actividad (cultural, deportiva,etc)\\
 	
 	\bottomrule
 \end{longtable}
@@ -423,7 +466,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{1.028\linewidth}}
 	\textbf{Descripción}\\
 	\midrule
-	Un usuario podrá realizar búsquedas de actividades/paquetes en las fechas en las que las quiere realizar
+	 Un usuario quiere realizar una búsqueda seleccionando o excluyendo un tipo específico de actividad entre: deportivas, culturales, gastronómicas, musicales\\
 \end{longtable}
 \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
 	\toprule
@@ -444,6 +487,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{1.028\linewidth}}
 	\textbf{Observaciones}\\
 	\midrule
+	Ninguna\\
 	\bottomrule
 	\bottomrule
 \end{longtable}
@@ -453,7 +497,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
 	\toprule
 	\toprule
-	\textbf{Identificador} & \textbf{HU-\ref{hu:filtrar}.4}. 3 - Un usuario quiere eliminar una actividad de un paquete\\
+	\textbf{Identificador} & \textbf{HU-\ref{hu:personalizar}.1}. - Un usuario quiere eliminar una actividad de un paquete\\
 	
 	\bottomrule
 \end{longtable}
@@ -461,7 +505,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{1.028\linewidth}}
 	\textbf{Descripción}\\
 	\midrule
-	Un usuario podrá realizar búsquedas de actividades/paquetes en las fechas en las que las quiere realizar
+	Al personalizar una paquete o ruta, el usuario una de las opciones que tiene es eliminar las actividades que no le interesen
 \end{longtable}
 \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
 	\toprule
@@ -477,6 +521,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{1.028\linewidth}}
 	\textbf{Observaciones}\\
 	\midrule
+	Ninguna\\
 	\bottomrule
 	\bottomrule
 \end{longtable}
@@ -486,7 +531,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
 	\toprule
 	\toprule
-	\textbf{Identificador} & \textbf{HU-\ref{hu:filtrar}.4}. 3 - Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta,actividad, evento)\\
+	\textbf{Identificador} & \textbf{HU-\ref{hu:filtrar}.3}. Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta,actividad, evento)\\
 	
 	\bottomrule
 \end{longtable}
@@ -515,6 +560,7 @@ Se incluye una descripción completa de las historias de usuario que se van a tr
 \begin{longtable}{p{1.028\linewidth}}
 	\textbf{Observaciones}\\
 	\midrule
+	Ninguna\\
 	\bottomrule
 	\bottomrule
 \end{longtable}
