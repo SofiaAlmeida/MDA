@@ -1,0 +1,140 @@
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{../Imagenes/}}
+
+\usepackage[paper=portrait, pagesize]{typearea}
+\usepackage{titlepic}
+
+%%% Tablas
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.7}
+
+%%%%%%%%%% Contador HU
+\newcounter{HUCounter}
+\newcommand{\hu}[1]{\refstepcounter{HUCounter}\textbf{\rmfamily HU-\theHUCounter}\label{#1}}
+
+%%% Referencias cruzadas HU
+\usepackage{xr}
+\externaldocument{../p3/HistoriasUsuario}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+{\scshape\LARGE Plan de la iteración 1\par}
+\vspace{1.5cm}
+
+\includegraphics[width=10cm] {Logo}
+
+\vspace{3cm}
+{\scshape\large \par}
+\vspace{1cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+\end{titlepage}
+
+\newpage
+
+\section{Objetivos de la iteración}
+El objetivo que se ha diseñado para esta primera iteración es el prototipado de las funcionalidades básicas, como registro e identificación, así como subir una publicación y seleccionar un viaje.
+
+Esta iteración generará prototipos visuales para que el cliente pueda ver cómo serán las funcionalidades básicas de la aplicación.
+
+\section{Listado inicial de HU a desarrollar}
+\begin{longtable}{p{0.13\linewidth}p{0.65\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}}
+	\toprule
+	\textbf{Id HU} & \textbf{Título} & \textbf{Est.}\\
+	\midrule
+	\textbf{HU-\ref{hu:registro}} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2\\
+	\textbf{HU-\ref{hu:identificarse}} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1\\
+	\textbf{HU-\ref{hu:ver_publicaciones}} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2\\
+	\textbf{HU-\ref{hu:subir}} & Un usuario quiere subir una publicación para compartir su experiencia & 3\\
+	\textbf{HU-\ref{hu:filtrar}.1} & Un usuario quiere filtrar la búsqueda de las publicaciones por lugar & 1/2 \\ 
+	\textbf{HU-\ref{hu:filtrar}.2} & Un usuario quiere filtrar la búsqueda de las publicaciones por fecha & 1/2 \\
+	\textbf{HU-\ref{hu:filtrar}.3} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta, actividad, evento) & 1/2 \\
+	\textbf{HU-\ref{hu:filtrar}.4} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de actividad (cultural, deportiva, etc)) & 1/2 \\
+	\textbf{HU-\ref{hu:personalizar}.1} & Un usuario quiere eliminar una actividad de un paquete & 1/2\\ 
+	\textbf{HU-\ref{hu:seleccionar}} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 \\
+	\bottomrule
+\end{longtable}
+
+\section{Descomposición en tareas de desarrollo}
+Se incluye el resultado de la descomposición de las historias de usuario en tareas de desarrollo, así como la asignación a los desarrolladores y la estimación realizada de su duración (en horas).
+
+%% Filtrar por fecha
+\centering
+\begin{longtable}{p{0.18\linewidth}|p{0.6\linewidth}|p{0.2\linewidth}}
+	\toprule
+	\toprule
+	\textbf{Identificador} & \textbf{HU-\ref{hu:filtrar}.2}. Un usuario quiere filtrar la búsqueda de las publicaciones por fecha & \textbf{Est. (PH):} 1/2 \\
+	
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{0.18\linewidth}|p{0.4\linewidth}|p{0.18\linewidth}|p{0.2\linewidth}}
+	\toprule
+	\textbf{Identificador} & \textbf{Título de la tarea de desarrollo} & \textbf{Est. (horas)} & \textbf{Desarrollador} \\
+        Tarea \ref{hu:filtrar}.2 - 1 & Acceder a la base de datos y obtener las actividades que se encuentran en las fechas indicadas & est & \\
+        Tarea \ref{hu:filtrar}.2 - 2 & Añadir a la interfaz un calendario para poder filtrar por fecha & \\
+        Tarea \ref{hu:filtrar}.2 - 3 & Realizar pruebas de aceptación & \\
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Observaciones}\\
+	\midrule
+	Ninguna\\
+	\bottomrule
+	\bottomrule
+\end{longtable}
+
+%% Ver publicaciones
+\centering
+\begin{longtable}{p{0.18\linewidth}|p{0.6\linewidth}|p{0.2\linewidth}}
+	\toprule
+	\toprule
+	\textbf{Identificador} & \textbf{HU-\ref{hu:ver_publicaciones}}. Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & \textbf{Est. (PH):} 2\\ \\
+	
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{0.18\linewidth}|p{0.5\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}}
+	\toprule
+	\textbf{Identificador} & \textbf{Título de la tarea de desarrollo} & \textbf{Est.} & \textbf{Desarrollador} \\
+        Tarea \ref{hu:ver_publicaciones} - 1 & Acceder  a la base de datos y mostrar las actividades que se encuentran cerca de él & est & \\
+        Tarea \ref{hu:ver_publicaciones} - 2 & Realizar la interfaz de usuario & \\
+        Tarea \ref{hu:ver_publicaciones} - 3 & Realizar pruebas de aceptación & \\
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Observaciones}\\
+	\midrule
+	Ninguna\\
+	\bottomrule
+	\bottomrule
+\end{longtable}
+
+\section{Carga prevista en los desarrolladores}
+
+Información final sobre la carga prevista de trabajo de cada uno de los miembros del equipo de desarrollo en las tareas asignadas en la iteración.
+
+\section{Planificación temporal de la iteración}
+La planificación temporal que se ha utilizado para hacer las estimaciones es la siguiente:
+
+\end{document}
