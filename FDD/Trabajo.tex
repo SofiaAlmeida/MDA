@@ -15,11 +15,8 @@
 \usepackage{adjustbox}
 \usepackage{booktabs}
 \usepackage{multirow}
+\usepackage{url}
 \renewcommand{\arraystretch}{1.7}
-
-%%% Bibliografía
-\usepackage[backend=biber]{biblatex}
-\addbibresource{referencias.bib}
 
 \begin{document}
 
@@ -50,7 +47,8 @@ Lidia Martín Chica
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\section{Bibliografía}
 \nocite{*}
-\printbibliography
+\bibliographystyle{plain}
+\bibliography{referencias.bib}
 %[type=inbook,heading=subbibliography,title={Libros}]
 
 \end{document}
