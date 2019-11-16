@@ -1,0 +1,395 @@
+\documentclass[11pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{../Imagenes/}}
+
+\usepackage[paper=portrait, pagesize]{typearea}
+\usepackage{titlepic}
+
+%%% Tablas
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.7}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+{\scshape\LARGE Documento de Visión:\\MakeATravel \par}
+\vspace{1.5cm}
+
+\includegraphics[width=16cm]{Logo}
+
+\vspace{3cm}
+{\scshape\large \par}
+\vspace{1cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+\end{titlepage}
+\newpage
+
+\section*{Historial de Cambios}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.15\linewidth}p{0.1\linewidth}p{0.4\linewidth}p{0.25\linewidth}}
+    \toprule
+    \textbf{Fecha} & \textbf{Versión} & \textbf{Descripción} & \textbf{Autor}\\
+    \midrule
+    07/Oct/2019 & 1.0 & Propuesta inicial del documento & MVG LMC MAP PMFC SAB\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\newpage
+
+\tableofcontents
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                   INTRODUCCIÓN                      %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introducción}
+\subsection{Propósito}
+Este documento proporciona una visión general sobre la aplicación MakeATravel, recogiendo las necesidades y características del sistema de gestión de actividades y viajes. Así como algunas funcionalidades opcinales como consejos para hacer la maleta, dependiendo del tiempo que vaya a hacer en el destino o la duración del viaje, y mapas de las ciudades con explicaciones de las mismas.
+
+El documento se centra en definir el alcance, oportunidades de negocio, identificar los stakeholders y sus perfiles para poder llevar a cabo un desarrollo ajustado de la aplicación.
+
+Además, encontraremos un apartado donde definiremos detalladamente el producto (sección \ref{4}) que será desarrollado para empresa \textit{Platilla}.
+
+
+\subsection{Alcance}
+Nuestro producto constará de un entregable, una aplicación móvil, dicha aplicación servirá para planificar viajes y actividades telemáticamente.
+
+Esta aplicación la encontraremos en los sistemas operativos de Android e iOS, para su descarga habrá que acceder a Play Store o a App Store, respectivamente. 
+
+%%COMPLETAR
+\subsection{Definición, Acrónimos y Abreviaciones}
+
+UOA: Usuarios que ofrecen actividades.
+
+USEA: Usuarios que seleccionan actividades.
+
+UC: Usuarios que comentan.
+
+UV: Usuarios que valoran una actividad que han realizado.
+
+US: Usuarios del sistema, engloba a todo el conjunto de usuarios.
+
+MAP: Miguel Albertí Pons
+
+SAB: Sofía Almeida Bruno
+
+PMFC: Pedro Manuel Flores Crespo
+
+MVGP: María Victoria Granados Pozo
+
+LMC: Lidia Martín Chica
+
+
+
+\subsection{Resumen}
+Actualmente, viajar está en auge y los paquetes de las compañías están anticuados y poco personalizados. Además, si no quieres acudir a una agencia de viajes, donde podría incrementar el precio, o dedicar muchas horas a organizar un viaje que se adapte a ti, con esta aplicación pretendemos que a través de las experiencia vividas por otros usuarios puedas planear tu viaje ideal sin salir de la misma.
+
+En esta aplicación los usuarios tienen un papel principal, en primer lugar serán ellos los que \textbf{ofertan} sus experiencias y sus actividades, mediante fotos y descripciones, que otros usuarios podrán \textbf{valorar, comentar, seleccionar y personalizar} el viaje.
+
+Las publicaciones de los usuarios podrán ser de distintos tipos como \textbf{rutas} (gastronómicas, turísticas, ...), \textbf{eventos} (musicales, obras de teatro, ...) y \textbf{actividades} (deportivas, culturales, ...). Asímismo un usuario puede crear un \textbf{paquete} en el que agrupe varias publicaciones o seleccionar paquetes hechos y adaptarlos a sus intereses.
+
+Los principales objetivos que queremos cubrir son: la \textbf{facilidad} a la hora de organizar un viaje usando filtros que se amolden a lo que buscamos y basándonos en los comentarios y valoraciones de otros usuarios; \textbf{beneficiar económicamente} a aquellos usuarios cuyas publicaciones sean las mejor valoradas; el \textbf{acceso} a todo tipo de usuarios (con discapacidad, de cualquier edad, ...) a usar la aplicación.
+
+Otras funcionalidades que se podrían incorporar son: \textbf{audioguías} para las actividades culturales; recomendaciones para \textbf{hacer la maleta} según las actividades que se vayan a realizar, el destino o el tiempo.
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                   POSICIONAMIENTO                   %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Posicionamiento}
+\subsection{Oportunidad de Negocio}
+Actualmente si se quiere organizar un viaje o buscar una actividad,  requiere mucho tiempo y la visita de muchas páginas web para poder tener un viaje personalizado, o bien acudir a una agencia de viajes y pagar un precio excesivo para lo que te ofrecen.
+
+Con MakeATravel estos dos problemas son inexistentes, en una misma aplicación puedes tener miles de opciones para elegir y pagar con un solo click, sin ningún coste extra.
+
+\subsection{Declaración del Problema}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{El problema de} & Tener que visitar muchas páginas web
+    
+    Elevados costes de las agencias de viajes
+    
+    Desconocer empresas locales y pequeñas, que ofrecen actividades más económicas por la baja demanda\\
+    \textbf{Afecta} & Usuarios finales 
+    
+    Pequeño comercio\\
+    \textbf{El impacto del problema es} & Organizar tu viaje con total comodidad, ofreciendo actividades únicas a través de las experiencias de otras personas\\
+    \textbf{Una solución exitosa sería} & Encontrar viajes más baratos de los que puedes encontrar en el mercado actualmente. Además de ayudar a la promoción de pequeñas empresas que oferten actividades\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Solución propuesta}
+Para los usuarios finales que quieran organizar un viaje y se encuentran con las opciones de visitar muchas páginas web o pagar excesivos costes en agencias de viajes una opción sería utilizar una única aplicación móvil en la que puedan encontrar agrupada toda la información que necesiten en base a las experiencias y opiniones de otros usuarios. La aplicación a desarrollar, además de esto, permite la personalización de dichos viajes y actividades desde una interfaz gráfica sencilla disponible siempre que se tenga conexión a internet.
+
+Para los pequeños comercios que resultan desconocidos para los turistas y que por este hecho ofertan actividades a menor precio nuestra apliación les permitirá darse a conocer. Lo harán mediante las publicaciones de usuarios que sí se hayan detenido a encontrar estas empresas organizadoras de actividades.
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%             USUARIOS Y STAKEHOLDERS                 %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Descripción de Usuarios y Stakeholders}
+
+\subsection{Resumen de los stakeholders}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.2\linewidth}p{0.4\linewidth}p{0.4\linewidth}}
+    \toprule
+    \textbf{Nombre} & \textbf{Descripción} & \textbf{Responsabilidades} \\
+    \midrule
+    Pequeñas empresas de actividades & A través de publicidad que hagan los clientes de las actividades realizadas en sus establecimientos, saldrán beneficiados & Atraer a los turistas con sus ofertas\\
+    \bottomrule
+    \midrule
+    Equipo de Marketing& Grupo de personas que se encargarán de publicitar nuestro producto & Atraer a los futuros suaurios de la aplicación\\
+    \bottomrule
+    \midrule
+    Equipo de Desarrollo& Grupo de personas que se encargarán de desarrollar nuestra aplicación & Programar todas las funcionalidades del sistema y cumplir todo los requisitos\\
+    \bottomrule
+    \midrule
+    Compañias de viajes& Grupo de empresas asentadas en el sector que no ven con buenos ojos nuestra app por la posible perdida de ingresos & Ninguna\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Resumen de los usuarios}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.2\linewidth}p{0.4\linewidth}p{0.4\linewidth}}
+    \toprule
+    \textbf{Nombre} & \textbf{Descripción} & \textbf{Stakeholder} \\
+    \midrule
+    ACT\_1 UOA & Usuarios que ofertan viajes o actividades & STK1 Ofertar\\
+    ACT\_2 USEA & Usuarios que seleccionan una actividad o viaje, que haya realizado el usuario ACT\_1 & STK2 Seleccionar\\
+    ACT\_3 UC & Usuarios que comentan los post, ya sea por que tengan dudas sobre el paquete de viaje o por que la han realizado y desean compartir su experiencia & STK3 Comentar/Valorar\\
+    ACT\_4 UV & Usuarios que valoran una actividad o viaje. Para ello deberán de haberla realizado & STK3 Comentar/Valorar\\
+    ACT\_5 UOA & Usuarios que ofertan viajes o actividades & STK1 Ofertar\\
+    ACT\_6 US & Usuarios que se registrán para usar la aplicación &US \\
+    ACT\_7  Empleado de Marketing & Responsable de ofertas de lanzamiento, publicidad y otros aspectos relacionados con el marketing & STK4 Marketing\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Perfil de los Stakeholders}
+
+%PERFIL1
+\subsubsection{Empresas del Sector}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+       \textbf{Descripción} & Empresas del sector, son reticentes a la hora de conocer nuestra aplicación, dentro de este grupo se encuentran en mayor parte las empresas de viaje\\
+    \textbf{Responsabilidades} & Este stakeholder no tiene ninguna responsabilidad, aunque intentarán esforzarse para mejorar sus paquetes de viajes y actividades para que nuestra aplicación no cabida en el mercado\\
+    \textbf{Criterios de éxito} & Se medirá según en el número de clientes, perdidos y ganados, que tengan las agencias después de lanzar MakeATravel\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%PERFIL2
+\subsubsection{Equipo de desarrollo}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & Los programadores son el grupo encargado de realizar la parte técnica de la aplicación, es decir, tanto el \textit{frontend} como el \textit{backend}, aunque dentro de estas dos categorías encontramos varios grupos, sus éxitos y responsabilidades serán parecidas\\ 
+    \textbf{Responsabilidades} & Este stakeholder se encargará de programar todas las funcionalidades que se hayan definido\\
+    \textbf{Criterios de éxito} & Usar todas las funcionalidades de la aplicación sin ningún problema\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%PERFIL3
+\subsubsection{Departamento de Marketing}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & Departamento de Marketing\\ 
+    \textbf{Responsabilidades} & Este conjunto de usuarios tiene la misión de llevar a cabo una buena campaña publicitaria del producto \\
+    \textbf{Criterios de éxito} & Gran número de personas registradas que usen la aplicación\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%PERFIL4
+\subsubsection{Usuarios finales}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & Los usuarios finales son aquellos que usarán la aplicación.\\ 
+    \textbf{Responsabilidades} & Este conjunto de usuarios o tiene ninguna responsabilidad sobre el producto. \\
+    \textbf{Criterios de éxito} & Una vez nos descarguemos la aplicación como usuarios podremos decir que ha sido un éxito si organizamos un viaje a través de la app o si algún viaje/actividad ha sido seleccionada.\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+
+\subsection{Perfil de los Usuarios}
+%STK1
+\subsubsection{Ofertar}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & STK1 Ofertar\\
+    \textbf{Responsabilidades} & Usuarios que durante la realización del viaje o al finalizar, publican las actividades que han realizado, con fotos y descripciones con los datos de estas para que ayuden a los usuarios que quieran realizar las mismas\\
+    \textbf{Criterios de éxito} &  Compartir sus experiencias al viajar para obtener beneficios\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%STK2
+\subsubsection{Seleccionar}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & STK2 Seleccionar\\
+    \textbf{Responsabilidades} & Usuarios que seleccionan las publicaciones que se obtienen tras una filtración según lo que busque el usuario. Estas publicaciones son las de otros usuarios que ya han realizado la ruta, el viaje o la actividad\\
+    \textbf{Criterios de éxito} &  Elegir actividades según las prioridades del usuario\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%STK3.1
+\subsubsection{Comentar}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & STK3 Comentar\\
+    \textbf{Responsabilidades} & Usuarios que comentan las publicaciones, para recomendarla o para preguntar las dudas que tengan sobre la misma\\
+    \textbf{Criterios de éxito} &  Los usuarios que acceden a la publicación obtienen información\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%STK3.2
+\subsubsection{Valorar}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & STK3 Valorar\\
+    \textbf{Responsabilidades} & Usuarios que tras la realización de la ruta o actividad, valoran la actividad de 1 a 5 para ayudar a otros usuarios a decidirse a elegir o no una actividad. Si no se realiza no se podrá valorar\\
+    \textbf{Criterios de éxito} & Los usuarios que acceden a la publicación obtienen información \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%STK4
+\subsubsection{Marketing}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & STK4 Marketing\\
+    \textbf{Responsabilidades} & Responsable de la publicidad de la aplicación\\
+    \textbf{Criterios de éxito} &  La aplicación llega al máximo número de usuarios posible\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%STK5
+\subsubsection{Registrarse}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & STK5 Registrarse\\
+    \textbf{Responsabilidades} & Los usuarios de la aplicación deben registrarse para usarla. Para poder ofrecer actividades reales y que puedas seleccionarlas para realizarlas y posteriormente, valorarlas\\
+    \textbf{Criterios de éxito} &  Poder utilizar la aplicación\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%STK6
+\subsubsection{Identificarse}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.35\linewidth}|p{0.65\linewidth}}
+    \toprule
+    \textbf{Descripción} & STK6 Identificarse\\
+    \textbf{Responsabilidades} & Los usuarios de la aplicación deben identificarse para usarla. Para poder ofrecer actividades reales y que puedas seleccionarlas para realizarlas y posteriormente, valorarlas\\
+    \textbf{Criterios de éxito} & Poder utilizar la aplicación \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Necesidades clave de los Stakeholders o usuarios}
+          
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.15\linewidth}p{0.12\linewidth}p{0.15\linewidth}p{0.25\linewidth}p{0.25\linewidth}}
+    \toprule
+    \textbf{Necesidad} & \textbf{Prioridad} & \textbf{Incumbe} & \textbf{Solución Actual} & \textbf{Solución propuesta} \\
+    \midrule
+    Registrarse & 100 & A todos los usuarios & Apartado para registrarse & Apartado para registrarse\\
+    Identificarse & 80 & A todos los usuarios & Apartado para identificarse & Apartado para identificarse\\
+    Seleccionar & 300 & Usuarios que quieran seleccionar una actividad & Seleccionar las actividades propuestas por otros usuarios & Seleccionar las actividades propuestas por otros usuarios gracias a la aplicación de filtros\\
+    Ofertar & 250 & Usuarios que quieran ofertar actividades que han realizado & Estar registrado para ofrecer actividades que haya realizado el usuario & Estar registrado para ofrecer actividades que haya realizado el usuario\\
+    Comentar & 50 & Usuarios que quieran obtener o dar información de una actividad & Apartado para que los usuarios realicen los comentarios acerca de una actividad & Apartado para que los usuarios realicen los comentarios acerca de una actividad\\
+    Valorar & 20 & Usuarios que quieran dar su valoración de una actividad que hayan realizado & Apartado para que los usuarios realicen las valoraciones acerca de una actividad & Apartado para que los usuarios realicen las valoraciones acerca de una actividad \\
+    
+    \bottomrule
+  \end{tabular}
+\end{table}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%               RESUMEN DEL PRODUCTO                  %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Resumen del producto}\label{4}
+\subsection{Perspectiva del producto}
+El sistema a desarrollar es una aplicación para la empresa \textit{Platilla}. Con ella se podrán seleccionar, ofertar y valorar tanto rutas de viajes como actividades culturales.
+
+
+\subsection{Resumen de capacidades}
+A continuación se muestra una lista con los principales beneficios que obtendrá el cliente:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{0.4\linewidth}p{0.6\linewidth}}
+		\toprule
+		\textbf{Beneficion del Cliente} & \textbf{Características de Soporte} \\
+		\midrule
+		Mayor agilidad en la planificación del tiempo libre y vacaciones & Aplicación móvil desde la que realizar las consultas \\
+		Facilidad en la búsqueda de actividades y rutas & Mecanismo de búsqueda con diferentes filtros \\
+		Personalización & Posibilidad de edición de los paquetes ofertados por la aplicación \\
+		Conocer opinión de otros usuarios & Sección específica con comentarios de otras personas y valoraciones\\
+		Beneficio económico & Sistema de recompensas para los usuarios que suban las actividades/rutas más realizadas \\
+		
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\subsection{Supuestos y dependencias}
+
+Para cumplir unos estándares de desarrollo de software utilizaremos la ISO 9001, además para la realización de este proyecto se ha asumido que la aplicación  se utilizará en los sistemas iOS o android, por otro lado también se ha supuesto que cualquier persona puede utilizar la aplicación centrándonos en los usuarios de entre 20 y 50 años y personas ágiles con las tecnologías, hecho que hará que no haya ningún tutorial extenso, únicamente contará con una pequeña guía.
+
+Dependeremos de las páginas web o aplicaciones externas, para realizar los pagos y las reservas. La aplicación únicamente vinculará publicaciones de los usuarios con las páginas oficiales de, por ejemplo, actividades específicas u hoteles. 
+
+\end{document}

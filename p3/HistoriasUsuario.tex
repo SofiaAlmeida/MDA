@@ -1,0 +1,570 @@
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\usepackage[spanish]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{../Imagenes/}}
+
+\usepackage{titlepic}
+
+%%% Tablas
+\usepackage{longtable}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+%% \usepackage{longtablex}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.7}
+
+%%%%%%%%%% Contador HU
+\newcounter{HUCounter}
+\newcommand{\hu}[1]{\refstepcounter{HUCounter}\textbf{\rmfamily HU-\theHUCounter}\label{#1}}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+{\scshape\LARGE Historias de Usuario \par}
+\vspace{1.5cm}
+
+\includegraphics[width=10cm]{Logo}
+
+\vspace{3cm}
+{\scshape\large \par}
+\vspace{1cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+\end{titlepage}
+\newpage
+
+\section{Listado de Historias de Usuario}
+En el apartado de prioridad hemos escogido una escala del 1 al 6 siendo el 1: máxima prioridad y el 6: prioridad mínima.
+  \begin{longtable}{p{0.12\linewidth}p{0.7\linewidth}p{0.07\linewidth}p{0.07\linewidth}}
+    \toprule
+    \textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Prio.}\\
+    \midrule
+    \hu{hu:registro} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2 & 1\\
+    \hu{hu:identificarse} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1 & 1\\
+    \hu{hu:ver_publicaciones} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2 & 2\\
+    \hu{hu:subir} & Un usuario quiere subir una publicación para compartir su experiencia & 3 & 2\\
+    \hu{hu:valorar} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 4\\
+    \hu{hu:comentar} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 4\\ 
+    \hu{hu:ver_coment} & Un usuario quiere ver los comentarios de una publicación para conocer las experiencias y opiniones de otros usuarios & 1 & 4\\ 
+    \hu{hu:ver_val} & Un usuario quiere ver las valoraciones de una publicación para tenerlo en cuenta a la hora de tomar una decisión & 1 & 4\\ 
+    \hu{hu:filtrar} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & - & -\\ 
+    \hu{hu:personalizar} & Un usuario quiere personalizar un paquete para adaptarlo a sus gustos & - & - \\ 
+    \hu{hu:seleccionar} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 & 2\\ 
+    \hu{hu:guardar} & Un usuario quiere guardar un viaje/actividad para verlo en otro momento & 1 & 5\\ 
+    \hu{hu:historial} & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 3/2 & 5\\
+    \hu{hu:maleta} & Un usuario quiere gestionar su maleta & - & -\\
+    \hu{hu:gaudio} & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 2 & 6\\
+    \hu{hu:eaudio} & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3/2 & 6\\
+
+    \bottomrule
+\end{longtable}
+
+\subsection{Historias que se han dividido en varias}
+
+  \begin{longtable}{p{0.13\linewidth}p{0.67\linewidth}p{0.07\linewidth}p{0.07\linewidth}}
+    \toprule
+    \textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Prio.}\\
+    \midrule
+    
+  \textbf{HU-\ref{hu:filtrar}} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & - & -\\ 
+	\textbf{HU-\ref{hu:filtrar}.1} & Un usuario quiere filtrar la búsqueda de las publicaciones por lugar & 1/2 & 3\\ 
+	\textbf{HU-\ref{hu:filtrar}.2} & Un usuario quiere filtrar la búsqueda de las publicaciones por fecha & 1/2 & 3\\ 
+	\textbf{HU-\ref{hu:filtrar}.3} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta, actividad, evento) & 1/2 & 3\\ 
+	\textbf{HU-\ref{hu:filtrar}.4} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de actividad (cultural, deportiva, etc)) & 1/2 & 3\\ 
+	\textbf{HU-\ref{hu:filtrar}.5} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más visitadas & 1/2 & 4\\ 
+	\textbf{HU-\ref{hu:filtrar}.6} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más realizadas & 1/2 & 4\\ 
+	\midrule
+	\textbf{HU-\ref{hu:personalizar}} & Un usuario quiere personalizar un paquete para adaptarlo a sus gustos y presupuesto & - & - \\
+	\textbf{HU-\ref{hu:personalizar}.1} & Un usuario quiere eliminar una actividad de un paquete & 1/2 & 3 \\ 
+	\textbf{HU-\ref{hu:personalizar}.2} & Un usuario quiere añadir una actividad de un paquete & 1 & 3 \\ 
+	\textbf{HU-\ref{hu:personalizar}.3} & Un usuario quiere modificar el orden de las actividades de un paquete & 3/2 & 4 \\
+	\midrule 
+	\textbf{HU-\ref{hu:maleta}} & Un usuario quiere gestionar su maleta & - & -\\
+	\textbf{HU-\ref{hu:maleta}.1} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el pronóstico meteorológico & 5 & 6\\
+	\textbf{HU-\ref{hu:maleta}.2} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el tipo de actividad que va a realizar & 4 & 6\\
+	\textbf{HU-\ref{hu:maleta}.3} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según la duración del viaje & 4 & 6\\
+    \bottomrule
+  \end{longtable}
+
+\section{Cálculo de la velocidad del equipo}
+Partimos de un equipo de desarrollo formado  por 5 programadores  que van a dedicar un 60\% de su trabajo al proyecto, ya que el resto del tiempo lo utilizan para avanzar otros proyectos. 
+
+La duración de cada una de las iteraciones que vamos a realizar en el proyecto van a ser de 2 semanas. 
+La estimación realizada del esfuerzo de cada una de las historias de usuario se ha expresado en días ideales de programación. En nuestro
+entorno de trabajo estimamos que un día ideal de programación se va a corresponder con 2 a 3 días reales de trabajo. 
+
+La duración de una iteración va a ser: 
+
+1 iteración = 2 semanas = 6 días reales 
+
+La velocidad del equipo de desarrollo medido en puntos de historia es:  
+
+5 programadores * 6 = 30 días reales por iteración $\Longrightarrow$ de 10 a 15 PH por iteración.  
+Se ha decidido usar 12 puntos de historia (PH) como la velocidad estimada del equipo. 
+
+\section{Descripción de las entregas}
+
+Esfuerzo total del proyecto = 40 PH \\
+Velocidad del equipo = 12 PH (por iteración) 
+
+En base al esfuerzo necesario y la velocidad estimada del equipo, para el desarrollo del proyecto se van a realizar 3 entregas, donde las dos primeras corresponderán a una iteración cada una y la última contiene las historias de usuario de las dos últimas iteraciones.
+\begin{itemize}
+	\item \textbf{Entrega 1:} (17 de Noviembre de 2019) Implementación de las funcionalidades básicas, como registro e identificación, así como subir una publicación y seleccionar un viaje. Correspondiente con la iteración 1.
+	\item \textbf{Entrega 2:} (1 de Diciembre de 2019)  En esta etapa se implementarán funcionalidades relacionadas con la gestión del viaje/ruta para amoldarlo a lo que busque el cliente. Correspondiente con la iteración 2.
+	\item \textbf{Entrega 3:} (29 de Diciembre de 2019) Implementación de funcionalidades adicionales como grabar un audioguía y el vestuario. Correspondiente con las iteraciones 3 y 4.
+
+\end{itemize}
+
+\section{Listado inicial del producto (Product Backlog)}
+La lista del producto con las historias de usuario que se usarán en el inicio del desarrollo es el siguiente.
+
+ \begin{longtable}{p{0.13\linewidth}p{0.65\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}}
+	\toprule
+	\textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Itr.} & \textbf{Entr.}\\
+	\midrule
+	\textbf{HU-\ref{hu:registro}} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2  & 1 & 1\\
+	\textbf{HU-\ref{hu:identificarse}} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1 & 1 & 1\\
+	\textbf{HU-\ref{hu:ver_publicaciones}} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2 & 1 & 1\\
+	\textbf{HU-\ref{hu:subir}} & Un usuario quiere subir una publicación para compartir su experiencia & 3 & 1 & 1\\
+	\textbf{HU-\ref{hu:filtrar}.1} & Un usuario quiere filtrar la búsqueda de las publicaciones por lugar & 1/2 & 1 & 1\\ 
+	\textbf{HU-\ref{hu:filtrar}.2} & Un usuario quiere filtrar la búsqueda de las publicaciones por fecha & 1/2 & 1 & 1\\ 
+	\textbf{HU-\ref{hu:filtrar}.3} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta, actividad, evento) & 1/2 & 1 & 1\\ 
+	\textbf{HU-\ref{hu:filtrar}.4} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de actividad (cultural, deportiva, etc)) & 1/2 & 1 & 1\\ 
+	\textbf{HU-\ref{hu:personalizar}.1} & Un usuario quiere eliminar una actividad de un paquete & 1/2 & 1 & 1\\ 
+	\textbf{HU-\ref{hu:seleccionar}} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 & 1 & 1\\ 
+	\textbf{HU-\ref{hu:valorar}} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 2 & 2\\
+	\textbf{HU-\ref{hu:comentar}} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 2 & 2\\ 
+	\textbf{HU-\ref{hu:ver_coment}} & Un usuario quiere ver los comentarios de una publicación para conocer las experiencias y opiniones de otros usuarios & 1 & 2 & 2\\
+	\textbf{HU-\ref{hu:ver_val}} & Un usuario quiere ver las valoraciones de una publicación para tenerlo en cuenta a la hora de tomar una decisión & 1 & 2 & 2\\  
+	\textbf{HU-\ref{hu:filtrar}.5} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más visitadas & 1/2 & 2 & 2\\ 
+	\textbf{HU-\ref{hu:filtrar}.6} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más realizadas & 1/2 & 2 & 2\\
+	\textbf{HU-\ref{hu:personalizar}.2} & Un usuario quiere añadir una actividad de un paquete & 1 & 2 & 2 \\ 
+	\textbf{HU-\ref{hu:personalizar}.3} & Un usuario quiere modificar el orden de las actividades de un paquete & 3/2 & 2 & 2 \\
+	\textbf{HU-\ref{hu:guardar}} & Un usuario quiere guardar un viaje/actividad para verlo en otro momento & 1 & 2 & 2\\ 
+	\textbf{HU-\ref{hu:historial}} & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 3/2 & 2 & 2\\
+	\textbf{HU-\ref{hu:maleta}.1} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el pronóstico meteorológico & 5 & 3 & 3\\
+	\textbf{HU-\ref{hu:gaudio}} & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 2 & 3 & 3\\
+	\textbf{HU-\ref{hu:eaudio}} & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3/2 & 3 & 3\\
+	\textbf{HU-\ref{hu:maleta}.2} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el tipo de actividad que va a realizar & 4 & 4 & 3\\
+	\textbf{HU-\ref{hu:maleta}.3} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según la duración del viaje & 4 & 4 & 3\\
+	\bottomrule
+\end{longtable}
+
+
+\section{Tarjetas de las HU}
+Se incluye una descripción completa de las historias de usuario que se van a tratar en la primera iteración del desarrollo, incluyendo los criterios de aceptación de cada una de ellas.
+
+%%Registro
+  \centering
+  \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+    \toprule
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:registro}}. Un usuario quiere registrarse en la aplicación para poder planificar su viaje\\
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Descripción}\\
+    \midrule
+    Un usuario quiere registrarse en la aplicación para poder planificar su viaje. Cuando un usuario quiere registrarse debe introducir su nombre, que debe tener entre 2 y 20 caracteres, sus apellidos que deben tener entre 2 y 50 caracteres, su nombre de usuario que consta de un mínimo de 4 caracteres alfanuméricos y un máximo de 15 caracteres alfanuméricos, la contraseña, que deberá repetir y que consta de un mínimo de 8 caracteres alfanuméricos y un máximo de 15 caracteres alfanuméricos y un e-mail.
+  \end{longtable}
+
+  \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+    \toprule
+    \textbf{Estimación} & 2 & \textbf{Prioridad} & 1 & \textbf{Entrega} & 1\\
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Pruebas de aceptación}\\
+  \midrule
+  \tabitem No introducir algún campo del registro y comprobar que informa que no se han rellenado todos los campos, ya que son obligatorios\\
+  \tabitem Introducir todos los datos de usuario correctos y comprobar que se crea el usuario en la base de datos con su contraseña asociada y que recibe un e-mail de confirmación\\
+  \tabitem Introducir un nombre con más de 20 caracteres y comprobar que nos informa que el nombre es demasiado largo\\
+  \tabitem Introducir un nombre con menos de 2 caracteres y comprobar que nos informa que el nombre es demasiado corto\\
+  \tabitem Introducir unos apellidos con más de 50 caracteres y comprobar que nos informa que los apellidos son demasiado largos\\
+  \tabitem Introducir unos apellidos con menos de 2 caracteres y comprobar que nos informa que los apellidos son demasiado corto\\
+  \tabitem Introducir un nombre de usuario con más de 15 caracteres y comprobar que nos informa que el nombre de usuario es demasiado largo\\
+  \tabitem Introducir un nombre de usuario con menos de 4 caracteres y comprobar que nos informa que el nombre de usuario es demasiado corto\\
+  \tabitem Introducir un nombre de usuario con caracteres no alfanuméricos y comprobar que nos informa que el nombre de usuario incluye caracteres no permitidos\\
+  \tabitem Introducir un nombre de usuario en formato correcto y existente, con los demás datos introducidos correctamente y comprobar que no se vuelve a crear el usuario y que informa que ya hay un usuario con ese nombre de usuario\\
+  \tabitem Introducir una contraseña con más de 15 caracteres y comprobar que nos informa que la contraseña es demasiado larga\\
+  \tabitem Introducir una contraseña con menos de  8 caracteres y comprobar que nos informa que la contraseña es demasiado corta\\
+  \tabitem Introducir una contraseña en formato correcto y al repetirla escribir una en formato incorrecto y comprobar que informa que la contraseña no cumple el formato\\
+  \tabitem Introducir una contraseña con caracteres no alfanuméricos y comprobar que nos informa que la contraseña incluye caracteres no permitidos\\
+  \tabitem Introducir una contraseña en formato correcto y al repetirla escribir una contraseña distinta en formato correcto y comprobar que informa que las contraseñas no coinciden\\
+  \tabitem Introducir contraseña/nombre usuario incorrectos varias veces. A la tercera indica que no podemos volver a intentarlo hasta dentro de cierto tiempo\\
+  \tabitem Introducir un e-mail en formato correcto y que no existe y comprobar que al intentar enviar el correo, al no existir no lo envía y que informa que el e-mail introducido no existe\\
+  \tabitem Introducir un e-mail en formato no correcto y que por tanto, no existe y comprobar informa que el e-mail introducido no es correcto\\
+
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  Ninguna\\
+  \bottomrule
+  \bottomrule
+\end{longtable}
+\bigskip
+
+%%Identificación 
+
+  \centering
+  \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+    \toprule
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:identificarse}}. Un usuario quiere identificarse en la aplicación para acceder a su contenido\\
+    
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Descripción}\\
+    \midrule
+    Un usuario quiere identificarse en la aplicación para acceder a su contenido. Para iniciar sesión es necesario introducir el nombre de usuario y la contraseña. El nombre de usuario consta de un mínimo de 4 caracteres alfanuméricos y un máximo de 15 caracteres alfanuméricos. La contraseña consta de un mínimo de 8 caracteres alfanuméricos y un máximo de 15 caracteres alfanuméricos.
+  \end{longtable}
+  \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+    \toprule
+    \textbf{Estimación} & 1 & \textbf{Prioridad} & 1 & \textbf{Entrega} & 1 \\
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Pruebas de aceptación}\\
+  \midrule
+  \tabitem Comprobar que la contraseña no se muestra al escribirla\\
+  \tabitem Introducir un nombre de usuario existente con su contraseña correcta y comprobar que se inicia la sesión con ese usuario\\
+  \tabitem Introducir un nombre de usuario con más de 15 caracteres y la contraseña correcta y comprobar que nos informa que no podemos acceder\\
+  \tabitem Introducir un nombre de usuario con menos de 4 caracteres y la contraseña correcta y comprobar que nos informa que no podemos acceder\\
+  \tabitem Introducir un nombre de usuario con una longitud entre 4 y 15 caracteres pero no todos alfanuméricos y la contraseña correcta y comprobar que nos informa que no podemos acceder\\
+  \tabitem Introducir un nombre de usuario correcto y una contraseña incorrecta, una que no cumpla restricciones y comprobar que nos informa que no podemos entrar\\
+  \tabitem Introducir un nombre de usuario correcto y una contraseña incorrecta, que cumpla restricciones pero no coincida con la asociada al usuario en la base de datos y comprobar que nos informa que no podemos entrar\\
+  \tabitem Introducir un nombre de usuario que cumpla las restricciones pero no esté en la base de datos y contraseña correcta en formato y comprobar que no permite entrar en el sistema\\
+  \tabitem No introducir nombre de usuario y ni contraseña e intentar entrar en el sistema, no debe permitirlo\\
+  \tabitem Introducir nombre de usuario correcto y no introducir contraseña. Nos debe indicar que no hemos introducido contraseña\\
+  \tabitem Introducir una contraseña correcta y no introducir un nombre de usuario. Nos debe indicar que no hemos introducido nombre de usuario\\
+  \tabitem Introducir contraseña/nombre usuario incorrectos varias veces. A la tercera indica que no podemos volver a intentarlo hasta dentro de cierto tiempo\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+   Ninguna\\
+  \bottomrule
+  \bottomrule
+\end{longtable}
+%% Subir publicaciones
+
+  \centering
+  \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+    \toprule
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:subir}}. Un usuario quiere subir una publicación para compartir su experiencia\\
+    
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Descripción}\\
+    \midrule
+    Un usuario puede subir una publicación para que el resto de usuarios puedan verla. Para ello, tendrá que seleccionar el tipo de publicación que es: evento, actividad, ruta o paquete. Luego debe seleccionar en el mapa el sitio (o sitios en caso de rutas/paquetes) donde se llevará a cabo. Este campo se rellenará correctamente cuando en las actividades y eventos solo haya una dirección y en ruta y paquete haya al menos dos. También debe añadir una descripción. En principio la descripción no tiene ninguna restricción, solo que no debe estar vacía. Finalmente, tiene la opción de añadir fotografías. 
+  \end{longtable}
+  \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+    \toprule
+    \textbf{Estimación} & 3 & \textbf{Prioridad} & 2 & \textbf{Entrega} & 1 \\
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Pruebas de aceptación}\\
+    \midrule
+    \tabitem Rellenar todos los campos correctamente salvo indicar el de tipo de actividad. Comprobar que el sistema informa que se debe indicar el tipo de actividad\\
+    \tabitem Rellenar todos los campos correctamente salvo indicar alguna dirección en el mapa. Comprobar que el sistema informa que se debe seleccionar la dirección\\
+    \tabitem Indicar que el tipo de publicación es ''Actividad'' y comprobar que la aplicación no permite seleccionar  más de una dirección en el mapa.\\
+    \tabitem Indicar que el tipo de publicación es ''Evento'' y comprobar que la aplicación no permite seleccionar  más de una dirección en el mapa\\
+    \tabitem Indicar que el tipo de publicación es ''Ruta'' y seleccionar solamente una dirección. La aplicación debe indicar que al menos tiene que contener dos direcciones\\
+    \tabitem Indicar que el tipo de publicación es ''Paquete'' y seleccionar solamente una dirección. La aplicación debe indicar que al menos tiene que contener dos direcciones\\
+    \tabitem Rellenar todos los campos correctamente dejando vacío el de ''Descripción''. Comprobar que la aplicación indica que la publicación debe de tener una descripción\\
+    \tabitem Rellenar todos los campos correctamente sin subir ninguna fotografía. Comprobar que se puede subir la publicación correctamente\\
+    \tabitem Rellenar todos los campos correctamente y añadir alguna fotografía. Comprobar que se puede subir la publicación correctamente\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  Ninguna\\
+  \bottomrule
+  \bottomrule
+\end{longtable}
+
+
+%% Seleccionar publicaciones
+
+  \centering
+  \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+    \toprule
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:seleccionar}}. Un usuario quiere seleccionar un viaje/actividad para realizarlo\\
+    
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Descripción}\\
+    \midrule
+    Los usuarios pueden seleccionar una publicación para indicar que la van a realizar. 
+  \end{longtable}
+  \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+    \toprule
+    \textbf{Estimación} & 3/2 & \textbf{Prioridad} & 2 & \textbf{Entrega} & 1 \\
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Pruebas de aceptación}\\
+    \midrule
+    \tabitem Indicar que se va a realizar una actividad y comprobar que realmente se marca como tal.\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  Ninguna\\
+  \bottomrule
+  \bottomrule
+\end{longtable}
+
+%% Ver publicaciones
+
+  \centering
+  \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+    \toprule
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:ver_publicaciones}}. Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar\\
+    
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Descripción}\\
+    \midrule
+    Un usuario al tocar el icono de nuestra aplicación accederá a la página principal donde verá un listado de las actividades que se realizan cerca de él.
+  \end{longtable}
+  \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+    \toprule
+    \textbf{Estimación} & 2 & \textbf{Prioridad} & 2 & \textbf{Entrega} & 1 \\
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Pruebas de aceptación}\\
+    \midrule
+    \tabitem Asegurarse de que el usuario ha dado permisos de localización a la aplicación\\
+    \tabitem Abrir la aplicación y comprobar que aparecen publicaciones\\
+    \tabitem Asegurarse de que las actividades que aparecen están cerca de su ubicación actual\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  Se ha considerado que el criterio para mostrar publicaciones cuando el usuario no ha establecido ningún filtro a su búsqueda es la localización\\
+  \bottomrule
+  \bottomrule
+\end{longtable}
+
+%% Filtrar por fecha
+  \centering
+  \begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+    \toprule
+    \toprule
+    \textbf{Identificador} & \textbf{HU-\ref{hu:filtrar}.2}. Un usuario quiere filtrar la búsqueda de las publicaciones por fecha\\
+    
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Descripción}\\
+    \midrule
+    Un usuario podrá realizar búsquedas de actividades/paquetes en las fechas en las que las quiere realizar
+  \end{longtable}
+  \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+    \toprule
+    \textbf{Estimación} & 0.5 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 1 \\
+    \bottomrule
+  \end{longtable}
+
+  \begin{longtable}{p{1.028\linewidth}}
+    \textbf{Pruebas de aceptación}\\
+    \midrule
+    \tabitem Al realizar una búsqueda filtrando por fecha, comprobar que la fecha de inicio sea anterior a la de finalización\\
+    \tabitem Al realizar una búsqueda filtrando por fecha, comprobar que las fechas introducidas son fechas futuras\\
+    \tabitem Al realizar una búsqueda filtrando por fecha, verificar que en las fechas introducidas haya actividades\\
+    \tabitem Realizar una búsqueda filtrando por una fecha correcta, comprobar que aparecen publicaciones y que, efectivamente, se realizan en esas fechas\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  Ninguna\\
+  \bottomrule
+  \bottomrule
+\end{longtable}
+
+
+%% Filtrar por lugar
+\centering
+\begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+	\toprule
+	\toprule
+	\textbf{Identificador} & \textbf{HU-\ref{hu:filtrar}.1}. El usuario puede realizar una búsqueda simple indicando los lugares que quiere que aparezcan y los que no\\
+	
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Descripción}\\
+	\midrule
+	El usuario puede realizar una búsqueda simple indicando los lugares que quiere que aparezcan y los que no
+\end{longtable}
+\begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+	\toprule
+	\textbf{Estimación} & 0.5 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 1 \\
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Pruebas de aceptación}\\
+	\midrule
+	\tabitem Realizar una búsqueda seleccionando los lugares que quiere que aparezcan, obtendremos una lista de publicaciones situadas en esos lugares\\
+	\tabitem Realizar una búsqueda excluyendo algún lugar, obtendremos una lista de publicaciones entre las que ninguna se sitúa en ese lugar\\
+	\tabitem Realizar una búsqueda seleccionando una ciudad de la que no existen publicaciones, obtendremos un mensaje indicando que no existen publicaciones en esa localización\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Observaciones}\\
+	\midrule
+	Ninguna\\
+	\bottomrule
+	\bottomrule
+\end{longtable}
+
+%% Filtrar por tipo actividad
+\centering
+\begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+	\toprule
+	\toprule
+	\textbf{Identificador} & \textbf{HU-\ref{hu:filtrar}.4}. Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de actividad (cultural, deportiva,etc)\\
+	
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Descripción}\\
+	\midrule
+	 Un usuario quiere realizar una búsqueda seleccionando o excluyendo un tipo específico de actividad entre: deportivas, culturales, gastronómicas, musicales\\
+\end{longtable}
+\begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+	\toprule
+	\textbf{Estimación} & 0.5 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 1 \\
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Pruebas de aceptación}\\
+	\midrule
+	\tabitem Realizar una búsqueda seleccionando actividades de tipo deportivo, obtendremos un listado de actividades solo de tipo deportivo\\
+	\tabitem Realizar una búsqueda seleccionando actividades de tipo cultural, obtendremos un listado de actividades solo de tipo cultural\\
+	\tabitem Realizar una búsqueda seleccionando actividades de tipo gastronómico, obtendremos un listado de actividades solo de tipo gastronómico\\
+	\tabitem Realizar una búsqueda seleccionando actividades de tipo musical, obtendremos un listado de actividades solo de tipo musical\\
+	\tabitem Realizar una búsqueda excluyendo actividades de un tipo, obtendremos una lista de actividades en la que no aparecerán las de este tipo\\
+	\tabitem Realizar una búsqueda incluyendo actividades de 2 tipos, obtendremos un listado en el que las actividades sean solo de estos dos tipos\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Observaciones}\\
+	\midrule
+	Ninguna\\
+	\bottomrule
+	\bottomrule
+\end{longtable}
+
+%% Eliminar una actividad de un paquete
+\centering
+\begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+	\toprule
+	\toprule
+	\textbf{Identificador} & \textbf{HU-\ref{hu:personalizar}.1}. - Un usuario quiere eliminar una actividad de un paquete\\
+	
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Descripción}\\
+	\midrule
+	Al personalizar una paquete o ruta, el usuario una de las opciones que tiene es eliminar las actividades que no le interesen
+\end{longtable}
+\begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+	\toprule
+	\textbf{Estimación} & 0.5 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 1 \\
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Pruebas de aceptación}\\
+	\midrule
+	\tabitem Seleccionar la opción de eliminar una actividad y ver que si vuelvo a la imagen del paquete o ruta no aparece.\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Observaciones}\\
+	\midrule
+	Ninguna\\
+	\bottomrule
+	\bottomrule
+\end{longtable}
+
+%% Un usuario quiere filtrar la búsqueda de las publicaciones
+\centering
+\begin{longtable}{p{0.3\linewidth}|p{0.7\linewidth}}
+	\toprule
+	\toprule
+	\textbf{Identificador} & \textbf{HU-\ref{hu:filtrar}.3}. Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta,actividad, evento)\\
+	
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Descripción}\\
+	\midrule
+	Un usuario podrá realizar búsquedas de actividades/paquetes en las fechas en las que las quiere realizar
+\end{longtable}
+\begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+	\toprule
+	\textbf{Estimación} & 0.5 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 1 \\
+	\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Pruebas de aceptación}\\
+	\midrule
+	\tabitem Si selecciono la opción paquete, que los resultados solo sean paquetes.\\
+	\tabitem Si selecciono la opción ruta, que los resultado solo sean rutas.\\
+	\tabitem Si selecciono la opción actividad, que los resultados solo sean actividad.\\
+	\tabitem Si selecciono la opción evento, que los resultados solo sean eventos.\\
+	\tabitem Hacer una búsqueda excluyendo algún tipo de publicación.\\
+	\tabitem Hacer una búsqueda que incluya al menos dos tipos de publicaciones y aparezcan las publicaciones relativas a los tipos seleccionados.\\
+\end{longtable}
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Observaciones}\\
+	\midrule
+	Ninguna\\
+	\bottomrule
+	\bottomrule
+\end{longtable}
+
+\end{document}

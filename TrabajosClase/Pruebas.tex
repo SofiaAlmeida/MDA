@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{../Imagenes/}}
+
+\usepackage{titlepic}
+
+%%% Tablas
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.7}
+
+
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+\scshape\LARGE{Pruebas de aceptación\par}
+\vspace{1.5cm}
+
+\includegraphics[width=5cm]{escudoGR}
+
+\vspace{1.5cm}
+{\scshape\large \par}
+\vspace{1cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+
+
+\end{titlepage}
+\newpage
+
+\section{Pruebas de aceptación}
+  \begin{longtable}{p{0.12\linewidth}p{0.88\linewidth}}
+    \toprule
+    \textbf{HU-3} & Un usuario directivo quiere dar de alta a un socio para que la peña crezca\\
+    \bottomrule
+  \end{longtable}
+
+\begin{itemize}
+	\item  Comprobar que se completan todos los campos
+	\item  Comprobar que el nombre y apellidos no superen una longitud máxima
+	\item  Comprobar que la edad es mayor o igual que 18 y si la edad es menor de 18 años entonces tiene que tener un tutor asociado
+	\item Comprobar que el teléfono sigue el formato correcto (9 números + 2 opcionales)
+	\item  Comprobar que la dirección existe 
+	\item  Comprobar que el correo electrónico está en el formato correcto (correo@compañia.loquesea)
+	\item  Si marca que está abonado, comprobar que el número de abonado coincide, comprobar que es el asociado a este usuario
+	\item  Comprobar que se envía un email de confirmación
+\end{itemize}
+
+\begin{longtable}{p{0.12\linewidth}p{0.88\linewidth}}
+	\toprule
+	\textbf{HU-11} & Un socio de la peña quiere identificarse para entrar en la aplicación \\
+	\bottomrule
+\end{longtable}
+
+\begin{itemize}
+	\item Comprobar que el nombre de usuario existe 
+	\item Comprobar que la contraseña coincide con la que tiene registrada
+\end{itemize}
+
+\end{document}

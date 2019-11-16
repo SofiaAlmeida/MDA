@@ -1,0 +1,54 @@
+\documentclass[11pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{fontspec}
+\usepackage{listings}
+\usepackage{graphicx}
+%\graphicspath{{../Imagenes/}}
+
+\usepackage[paper=portrait, pagesize]{typearea}
+\usepackage{titlepic}
+
+%%% Tablas
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{url}
+\renewcommand{\arraystretch}{1.7}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+{\scshape\LARGE Metodología Ágil:\\ Feature Driven Development\par}
+\vspace{1.5cm}
+
+%\includegraphics[width=16cm] {}
+
+\vspace{3cm}
+{\scshape\large \par}
+\vspace{1cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+\end{titlepage}
+%\cite{SeminarioMunich}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% BIBLIOGRAFÍA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Bibliografía}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{referencias.bib}
+%[type=inbook,heading=subbibliography,title={Libros}]
+
+\end{document}
