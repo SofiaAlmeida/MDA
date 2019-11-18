@@ -22,17 +22,18 @@
 %%%%%%%%%% Contador HU
 \newcounter{HUCounter}
 \newcommand{\hu}[1]{\refstepcounter{HUCounter}\textbf{\rmfamily HU-\theHUCounter}\label{#1}}
-\setcounter{HUCounter}{16}
+
 %%% Referencias cruzadas HU
 \usepackage{xr}
 \externaldocument{../p3/HistoriasUsuario}
+
 
 \begin{document}
 
 \begin{titlepage}
 \centering
 \vspace{4.5cm}
-{\scshape\LARGE Plan de la iteración 1\par}
+{\scshape\LARGE Plan de la iteración 2\par}
 \vspace{1.5cm}
 
 \includegraphics[width=10cm] {Logo}
@@ -51,6 +52,34 @@ Lidia Martín Chica
 \end{titlepage}
 
 \newpage
+
+\section{Actualización Product Backlog}
+Tras añadir las historias de usuario surgidas en la revisión del sprint anterior, la pila del producto queda de la siguiente manera:
+
+\begin{longtable}{p{0.12\linewidth}p{0.7\linewidth}p{0.07\linewidth}p{0.07\linewidth}}
+    \toprule
+    \textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Prio.}\\
+    \midrule
+    \hu{hu:registro} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2 & 1\\
+    \hu{hu:identificarse} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1 & 1\\
+    \hu{hu:ver_publicaciones} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2 & 2\\
+    \hu{hu:subir} & Un usuario quiere subir una publicación para compartir su experiencia & 3 & 2\\
+    \hu{hu:valorar} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 4\\
+    \hu{hu:comentar} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 4\\ 
+    \hu{hu:ver_coment} & Un usuario quiere ver los comentarios de una publicación para conocer las experiencias y opiniones de otros usuarios & 1 & 4\\ 
+    \hu{hu:ver_val} & Un usuario quiere ver las valoraciones de una publicación para tenerlo en cuenta a la hora de tomar una decisión & 1 & 4\\ 
+    \hu{hu:filtrar} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & - & -\\ 
+    \hu{hu:personalizar} & Un usuario quiere personalizar un paquete para adaptarlo a sus gustos & - & - \\ 
+    \hu{hu:seleccionar} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 & 2\\ 
+    \hu{hu:guardar} & Un usuario quiere guardar un viaje/actividad para verlo en otro momento & 1 & 5\\ 
+    \hu{hu:historial} & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 3/2 & 5\\
+    \hu{hu:maleta} & Un usuario quiere gestionar su maleta & - & -\\
+    \hu{hu:gaudio} & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 2 & 6\\
+    \hu{hu:eaudio} & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3/2 & 6\\
+%TODO: AÑADIR NUEVAS
+    \bottomrule
+\end{longtable}
+
 
 \section{Objetivos de la iteración}
 El objetivo que se ha diseñado para esta primera iteración es el prototipado de las funcionalidades básicas, como registro e identificación, así como subir una publicación y seleccionar un viaje.
@@ -384,28 +413,6 @@ La planificación temporal que se ha utilizado para hacer las estimaciones es la
 
 \section{Desviaciones previstas}
 
-Durante el sprint se han realizado las siguientes modificaciones en las historias de usuario:
-
-\begin{itemize}
-\item \textbf{HU-\ref{hu:subir}}. Se añade el campo ``Título'' y ``Enlace''. 
-\end{itemize}
-
 Añadimos las siguientes historias de usuario a la lista del producto:
-
-\begin{itemize}
-\item \hu{hu:buscar}. Un usuario quiere buscar una publicación a partir de un texto.
-\item \hu{hu:ver_datos}. Un usuario quiere ver su información personal.
-\item \hu{hu:modificar_datos}. Un usuario quiere modificar sus datos personales.
-\item \hu{hu:marcar_realizado}. Un usuario quiere indicar que ha realizado una actividad.
-\item \hu{hu:cerrar_sesion}. Un usuario desea cerrar la sesión en la aplicación.
-\item \hu{hu:ver_publicadas}. Un usuario quiere ver sus propias publicaciones.
-\item \hu{hu:eliminar_deseo}. Un usuario quiere eliminar una actividad de su lista de deseos.
-\item \hu{hu:eliminar_voy_a_realizar}. Un usuario desea eliminar una actividad de su lista de actividades a realizar.
-\item \hu{hu:recuperar_contraseña}. Un usuario ha olvidado su contraseña y desea poder recuperarla.
-\item \hu{hu:saber_mas}. Un usuario desea conocer más información sobre una publicación en particular.
-\item \hu{hu:sobre_nosotros}. Un usuario quiere saber más informacón sobre quién ha desarrollado la aplicación.
-\item \hu{hu:ayuda}. Un usuario desea ver una guía sobre el uso de la aplicación.
-\item \hu{hu:eliminar_publicacion}. Un usuario desea eliminar una publicación que ha subido. 
-\end{itemize}
 
 \end{document}
