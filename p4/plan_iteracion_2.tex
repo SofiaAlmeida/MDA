@@ -1,3 +1,4 @@
+
 \documentclass[11pt]{article}
 \usepackage{fontspec}
 \usepackage[spanish]{babel}
@@ -129,23 +130,170 @@ Esta iteración generará prototipos visuales para que el cliente pueda ver cóm
 \section{Listado inicial de HU a desarrollar}
 \begin{longtable}{p{0.13\linewidth}p{0.65\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}}
 	\toprule
-	\textbf{Id HU} & \textbf{Título} & \textbf{Est.}\\
+	\textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Prio.}\\
 	\midrule
-	\textbf{HU-\ref{hu:registro}} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2\\
-	\textbf{HU-\ref{hu:identificarse}} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1\\
-	\textbf{HU-\ref{hu:ver_publicaciones}} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2\\
-	\textbf{HU-\ref{hu:subir}} & Un usuario quiere subir una publicación para compartir su experiencia & 3\\
-	\textbf{HU-\ref{hu:filtrar}.1} & Un usuario quiere filtrar la búsqueda de las publicaciones por lugar & 1/2 \\ 
-	\textbf{HU-\ref{hu:filtrar}.2} & Un usuario quiere filtrar la búsqueda de las publicaciones por fecha & 1/2 \\
-	\textbf{HU-\ref{hu:filtrar}.3} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta, actividad, evento) & 1/2 \\
-	\textbf{HU-\ref{hu:filtrar}.4} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de actividad (cultural, deportiva, etc)) & 1/2 \\
-	\textbf{HU-\ref{hu:personalizar}.1} & Un usuario quiere eliminar una actividad de un paquete & 1/2\\ 
-	\textbf{HU-\ref{hu:seleccionar}} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 \\
+		\hu{hu:saber_mas} & Un usuario desea conocer más información sobre una publicación en particular & 1 & 2 \\
+
+	\hu{hu:modificar_publicacion} & Un usuario desea modificar una publicación que ha subido & 1 & 2 \\	
+	
+	\textbf{HU-\ref{hu:personalizar}.2} & Un usuario quiere añadir una actividad de un paquete & 1 & 3 \\ 	
+
+	\hu{hu:buscar} & Un usuario quiere buscar una publicación a partir de un texto & 1/2 & 3 \\
+
+	\hu{hu:marcar_realizado} & Un usuario quiere indicar que ha realizado una actividad & 1/2 & 3 \\
+	
+	\hu{hu:ver_publicadas} & Un usuario quiere ver sus propias publicaciones & 1 & 3 \\
+	
+	\hu{hu:eliminar_voy_a_realizar} & Un usuario desea eliminar una actividad de su lista de actividades a realizar & 1/2 & 3 \\	
+		
+	\hu{hu:eliminar_publicacion} & Un usuario desea eliminar una publicación que ha subido & 1 & 3 \\	
+
+	\hu{hu:valorar} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 4\\
+
+	\hu{hu:comentar} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 4\\
+
+	\hu{hu:ver_realizadas} & Un usuario desea ver su lista de publicaciones ya realizadas & 3/2 & 4\\
+
+    
 	\bottomrule
 \end{longtable}
 
 \section{Pruebas de aceptación y tareas}
 Se incluye el resultado de la descomposición de las historias de usuario en tareas de desarrollo, así como la asignación a los desarrolladores y la estimación realizada de su duración. También se incluyen las pruebas de aceptación (en horas).
+
+
+%% Añadir actividad al paquete
+\begin{longtable}{p{0.18\linewidth}|p{0.8\linewidth}}
+  \rowcolor{LightCyan}
+  \textbf{Identificador} & \textbf{{HU-\ref{hu:personalizar}.2}}. Un usuario quiere añadir una actividad a un paquete \\  
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+	\toprule
+	\textbf{Estimación} & 1 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 2 \\
+	\bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Descripción}\\
+	\midrule
+	Al personalizar una paquete o ruta, el usuario una de las opciones que tiene es añadir paradas o lugares que no están inicialmente incluidas pero que ha decido incluir porque son de su interés. \\
+	\bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Pruebas de aceptación}\\
+	\midrule
+	\tabitem El usuario al añade una actividad al paquete y cuando vuelve a la publicación le aparece modificada.\\
+	\tabitem Comprobar que esa opción solo está disponible en las publicaciones de tipo paquete o ruta.\\
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{0.18\linewidth}|p{0.48\linewidth}|p{0.1\linewidth}|p{0.17\linewidth}}
+  \toprule
+  \textbf{Identificador} & \textbf{Título de la tarea de desarrollo} & \textbf{Est. (horas)} & \textbf{Desarrollador} \\
+  Tarea \ref{hu:personalizar}.2 - 1 &Crear interfaz de usuario & 3/2 &\\
+  Tarea \ref{hu:personalizar}.2 - 2 & Crear comando para  actualizar la entrada correspondiente en la base de datos  & 1/2 & \\
+  Tarea \ref{hu:personalizar}.2 - 3 & Crear documentación & 3/2 & \\
+  Tarea \ref{hu:personalizar}.2 - 4 & Realizar pruebas de aceptación & 1 &  \\
+  \bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  Ninguna\\
+  \bottomrule
+\end{longtable}
+
+%% Buscar publicación
+\begin{longtable}{p{0.18\linewidth}|p{0.8\linewidth}}
+  \rowcolor{LightCyan}
+  \textbf{Identificador} & \textbf{{HU-\ref{hu:buscar}}}. Un usuario quiere buscar una aplicación a partir de un texto \\  
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+	\toprule
+	\textbf{Estimación} & 1/2 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 2 \\
+	\bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Descripción}\\
+	\midrule
+	El usuario puede realizar una búsqueda de las publicaciones a partir de un texto, además se hará uso de las expresiones regulares por si el texto no estuviera completo. Quiere que ese texto tenga coincidencia con parte del título, descripción o ambas. Si no se indica nada se supone que se busca en ambos apartados.  \\
+	\bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Pruebas de aceptación}\\
+	\midrule
+	\tabitem Escribir un texto en el buscador y no seleccionar ninguna opción. Comprobar que aparecen publicaciones relacionadas en título y descripción.\\
+	\tabitem Escribir un texto seleccionando la opción de solo título y ver que aparecen las publicaciones deseadas.\\
+	\tabitem Escribir un texto seleccionando la opción de solo descripción y ver que aparecen las publicaciones deseadas.\\
+	\tabitem No escribir ningún texto en el buscador y querer buscar. La aplicación debe indicar que no se ha indicado ningún texto.\\
+	\tabitem Comprobar que si ninguna publicación coincide con el texto indicado aparece un mensaje indicando que no hay publicaciones que coincidan.\\
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{0.18\linewidth}|p{0.48\linewidth}|p{0.1\linewidth}|p{0.17\linewidth}}
+  \toprule
+  \textbf{Identificador} & \textbf{Título de la tarea de desarrollo} & \textbf{Est. (horas)} & \textbf{Desarrollador} \\
+  Tarea \ref{hu:buscar} - 1 & Crear interfaz de usuario & 3/2 &\\
+  Tarea \ref{hu:buscar} - 2 & Crear consulta para la base de datos & 1 & \\
+  Tarea \ref{hu:buscar} - 3 & Crear documentación & 1 & \\
+  Tarea \ref{hu:buscar} - 4 & Realizar pruebas de aceptación & 3/2 &  \\
+  \bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  Ninguna\\
+  \bottomrule
+\end{longtable}
+
+
+%% Marcar realizadas
+\begin{longtable}{p{0.18\linewidth}|p{0.8\linewidth}}
+  \rowcolor{LightCyan}
+  \textbf{Identificador} & \textbf{{HU-\ref{hu:marcar_realizado}}}. Un usuario quiere indicar que ha realizado una actividad \\  
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+	\toprule
+	\textbf{Estimación} & 1/2 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 2 \\
+	\bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Descripción}\\
+	\midrule
+	Los usuarios pueden seleccionar una publicación para indicar que la han realizado para tener un control de lo que ha hecho. \\
+	\bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+	\textbf{Pruebas de aceptación}\\
+	\midrule
+	\tabitem Indicar que se ha realizado una actividad y comprobar que realmente se marca como tal.\\
+
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{0.18\linewidth}|p{0.48\linewidth}|p{0.1\linewidth}|p{0.17\linewidth}}
+  \toprule
+  \textbf{Identificador} & \textbf{Título de la tarea de desarrollo} & \textbf{Est. (horas)} & \textbf{Desarrollador} \\
+  Tarea \ref{hu:marcar_realizado} - 1 & Crear base de datos & 1 &\\
+  Tarea \ref{hu:marcar_realizado} - 2 & Crear comando para insertar actividad en la vase de datos & 1/2 & \\
+  Tarea \ref{hu:marcar_realizado} - 3 & Integrar selección con la visualización de las publicaciones & 1/2 & \\
+  Tarea \ref{hu:marcar_realizado} - 4 & Realizar pruebas de aceptación & 1/5 &  \\
+  \bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  Ninguna\\
+  \bottomrule
+\end{longtable}
 
 %% Comentar
 \begin{longtable}{p{0.18\linewidth}|p{0.8\linewidth}}
@@ -180,7 +328,7 @@ Se incluye el resultado de la descomposición de las historias de usuario en tar
   Tarea \ref{hu:comentar} - 1 & Realizar los cambios necesarios con la base de datos & 1/2 &\\
   Tarea \ref{hu:comentar} - 2 & Crear comando para insertar el usuario en la base de datos & 1 & \\
   Tarea \ref{hu:comentar} - 3 & Crear documentación & 1/2 & \\
-  Tarea \ref{hu:registro} - 4 & Realizar pruebas de aceptación & 1/2 &  \\
+  Tarea \ref{hu:comentar} - 4 & Realizar pruebas de aceptación & 1/2 &  \\
   \bottomrule
 \end{longtable}
 \vspace{-0.8cm}
