@@ -34,23 +34,23 @@
 \begin{document}
 
 \begin{titlepage}
-\centering
-\vspace{4.5cm}
-{\scshape\LARGE Plan de la iteración 2\par}
-\vspace{1.5cm}
+  \centering
+  \vspace{4.5cm}
+         {\scshape\LARGE Plan de la iteración 2\par}
+         \vspace{1.5cm}
 
-\includegraphics[width=10cm] {Logo}
+         \includegraphics[width=10cm] {Logo}
 
-\vspace{3cm}
-{\scshape\large \par}
-\vspace{1cm}
+         \vspace{3cm}
+                {\scshape\large \par}
+                \vspace{1cm}
 
-{Miguel Albertí Pons\\
-Sofía Almeida Bruno\\
-Pedro Manuel Flores Crespo\\
-María Victoria Granados Pozo\\
-Lidia Martín Chica
-\par}
+                {Miguel Albertí Pons\\
+                  Sofía Almeida Bruno\\
+                  Pedro Manuel Flores Crespo\\
+                  María Victoria Granados Pozo\\
+                  Lidia Martín Chica
+                  \par}
 
 \end{titlepage}
 
@@ -60,65 +60,64 @@ Lidia Martín Chica
 Tras añadir las historias de usuario surgidas en la revisión del sprint anterior, la pila del producto queda de la siguiente manera (señaladas en verde las historias de usuario completadas en la iteración anterior):
 
 \begin{longtable}{p{0.12\linewidth}p{0.7\linewidth}p{0.07\linewidth}p{0.07\linewidth}}
-    \toprule
-    \textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Prio.}\\
-    \midrule
-    \rowcolor{dollarbill}
-    \hu{hu:registro} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2 & 1\\
-    \rowcolor{dollarbill}
-    \hu{hu:identificarse} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1 & 1\\
-    \rowcolor{dollarbill}
-    \hu{hu:ver_publicaciones} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2 & 2\\
-    \rowcolor{dollarbill}
-    \hu{hu:subir} & Un usuario quiere subir una publicación para compartir su experiencia & 3 & 2\\
-    \hu{hu:valorar} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 4\\
-    \hu{hu:comentar} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 4\\ 
-    \hu{hu:ver_coment} & Un usuario quiere ver los comentarios de una publicación para conocer las experiencias y opiniones de otros usuarios & 1 & 4\\ 
-    \hu{hu:ver_val} & Un usuario quiere ver las valoraciones de una publicación para tenerlo en cuenta a la hora de tomar una decisión & 1 & 4\\ 
-    \hu{hu:filtrar} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & - & -\\ 
-    \rowcolor{dollarbill}
-    \textbf{HU-\ref{hu:filtrar}.1} & Un usuario quiere filtrar la búsqueda de las publicaciones por lugar & 1/2 & 3\\ 
-    \rowcolor{dollarbill}
-    \textbf{HU-\ref{hu:filtrar}.2} & Un usuario quiere filtrar la búsqueda de las publicaciones por fecha & 1/2 & 3\\ 
-    \rowcolor{dollarbill}
-    \textbf{HU-\ref{hu:filtrar}.3} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta, actividad, evento) & 1/2 & 3\\ 
-    \rowcolor{dollarbill}
-    \textbf{HU-\ref{hu:filtrar}.4} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de actividad (cultural, deportiva, etc)) & 1/2 & 3\\ 
-    \textbf{HU-\ref{hu:filtrar}.5} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más visitadas & 1/2 & 4\\ 
-    \textbf{HU-\ref{hu:filtrar}.6} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más realizadas & 1/2 & 4\\
-    \hu{hu:personalizar} & Un usuario quiere personalizar un paquete para adaptarlo a sus gustos & - & - \\ 
-    \rowcolor{dollarbill}
-    \textbf{HU-\ref{hu:personalizar}.1} & Un usuario quiere eliminar una actividad de un paquete & 1/2 & 3 \\ 
-    \textbf{HU-\ref{hu:personalizar}.2} & Un usuario quiere añadir una actividad de un paquete & 1 & 3 \\ 
-    \textbf{HU-\ref{hu:personalizar}.3} & Un usuario quiere modificar el orden de las actividades de un paquete & 3/2 & 4 \\
-    \rowcolor{dollarbill}
-    \hu{hu:seleccionar} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 & 2\\ 
-    \hu{hu:guardar} & Un usuario quiere guardar un viaje/actividad para verlo en otro momento & 1 & 5\\ 
-    \hu{hu:historial} & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 3/2 & 5\\
-    \hu{hu:maleta} & Un usuario quiere gestionar su maleta & - & -\\
-    \textbf{HU-\ref{hu:maleta}.1} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el pronóstico meteorológico & 5 & 6\\
-    \textbf{HU-\ref{hu:maleta}.2} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el tipo de actividad que va a realizar & 4 & 6\\
-    \textbf{HU-\ref{hu:maleta}.3} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según la duración del viaje & 4 & 6\\
-    \hu{hu:gaudio} & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 2 & 6\\
-    \hu{hu:eaudio} & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3/2 & 6\\
-%TODO: AÑADIR NUEVAS
-	\hu{hu:buscar} & Un usuario quiere buscar una publicación a partir de un texto & 1/2 & 3 \\
-	\hu{hu:ver_datos} & Un usuario quiere ver su información personal & 1 & 5 \\
-	\hu{hu:modificar_datos} & Un usuario quiere modificar sus datos personales & 2 & 5 \\
-	\hu{hu:marcar_realizado} & Un usuario quiere indicar que ha realizado una actividad & 1/2 & 3 \\
-	\hu{hu:cerrar_sesion} & Un usuario desea cerrar la sesión en la aplicación & 1/2 & 5 \\
-	\hu{hu:ver_publicadas} & Un usuario quiere ver sus propias publicaciones & 1 & 3 \\
-	\hu{hu:eliminar_deseo} & Un usuario quiere eliminar una actividad de su lista de deseos & 1/2 & 5 \\
-	\hu{hu:eliminar_voy_a_realizar} & Un usuario desea eliminar una actividad de su lista de actividades a realizar & 1/2 & 3 \\
-	\hu{hu:recuperar_contraseña} & Un usuario ha olvidado su contraseña y desea poder recuperarla & 1/2 & 5 \\
-	\hu{hu:saber_mas} & Un usuario desea conocer más información sobre una publicación en particular & 1 & 2 \\
-	\hu{hu:sobre_nosotros} & Un usuario quiere saber más información sobre quién ha desarrollado la aplicación & 1 & 5 \\
-	\hu{hu:ayuda} & Un usuario desea ver una guía sobre el uso de la aplicación & 3 & 6 \\
-	\hu{hu:eliminar_publicacion} & Un usuario desea eliminar una publicación que ha subido & 1 & 3 \\
-	\hu{hu:modificar_publicacion} & Un usuario desea modificar una publicación que ha subido & 1 & 2 \\
-    \hu{hu:ver_realizar} & Un usuario quiere ver la lista de publicaciones a realizar & 3/2 & 3\\
-    \hu{hu:ver_realizadas} & Un usuario desea ver su lista de publicaciones ya realizadas & 3/2 & 4\\
-        \bottomrule
+  \toprule
+  \textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Prio.}\\
+  \midrule
+  \rowcolor{dollarbill}
+  \hu{hu:registro} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2 & 1\\
+  \rowcolor{dollarbill}
+  \hu{hu:identificarse} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1 & 1\\
+  \rowcolor{dollarbill}
+  \hu{hu:ver_publicaciones} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2 & 2\\
+  \rowcolor{dollarbill}
+  \hu{hu:subir} & Un usuario quiere subir una publicación para compartir su experiencia & 3 & 2\\
+  \hu{hu:valorar} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 4\\
+  \hu{hu:comentar} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 4\\ 
+  \hu{hu:ver_coment} & Un usuario quiere ver los comentarios de una publicación para conocer las experiencias y opiniones de otros usuarios & 1 & 4\\ 
+  \hu{hu:ver_val} & Un usuario quiere ver las valoraciones de una publicación para tenerlo en cuenta a la hora de tomar una decisión & 1 & 4\\ 
+  \hu{hu:filtrar} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & - & -\\ 
+  \rowcolor{dollarbill}
+  \textbf{HU-\ref{hu:filtrar}.1} & Un usuario quiere filtrar la búsqueda de las publicaciones por lugar & 1/2 & 3\\ 
+  \rowcolor{dollarbill}
+  \textbf{HU-\ref{hu:filtrar}.2} & Un usuario quiere filtrar la búsqueda de las publicaciones por fecha & 1/2 & 3\\ 
+  \rowcolor{dollarbill}
+  \textbf{HU-\ref{hu:filtrar}.3} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta, actividad, evento) & 1/2 & 3\\ 
+  \rowcolor{dollarbill}
+  \textbf{HU-\ref{hu:filtrar}.4} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de actividad (cultural, deportiva, etc)) & 1/2 & 3\\ 
+  \textbf{HU-\ref{hu:filtrar}.5} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más visitadas & 1/2 & 4\\ 
+  \textbf{HU-\ref{hu:filtrar}.6} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más realizadas & 1/2 & 4\\
+  \hu{hu:personalizar} & Un usuario quiere personalizar un paquete para adaptarlo a sus gustos & - & - \\ 
+  \rowcolor{dollarbill}
+  \textbf{HU-\ref{hu:personalizar}.1} & Un usuario quiere eliminar una actividad de un paquete & 1/2 & 3 \\ 
+  \textbf{HU-\ref{hu:personalizar}.2} & Un usuario quiere añadir una actividad de un paquete & 1 & 3 \\ 
+  \textbf{HU-\ref{hu:personalizar}.3} & Un usuario quiere modificar el orden de las actividades de un paquete & 3/2 & 4 \\
+  \rowcolor{dollarbill}
+  \hu{hu:seleccionar} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 & 2\\ 
+  \hu{hu:guardar} & Un usuario quiere guardar un viaje/actividad para verlo en otro momento & 1 & 5\\ 
+  \hu{hu:historial} & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 3/2 & 5\\
+  \hu{hu:maleta} & Un usuario quiere gestionar su maleta & - & -\\
+  \textbf{HU-\ref{hu:maleta}.1} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el pronóstico meteorológico & 5 & 6\\
+  \textbf{HU-\ref{hu:maleta}.2} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el tipo de actividad que va a realizar & 4 & 6\\
+  \textbf{HU-\ref{hu:maleta}.3} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según la duración del viaje & 4 & 6\\
+  \hu{hu:gaudio} & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 2 & 6\\
+  \hu{hu:eaudio} & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3/2 & 6\\
+  \hu{hu:buscar} & Un usuario quiere buscar una publicación a partir de un texto & 1/2 & 3 \\
+  \hu{hu:ver_datos} & Un usuario quiere ver su información personal & 1 & 5 \\
+  \hu{hu:modificar_datos} & Un usuario quiere modificar sus datos personales & 2 & 5 \\
+  \hu{hu:marcar_realizado} & Un usuario quiere indicar que ha realizado una actividad & 1/2 & 3 \\
+  \hu{hu:cerrar_sesion} & Un usuario desea cerrar la sesión en la aplicación & 1/2 & 5 \\
+  \hu{hu:ver_publicadas} & Un usuario quiere ver sus propias publicaciones & 1 & 3 \\
+  \hu{hu:eliminar_deseo} & Un usuario quiere eliminar una actividad de su lista de deseos & 1/2 & 5 \\
+  \hu{hu:eliminar_voy_a_realizar} & Un usuario desea eliminar una actividad de su lista de actividades a realizar & 1/2 & 3 \\
+  \hu{hu:recuperar_contraseña} & Un usuario ha olvidado su contraseña y desea poder recuperarla & 1/2 & 5 \\
+  \hu{hu:saber_mas} & Un usuario desea conocer más información sobre una publicación en particular & 1 & 2 \\
+  \hu{hu:sobre_nosotros} & Un usuario quiere saber más información sobre quién ha desarrollado la aplicación & 1 & 5 \\
+  \hu{hu:ayuda} & Un usuario desea ver una guía sobre el uso de la aplicación & 3 & 6 \\
+  \hu{hu:eliminar_publicacion} & Un usuario desea eliminar una publicación que ha subido & 1 & 3 \\
+  \hu{hu:modificar_publicacion} & Un usuario desea modificar una publicación que ha subido & 1 & 2 \\
+  \hu{hu:ver_realizar} & Un usuario quiere ver la lista de publicaciones a realizar & 3/2 & 3\\
+  \hu{hu:ver_realizadas} & Un usuario desea ver su lista de publicaciones ya realizadas & 3/2 & 4\\
+  \bottomrule
 \end{longtable}
 
 
@@ -128,37 +127,136 @@ Esta iteración generará prototipos visuales para que el cliente pueda ver cóm
 
 \section{Listado inicial de HU a desarrollar}
 \begin{longtable}{p{0.13\linewidth}p{0.65\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}}
-	\toprule
-	\textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Prio.}\\
-	\midrule
-	\textbf{HU-\ref{hu:saber_mas}} & Un usuario desea conocer más información sobre una publicación en particular & 1 & 2 \\
+  \toprule
+  \textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Prio.}\\
+  \midrule
+  \textbf{HU-\ref{hu:saber_mas}} & Un usuario desea conocer más información sobre una publicación en particular & 1 & 2 \\
 
-	\textbf{HU-\ref{hu:modificar_publicacion}} & Un usuario desea modificar una publicación que ha subido & 1 & 2 \\	
-	
-	\textbf{HU-\ref{hu:personalizar}.2} & Un usuario quiere añadir una actividad de un paquete & 1 & 3 \\ 	
+  \textbf{HU-\ref{hu:modificar_publicacion}} & Un usuario desea modificar una publicación que ha subido & 1 & 2 \\	
+  
+  \textbf{HU-\ref{hu:personalizar}.2} & Un usuario quiere añadir una actividad de un paquete & 1 & 3 \\ 	
 
-	\textbf{HU-\ref{hu:buscar}} & Un usuario quiere buscar una publicación a partir de un texto & 1/2 & 3 \\
+  \textbf{HU-\ref{hu:buscar}} & Un usuario quiere buscar una publicación a partir de un texto & 1/2 & 3 \\
 
-	\textbf{HU-\ref{hu:marcar_realizado}} & Un usuario quiere indicar que ha realizado una actividad & 1/2 & 3 \\
-	
-	\textbf{HU-\ref{hu:ver_publicadas}} & Un usuario quiere ver sus propias publicaciones & 1 & 3 \\
-	
-	\textbf{HU-\ref{hu:eliminar_voy_a_realizar}} & Un usuario desea eliminar una actividad de su lista de actividades a realizar & 1/2 & 3 \\	
-		
-	\textbf{HU-\ref{hu:eliminar_publicacion}} & Un usuario desea eliminar una publicación que ha subido & 1 & 3 \\	
+  \textbf{HU-\ref{hu:marcar_realizado}} & Un usuario quiere indicar que ha realizado una actividad & 1/2 & 3 \\
+  
+  \textbf{HU-\ref{hu:ver_publicadas}} & Un usuario quiere ver sus propias publicaciones & 1 & 3 \\
+  
+  \textbf{HU-\ref{hu:eliminar_voy_a_realizar}} & Un usuario desea eliminar una actividad de su lista de actividades a realizar & 1/2 & 3 \\	
+  
+  \textbf{HU-\ref{hu:eliminar_publicacion}} & Un usuario desea eliminar una publicación que ha subido & 1 & 3 \\	
 
-	\textbf{HU-\ref{hu:valorar}} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 4\\
+  \textbf{HU-\ref{hu:valorar}} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 4\\
 
-	\textbf{HU-\ref{hu:comentar}} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 4\\
+  \textbf{HU-\ref{hu:comentar}} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 4\\
 
-	\textbf{HU-\ref{hu:ver_realizadas}} & Un usuario desea ver su lista de publicaciones a realizar & 3/2 & 3\\
+  \textbf{HU-\ref{hu:ver_realizadas}} & Un usuario desea ver su lista de publicaciones a realizar & 3/2 & 3\\
 
-    
-	\bottomrule
+  
+  \bottomrule
 \end{longtable}
 
 \section{Pruebas de aceptación y tareas}
 Se incluye el resultado de la descomposición de las historias de usuario en tareas de desarrollo, así como la asignación a los desarrolladores y la estimación realizada de su duración. También se incluyen las pruebas de aceptación (en horas).
+
+%% Saber más
+\begin{longtable}{p{0.18\linewidth}|p{0.8\linewidth}}
+  \rowcolor{LightCyan}
+  \textbf{Identificador} & \textbf{HU-\ref{hu:saber_mas}}. Un usuario desea conocer más información sobre una publicación en particular\\  
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+  \toprule
+  \textbf{Estimación} & 1 & \textbf{Prioridad} & 2 & \textbf{Entrega} & 2 \\
+  \bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Descripción}\\
+  \midrule
+  Un usuario desde la página principal, ya sea con la aplicación o no de filtros de búsqueda, accederá a una descripción completa de una publicación determinada en la que aparece el título de la publicación, el tipo de publicación que es: evento, actividad, ruta o paquete, un mapa con el sitio (o sitios en caso de rutas/paquetes) donde se llevará a cabo, una descripción más completa junto con las fotografías si están disponibles y el nombre del usuario que ha subido la publicación. Además, se muestra, si es necesario, un enlace para saber más información o para la realización de pagos, por ejemplo.
+  Finalmente, en la parte baja de la pantalla el usuario podrá observar los comentarios y valoraciones de otros usuarios así como realizar las suyas propias.
+  \\
+  \bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Pruebas de aceptación}\\
+  \midrule
+  \tabitem Comprobar que se puede acceder a la información de todas las publicaciones en la lista de la página principal.\\
+  \tabitem Comprobar que se muestran todos los datos de la publicación indicados en la descripción que están incluidos en la base de datos.\\
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{0.18\linewidth}|p{0.48\linewidth}|p{0.1\linewidth}|p{0.17\linewidth}}
+  \toprule
+  \textbf{Identificador} & \textbf{Título de la tarea de desarrollo} & \textbf{Est. (horas)} & \textbf{Desarrollador} \\
+  Tarea \ref{hu:saber_mas} - 1 & Crear la interfaz de usuario con la descripción completa de la publicación & 2 &\\
+  Tarea \ref{hu:saber_mas} - 2 & Realizar las pruebas de aceptación  & 1/2 & \\
+  Tarea \ref{hu:saber_mas} - 3 & Mostrar la información de la base de datos & 1/2 & \\
+  Tarea \ref{hu:saber_mas} - 4 & Crear la documentación & 1/2 &  \\
+  \bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  Ninguna\\
+  \bottomrule
+\end{longtable}
+
+%% Modificar una publicación subida
+\begin{longtable}{p{0.18\linewidth}|p{0.8\linewidth}}
+  \rowcolor{LightCyan}
+  \textbf{Identificador} & \textbf{{HU-\ref{hu:modificar_publicacion}}}. Un usuario desea modificar una publicación que ha subido \\  
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
+  \toprule
+  \textbf{Estimación} & 1 & \textbf{Prioridad} & 2& \textbf{Entrega} & 2 \\
+  \bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Descripción}\\
+  \midrule
+  Un usuario, después de haber subido una publicación, decide modificar algún dato que ha introducido. Así, desde su lista de publicaciones subidas accede a las publicaciones que ha subido y desde ahí puede modificar. Cuando modifica una publicación se deben cumplir los mismos requisitos que al subir una publicación desde cero. \\
+  \bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Pruebas de aceptación}\\
+  \midrule
+  \tabitem Rellenar todos los campos correctamente salvo indicar el de tipo de actividad. Comprobar que el sistema informa que se debe indicar el tipo de actividad.\\
+  \tabitem Rellenar todos los campos correctamente salvo indicar alguna dirección en el mapa. Comprobar que el sistema informa que se debe seleccionar la dirección.\\
+  \tabitem Indicar que el tipo de publicación es "Actividad" y comprobar que la aplicación no permite seleccionar más de una dirección en el mapa.\\
+  \tabitem Indicar que el tipo de publicación es "Evento" y comprobar que la aplicación no permite seleccionar más de una dirección en el mapa.\\
+  \tabitem Indicar que el tipo de publicación es "Ruta" y seleccionar solamente una dirección. La aplicación debe indicar que al menos tiene que contener dos direcciones.\\
+  \tabitem Indicar que el tipo de publicación es "Paquete" y seleccionar solamente una dirección. La aplicación debe indicar que al menos tiene que contener dos direcciones.\\
+  \tabitem Rellenar todos los campos correctamente dejando vacío el de "Descripción". Comprobar que la aplicación indica que la publicación debe de tener una descripción.\\
+  \tabitem Rellenar todos los campos correctamente sin subir ninguna fotografía. Comprobar que se puede subir la publicación correctamente.\\
+  \tabitem Rellenar todos los campos correctamente y añadir alguna fotografía. Comprobar que se puede subir la publicación correctamente.\\
+  \tabitem Dejar vacío el campo título y comprobar que no deja subir la publicación indicando que debe rellenar dicho campo.\\
+  \tabitem Dejar vacío el campo del enlace y comprobar que podemos subir la publicación.\\
+  \tabitem No modificar nada y comprobar que el sistema informa de que no se han realizado cambios y la publicación subida anteriormente no se modifica.\\
+  \tabitem Comprobar que al modificar algún apartado se sube la publicación con el apartado modificado y se elimina la anterior.\\
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{0.18\linewidth}|p{0.48\linewidth}|p{0.1\linewidth}|p{0.17\linewidth}}
+  \toprule
+  \textbf{Identificador} & \textbf{Título de la tarea de desarrollo} & \textbf{Est. (horas)} & \textbf{Desarrollador} \\
+  Tarea \ref{hu:modificar_publicacion} - 1 & Crear interfaz de usuario & 4 &\\
+  Tarea \ref{hu:modificar_publicacion} - 2 & Crear comando para  modificar la publicación en la base de datos  & 1/2 & \\
+  Tarea \ref{hu:modificar_publicacion} - 3 & Crear documentación & 2 & \\
+  Tarea \ref{hu:modificar_publicacion} - 4 & Realizar pruebas de aceptación & 3 &  \\
+  \bottomrule
+\end{longtable}
+\vspace{-0.8cm}
+\begin{longtable}{p{1.028\linewidth}}
+  \textbf{Observaciones}\\
+  \midrule
+  Ninguna\\
+  \bottomrule
+\end{longtable}
 
 
 %% Añadir actividad al paquete
@@ -168,23 +266,23 @@ Se incluye el resultado de la descomposición de las historias de usuario en tar
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
-	\toprule
-	\textbf{Estimación} & 1 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 2 \\
-	\bottomrule
+  \toprule
+  \textbf{Estimación} & 1 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 2 \\
+  \bottomrule
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{1.028\linewidth}}
-	\textbf{Descripción}\\
-	\midrule
-	Al personalizar una paquete o ruta, el usuario una de las opciones que tiene es añadir paradas o lugares que no están inicialmente incluidas pero que ha decido incluir porque son de su interés. \\
-	\bottomrule
+  \textbf{Descripción}\\
+  \midrule
+  Al personalizar una paquete o ruta, el usuario una de las opciones que tiene es añadir paradas o lugares que no están inicialmente incluidas pero que ha decido incluir porque son de su interés. \\
+  \bottomrule
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{1.028\linewidth}}
-	\textbf{Pruebas de aceptación}\\
-	\midrule
-	\tabitem El usuario al añade una actividad al paquete y cuando vuelve a la publicación le aparece modificada.\\
-	\tabitem Comprobar que esa opción solo está disponible en las publicaciones de tipo paquete o ruta.\\
+  \textbf{Pruebas de aceptación}\\
+  \midrule
+  \tabitem El usuario añade una actividad al paquete y cuando vuelve a la publicación le aparece modificada.\\
+  \tabitem Comprobar que esa opción solo está disponible en las publicaciones de tipo paquete o ruta.\\
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{0.18\linewidth}|p{0.48\linewidth}|p{0.1\linewidth}|p{0.17\linewidth}}
@@ -211,26 +309,26 @@ Se incluye el resultado de la descomposición de las historias de usuario en tar
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
-	\toprule
-	\textbf{Estimación} & 1/2 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 2 \\
-	\bottomrule
+  \toprule
+  \textbf{Estimación} & 1/2 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 2 \\
+  \bottomrule
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{1.028\linewidth}}
-	\textbf{Descripción}\\
-	\midrule
-	El usuario puede realizar una búsqueda de las publicaciones a partir de un texto, además se hará uso de las expresiones regulares por si el texto no estuviera completo. Quiere que ese texto tenga coincidencia con parte del título, descripción o ambas. Si no se indica nada se supone que se busca en ambos apartados.\\
-	\bottomrule
+  \textbf{Descripción}\\
+  \midrule
+  El usuario puede realizar una búsqueda de las publicaciones a partir de un texto, además se hará uso de las expresiones regulares por si el texto no estuviera completo. Quiere que ese texto tenga coincidencia con parte del título, descripción o ambas. Si no se indica nada se supone que se busca en ambos apartados.\\
+  \bottomrule
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{1.028\linewidth}}
-	\textbf{Pruebas de aceptación}\\
-	\midrule
-	\tabitem Escribir un texto en el buscador y no seleccionar ninguna opción. Comprobar que aparecen publicaciones relacionadas en título y descripción.\\
-	\tabitem Escribir un texto seleccionando la opción de solo título y ver que aparecen las publicaciones deseadas.\\
-	\tabitem Escribir un texto seleccionando la opción de solo descripción y ver que aparecen las publicaciones deseadas.\\
-	\tabitem No escribir ningún texto en el buscador y querer buscar. La aplicación debe indicar que no se ha indicado ningún texto.\\
-	\tabitem Comprobar que si ninguna publicación coincide con el texto indicado aparece un mensaje indicando que no hay publicaciones que coincidan.\\
+  \textbf{Pruebas de aceptación}\\
+  \midrule
+  \tabitem Escribir un texto en el buscador y no seleccionar ninguna opción. Comprobar que aparecen publicaciones relacionadas en título y descripción.\\
+  \tabitem Escribir un texto seleccionando la opción de solo título y ver que aparecen las publicaciones deseadas.\\
+  \tabitem Escribir un texto seleccionando la opción de solo descripción y ver que aparecen las publicaciones deseadas.\\
+  \tabitem No escribir ningún texto en el buscador y querer buscar. La aplicación debe indicar que no se ha indicado ningún texto.\\
+  \tabitem Comprobar que si ninguna publicación coincide con el texto indicado aparece un mensaje indicando que no hay publicaciones que coincidan.\\
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{0.18\linewidth}|p{0.48\linewidth}|p{0.1\linewidth}|p{0.17\linewidth}}
@@ -258,22 +356,22 @@ Se incluye el resultado de la descomposición de las historias de usuario en tar
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
-	\toprule
-	\textbf{Estimación} & 1/2 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 2 \\
-	\bottomrule
+  \toprule
+  \textbf{Estimación} & 1/2 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 2 \\
+  \bottomrule
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{1.028\linewidth}}
-	\textbf{Descripción}\\
-	\midrule
-	Los usuarios pueden seleccionar una publicación para indicar que la han realizado para tener un control de lo que ha hecho. \\
-	\bottomrule
+  \textbf{Descripción}\\
+  \midrule
+  Los usuarios pueden seleccionar una publicación para indicar que la han realizado para tener un control de lo que ha hecho. \\
+  \bottomrule
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{1.028\linewidth}}
-	\textbf{Pruebas de aceptación}\\
-	\midrule
-	\tabitem Indicar que se ha realizado una actividad y comprobar que realmente se marca como tal.\\
+  \textbf{Pruebas de aceptación}\\
+  \midrule
+  \tabitem Indicar que se ha realizado una actividad y comprobar que realmente se marca como tal.\\
 
 \end{longtable}
 \vspace{-0.8cm}
@@ -301,24 +399,24 @@ Se incluye el resultado de la descomposición de las historias de usuario en tar
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
-	\toprule
-	\textbf{Estimación} & 2 & \textbf{Prioridad} & 4 & \textbf{Entrega} & 2 \\
-	\bottomrule
+  \toprule
+  \textbf{Estimación} & 2 & \textbf{Prioridad} & 4 & \textbf{Entrega} & 2 \\
+  \bottomrule
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{1.028\linewidth}}
-	\textbf{Descripción}\\
-	\midrule
-	Un usuario después de seleccionar una publicación quiere poner un comentario para poner su experiencia, por ejemplo si ha hecho algún cambio de actividades dentro de una ruta o paquete, o bien comentar las dudas que tenga como horarios o precios. \\
-	\bottomrule
+  \textbf{Descripción}\\
+  \midrule
+  Un usuario después de seleccionar una publicación quiere poner un comentario para poner su experiencia, por ejemplo si ha hecho algún cambio de actividades dentro de una ruta o paquete, o bien comentar las dudas que tenga como horarios o precios. \\
+  \bottomrule
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{1.028\linewidth}}
-	\textbf{Pruebas de aceptación}\\
-	\midrule
-	\tabitem Rellenar el campo de comentarios.\\
-	\tabitem Rellenar el campo del nombre de usuario (es opcional).\\
-	\tabitem Comprobar que se han guardado los cambios, volviendo a recargar la página.\\
+  \textbf{Pruebas de aceptación}\\
+  \midrule
+  \tabitem Rellenar el campo de comentarios.\\
+  \tabitem Rellenar el campo del nombre de usuario (es opcional).\\
+  \tabitem Comprobar que se han guardado los cambios, volviendo a recargar la página.\\
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{0.18\linewidth}|p{0.48\linewidth}|p{0.1\linewidth}|p{0.17\linewidth}}
@@ -341,47 +439,47 @@ Se incluye el resultado de la descomposición de las historias de usuario en tar
 
 %% Ver publicaciones ya realizadas
 \begin{longtable}{p{0.18\linewidth}|p{0.8\linewidth}}
-	\rowcolor{Orange}
-	\textbf{Identificador} & \textbf{HU-\ref{hu:ver_realizar}}. Un usuario desea ver su lista de publicaciones a realizar \\  
+  \rowcolor{Orange}
+  \textbf{Identificador} & \textbf{HU-\ref{hu:ver_realizar}}. Un usuario desea ver su lista de publicaciones a realizar \\  
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}|p{0.18\linewidth}|p{0.1\linewidth}}
-	\toprule
-	\textbf{Estimación} & 3/2 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 2 \\
-	\bottomrule
+  \toprule
+  \textbf{Estimación} & 3/2 & \textbf{Prioridad} & 3 & \textbf{Entrega} & 2 \\
+  \bottomrule
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{1.028\linewidth}}
-	\textbf{Descripción}\\
-	\midrule
-	Un usuario entra en la aplicación y abre el menú lateral, selecciona la lista de publicaciones ya realizadas. Ahora aparece una lista con las publicaciones, estas se podrán valorar sino han sido valoradas ya. \\
-	\bottomrule
+  \textbf{Descripción}\\
+  \midrule
+  Un usuario entra en la aplicación y abre el menú lateral, selecciona la lista de publicaciones ya realizadas. Ahora aparece una lista con las publicaciones, estas se podrán valorar sino han sido valoradas ya. \\
+  \bottomrule
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{1.028\linewidth}}
-	\textbf{Pruebas de aceptación}\\
-	\midrule
-	\tabitem Comprobar que la lista contiene la publicaciones que de verdad se han realizado.\\
-	\tabitem Comprobar que entre las publicaciones mostradas se encuentran las valoradas.\\
-	\tabitem Comprobar que está bien enlazado el menú lateral con la página que muestra las publicaciones realizadas.\\
+  \textbf{Pruebas de aceptación}\\
+  \midrule
+  \tabitem Comprobar que la lista contiene la publicaciones que de verdad se han realizado.\\
+  \tabitem Comprobar que entre las publicaciones mostradas se encuentran las valoradas.\\
+  \tabitem Comprobar que está bien enlazado el menú lateral con la página que muestra las publicaciones realizadas.\\
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{0.18\linewidth}|p{0.48\linewidth}|p{0.1\linewidth}|p{0.17\linewidth}}
-	\toprule
-	\textbf{Identificador} & \textbf{Título de la tarea de desarrollo} & \textbf{Est. (horas)} & \textbf{Desarrollador} \\
-	Tarea \ref{hu:ver_realizadas} - 1 & Realizar las pruebas de aceptación & 1/2 &\\
-	Tarea \ref{hu:ver_realizadas} - 2 & Realizar la integración con el menú lateral & 1/2 & \\
-	Tarea \ref{hu:ver_realizadas} - 3 & Crear documentación & 1/2 & \\
-	Tarea \ref{hu:ver_realizadas} - 4 & Realizar la interfaz de usuario con la lista de publicación & 3/2 &  \\
-	Tarea \ref{hu:ver_realizadas} - 5 & Mostrar la información de la base de datos & 1/2 &  \\
-	\bottomrule
+  \toprule
+  \textbf{Identificador} & \textbf{Título de la tarea de desarrollo} & \textbf{Est. (horas)} & \textbf{Desarrollador} \\
+  Tarea \ref{hu:ver_realizadas} - 1 & Realizar las pruebas de aceptación & 1/2 &\\
+  Tarea \ref{hu:ver_realizadas} - 2 & Realizar la integración con el menú lateral & 1/2 & \\
+  Tarea \ref{hu:ver_realizadas} - 3 & Crear documentación & 1/2 & \\
+  Tarea \ref{hu:ver_realizadas} - 4 & Realizar la interfaz de usuario con la lista de publicación & 3/2 &  \\
+  Tarea \ref{hu:ver_realizadas} - 5 & Mostrar la información de la base de datos & 1/2 &  \\
+  \bottomrule
 \end{longtable}
 \vspace{-0.8cm}
 \begin{longtable}{p{1.028\linewidth}}
-	\textbf{Observaciones}\\
-	\midrule
-	Ninguna\\
-	\bottomrule
+  \textbf{Observaciones}\\
+  \midrule
+  Ninguna\\
+  \bottomrule
 \end{longtable}
 
 
@@ -393,19 +491,19 @@ Información final sobre la carga prevista de trabajo de cada uno de los miembro
   \centering
 
   \begin{adjustbox}{width=\textwidth}
-\begin{tabular}{lrrrrr}
-  \toprule
-  \textbf{Desarrollador} & \textbf{Velocidad inicial} & \textbf{Dedicación} & \textbf{Carga de trabajo} & \textbf{Tareas aceptadas} \\
-  & \textbf{(días ideales)} & \textbf{(\% de tiempo)} & \textbf{(días ideales)} & \textbf{ (cantidad)}\\
-  \midrule
-  MAP & 12 & 60 & 12.5 & 5\\
-  SAB & 12 & 60 & 13 & 13\\
-  PFC & 12 & 60 & 12.5 & 5\\
-  MVGP & 12 & 60 & 13 & 11\\
-  LMC & 12 & 60 & 12.2 & 10\\
-  \bottomrule
-\end{tabular}
-\end{adjustbox}
+    \begin{tabular}{lrrrrr}
+      \toprule
+      \textbf{Desarrollador} & \textbf{Velocidad inicial} & \textbf{Dedicación} & \textbf{Carga de trabajo} & \textbf{Tareas aceptadas} \\
+      & \textbf{(días ideales)} & \textbf{(\% de tiempo)} & \textbf{(días ideales)} & \textbf{ (cantidad)}\\
+      \midrule
+      MAP & 12 & 60 & 12.5 & 5\\
+      SAB & 12 & 60 & 13 & 13\\
+      PFC & 12 & 60 & 12.5 & 5\\
+      MVGP & 12 & 60 & 13 & 11\\
+      LMC & 12 & 60 & 12.2 & 10\\
+      \bottomrule
+    \end{tabular}
+  \end{adjustbox}
 \end{table}
 
 \section{Planificación temporal de la iteración}
