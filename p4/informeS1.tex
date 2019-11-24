@@ -1,0 +1,83 @@
+
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{../Imagenes/}}
+
+\usepackage[paper=portrait, pagesize]{typearea}
+\usepackage{titlepic}
+
+%%% Tablas
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[dvipsnames]{xcolor,colortbl}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{dollarbill}{rgb}{0.74, 0.92, 0.6}
+\renewcommand{\arraystretch}{1.7}
+
+%%%%%%%%%% Contador HU
+\newcounter{HUCounter}
+\newcommand{\hu}[1]{\refstepcounter{HUCounter}\textbf{\rmfamily HU-\theHUCounter}\label{#1}}
+
+%%% Referencias cruzadas HU
+\usepackage{xr}
+\externaldocument{../p3/HistoriasUsuario}
+\externaldocument{./plan_iteracion_1}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+{\scshape\LARGE Informes iteración 1\par}
+\vspace{1.5cm}
+
+\includegraphics[width=10cm] {Logo}
+
+\vspace{3cm}
+{\scshape\large \par}
+\vspace{1cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+\end{titlepage}
+
+\newpage
+
+\section*{Revisión de la iteración}
+Nos reunimos al terminar la iteración y, con nuestro prototipo delante, vamos comentando el trabajo realizado.\\
+
+Los objetivos que se han conseguido son: la identificación, registro y el formulario para subir publicaciones.\\
+
+Los objetivos relacionados con los filtros se están prototipados pero no se han integrado entre ellos ni con el resto del prototipo.\\
+
+Se mantienen ``En proceso'' las historia de usuario relativas a eliminar actividad y filtrar por tipo de publicación debido a fallos en el uso de \textit{Justinmind}.\\
+
+Varios miembros del equipo han tenido problemas con el uso de \textit{Justinmind}, ya que este no funciona correctamente en Ubuntu, para solucionar este problema han tenido que usar el ordenador portátil de otros compañeros o los ordenadores de la facultad para el prototipado.\\
+
+Volviendo al prototipo creado, al ir comprobando el paso de una pantalla a otra, varios compañeros van comentando historias de usuario que sería interesante añadir y antes de tener el prototipo no se había pensado. Estas son: búsqueda de publicaciones por título, nombre usuario del que sube la publicación, ver una publicación específica, modificar y ver los datos de un usuario, separar la lista de guardados en ``realizadas'' y ``voy a realizar'', además de poder eliminarlas de ambas listas, cerrar sesión, recuperar contraseña, información sobre el equipo y funcionamiento de la aplicación. Estas historias de usuario son añadidas al Product Backlog, antes de comenzar la siguiente iteración serán estimadas y priorizadas para tenerlas en cuenta en la planificación de la siguiente iteración, que se verá alterada al incluir algunas de estas historias.\\
+
+En conclusión, se ha logrado durante esta iteración realizar una primera aproximación al producto. La interacción básica del usuario con el producto (identificarse, iniciar sesión y subir publicación) se consiguió sin problema durante la misma.\\
+
+\newpage
+\section*{Retrospectiva de la iteración}
+Tras la revisión de la iteración el equipo se para a analizar cómo se ha trabajado, para proponer mejoras a aplicar en la siguiente iteración.\\
+
+Un problema que ha tenido el grupo para poder empezar a prototipar es que no tuvo desde el principio una explicación sobre el funcionamiento de \textit{Justinmind}, ni acceso a él. Además, los problemas de la herramienta en Ubunto retrasaron e incluso impidieron la realización de algunas historias de usuario. Ahora que ya saben utilizar la herramienta y que necesitan acceso a un ordenador con Windows, se prevé que la interacción con la misma será mejor en la siguiente iteración.\\
+
+Otro elemento negativo en el desarrollo ha sido que no se han mantenido actualizados los tableros y algunas historias de usuario pasaron casi directamente de la columna ``Asignado'' a ``Finalizada''. Así, los otros miembros del equipo no pueden conocer en tiempo real el estado de las historias de usuario desarrolladas por otros miembros, se propone mantener el tablero totalmente actualizado en todo momento para aprovechar las ventajas de este método.
+
+Otro problema encontrado es que no pueden trabajar más de dos miembros del equipo al mismo tiempo sobre el mismo archivo, así que, para integrar todas las pantallas, es necesario organizarse y trabajar con la suficiente antelación para que todos los miembros del equipo puedan acceder al archivo.\\
+\end{document}
