@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\usepackage[spanish]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{../Imagenes/}}
+
+\usepackage{titlepic}
+\usepackage{hyperref}
+
+%%% Tablas
+\usepackage{longtable}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+%% \usepackage{longtablex}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.7}
+
+%%%%%%%%%% Contador HU
+\newcounter{HUCounter}
+\newcommand{\hu}[1]{\refstepcounter{HUCounter}\textbf{\rmfamily HU-\theHUCounter}\label{#1}}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+{\scshape\LARGE Información para acceder al repositorio \par}
+\vspace{1.5cm}
+
+\includegraphics[width=10cm]{Logo}
+
+\vspace{3cm}
+{\scshape\large \par}
+\vspace{1cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+\end{titlepage}
+\newpage
+
+\section{Enlaces de Trello}
+Tal y como indica la práctica, hemos usado la aplicación Trello para gestionar las historias de usuario. 
+
+\begin{itemize}
+\item \url{https://trello.com/invite/b/5Wi2rqx5/4f7ea1658934d19280be9b60fb97ffc7/sprint1} \\
+
+Este enlace dirige a un tablero con las historias de usuario incluidas en la primera iteración del proyecto. 
+
+\item \url{https://trello.com/invite/b/8hX1URIX/c4a4d7b67b63f6516e5b531fd5ae79c6/sprint2} \\
+
+Este enlace dirige a un tablero con las historias de usuario incluidas en la segunda iteración del proyecto. 
+
+\item \url{https:....} \\
+Este es un enlace al repositorio de GitHub donde se ha ido llevando el trabajo de las memorias del proyecto
+
+
+\end{itemize}
+\end{document}
