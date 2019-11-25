@@ -1,0 +1,124 @@
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{../Imagenes/}}
+
+\usepackage[paper=portrait, pagesize]{typearea}
+\usepackage{titlepic}
+
+%%% Tablas
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor,colortbl}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\renewcommand{\arraystretch}{1.7}
+
+%%%%%%%%%% Contador HU
+\newcounter{HUCounter}
+\newcommand{\hu}[1]{\refstepcounter{HUCounter}\textbf{\rmfamily HU-\theHUCounter}\label{#1}}
+\setcounter{HUCounter}{0}
+%%% Referencias cruzadas HU
+\usepackage{xr}
+\externaldocument{../p3/HistoriasUsuario}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+{\scshape\LARGE Plan de la iteración 1\par}
+\vspace{1.5cm}
+
+\includegraphics[width=10cm] {Logo}
+
+\vspace{3cm}
+{\scshape\large \par}
+\vspace{1cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+\end{titlepage}
+
+\newpage
+\section{Listado de Historias de Usuario}
+En el apartado de prioridad hemos escogido una escala del 1 al 6 siendo el 1: máxima prioridad y el 6: prioridad mínima.
+\begin{longtable}{p{0.12\linewidth}p{0.7\linewidth}p{0.07\linewidth}p{0.07\linewidth}}
+	\toprule
+	\textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Prio.}\\
+	\midrule
+	\hu{hu:registro} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2 & 1\\
+	\hu{hu:identificarse} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1 & 1\\
+	\hu{hu:ver_publicaciones} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2 & 2\\
+	\hu{hu:subir} & Un usuario quiere subir una publicación para compartir su experiencia & 3 & 2\\
+	\hu{hu:valorar} & Un usuario quiere valorar un viaje que ha realizado para mostrar su opinión & 2 & 4\\
+	\hu{hu:comentar} & Un usuario quiere comentar en una publicación para preguntar una duda o aportar información & 2 & 4\\ 
+	\hu{hu:ver_coment} & Un usuario quiere ver los comentarios de una publicación para conocer las experiencias y opiniones de otros usuarios & 1 & 4\\ 
+	\hu{hu:ver_val} & Un usuario quiere ver las valoraciones de una publicación para tenerlo en cuenta a la hora de tomar una decisión & 1 & 4\\ 
+	\hu{hu:filtrar} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & - & -\\ 
+	\hu{hu:personalizar} & Un usuario quiere personalizar un paquete para adaptarlo a sus gustos & - & - \\ 
+	\hu{hu:seleccionar} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 & 2\\ 
+	\hu{hu:guardar} & Un usuario quiere guardar un viaje/actividad para verlo en otro momento & 1 & 5\\ 
+	\hu{hu:historial} & Un usuario quiere ver su historial de viajes guardados/lista de deseos para elegir entre ellos & 3/2 & 5\\
+	\hu{hu:maleta} & Un usuario quiere gestionar su maleta & - & -\\
+	\hu{hu:gaudio} & Un usuario quiere grabar un audioguía sobre su ciudad para compartirla con otros usuarios & 2 & 6\\
+	\hu{hu:eaudio} & Un usuario quiere escuchar un audioguía sobre la ruta que va a realizar para informarse sobre la ciudad & 3/2 & 6\\
+	\hu{hu:buscar}& Un usuario quiere buscar una publicación a partir de un texto.\\
+	\hu{hu:ver_datos}. & Un usuario quiere ver su información personal. \\
+	\hu{hu:modificar_datos}. &Un usuario quiere modificar sus datos personales.\\
+	\hu{hu:marcar_realizado}.& Un usuario quiere indicar que ha realizado una actividad.\\
+	\hu{hu:cerrar_sesion}. &Un usuario desea cerrar la sesión en la aplicación.\\
+	\hu{hu:ver_publicadas}.& Un usuario quiere ver sus propias publicaciones.\\
+	\hu{hu:eliminar_deseo}.& Un usuario quiere eliminar una actividad de su lista de deseos.\\
+	\hu{hu:eliminar_voy_a_realizar}.& Un usuario desea eliminar una actividad de su lista de actividades a realizar.\\
+	\hu{hu:recuperar_contraseña}. & Un usuario ha olvidado su contraseña y desea poder recuperarla.\\
+	\hu{hu:saber_mas}.& Un usuario desea conocer más información sobre una publicación en particular.\\
+	\hu{hu:sobre_nosotros}.& Un usuario quiere saber más información sobre quién ha desarrollado la aplicación.\\
+	\hu{hu:ayuda}.& Un usuario desea ver una guía sobre el uso de la aplicación.\\
+	\hu{hu:eliminar_publicacion}.& Un usuario desea eliminar una publicación que ha subido. \\
+	\hu{hu:modificar_publicacion}.& Un usuario desea modificar una publicación que ha subido. \\
+	\hu{hu:ver_realizar}.& Un usuario quiere ver la lista de publicaciones a realizar.\\
+	\hu{hu:ver_realizadas}.&  Un usuario desea ver su lista de publicaciones ya realizadas. \\
+	
+	\bottomrule
+\end{longtable}
+
+\subsection{Historias que se han dividido en varias}
+
+\begin{longtable}{p{0.13\linewidth}p{0.67\linewidth}p{0.07\linewidth}p{0.07\linewidth}}
+	\toprule
+	\textbf{Id HU} & \textbf{Título} & \textbf{Est.} & \textbf{Prio.}\\
+	\midrule
+	
+	\textbf{HU-\ref{hu:filtrar}} & Un usuario quiere filtrar la búsqueda de las publicaciones para encontrar una que se adapte a sus intereses & - & -\\ 
+	\textbf{HU-\ref{hu:filtrar}.1} & Un usuario quiere filtrar la búsqueda de las publicaciones por lugar & 1/2 & 3\\ 
+	\textbf{HU-\ref{hu:filtrar}.2} & Un usuario quiere filtrar la búsqueda de las publicaciones por fecha & 1/2 & 3\\ 
+	\textbf{HU-\ref{hu:filtrar}.3} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta, actividad, evento) & 1/2 & 3\\ 
+	\textbf{HU-\ref{hu:filtrar}.4} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de actividad (cultural, deportiva, etc)) & 1/2 & 3\\ 
+	\textbf{HU-\ref{hu:filtrar}.5} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más visitadas & 1/2 & 4\\ 
+	\textbf{HU-\ref{hu:filtrar}.6} & Un usuario quiere filtrar la búsqueda de las publicaciones para que aparezcan las más realizadas & 1/2 & 4\\ 
+	\midrule
+	\textbf{HU-\ref{hu:personalizar}} & Un usuario quiere personalizar un paquete para adaptarlo a sus gustos y presupuesto & - & - \\
+	\textbf{HU-\ref{hu:personalizar}.1} & Un usuario quiere eliminar una actividad de un paquete & 1/2 & 3 \\ 
+	\textbf{HU-\ref{hu:personalizar}.2} & Un usuario quiere añadir una actividad de un paquete & 1 & 3 \\ 
+	\textbf{HU-\ref{hu:personalizar}.3} & Un usuario quiere modificar el orden de las actividades de un paquete & 3/2 & 4 \\
+	\midrule 
+	\textbf{HU-\ref{hu:maleta}} & Un usuario quiere gestionar su maleta & - & -\\
+	\textbf{HU-\ref{hu:maleta}.1} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el pronóstico meteorológico & 5 & 6\\
+	\textbf{HU-\ref{hu:maleta}.2} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según el tipo de actividad que va a realizar & 4 & 6\\
+	\textbf{HU-\ref{hu:maleta}.3} & Un usuario quiere obtener una recomendación del vestuario que debe llevar según la duración del viaje & 4 & 6\\
+	\bottomrule
+\end{longtable}
+
+
+\end{document}
