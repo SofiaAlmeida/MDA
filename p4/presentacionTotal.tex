@@ -47,10 +47,22 @@
 \setbeamercolor{qed symbol}{fg=accent}
 \usebeamercolor[fg]{normal text}
 
+%%% TABLAS
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor,colortbl}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\renewcommand{\arraystretch}{1.7}
+
+
 %%% INFORMACIÓN DEL DOCUMENTO
 
 \title{Metologías de Desarrollo Ágil : práctica 4}
-\subtitle{Tablero trello y kanban de la iteración 1}
+\subtitle{Plan de entregas iteración 1 y 2}
 \author{Miguel Albertí Pons\\ Sofía Almeida Bruno\\ Pedro Manuel Flores Crespo\\ María Victoria Granados Pozo\\ Lidia Martín Chica\vspace{1em}Grupo 2}
 
 
@@ -63,6 +75,83 @@
 \begin{center}
 		\includegraphics[scale=0.4]{../../Imagenes/Logo}
 	\end{center}
+\end{frame}
+
+{\small
+\begin{frame}[allowframebreaks=0.9]
+	\frametitle{Historias de usuario iteración 1}
+	\begin{longtable}{p{0.13\linewidth}p{0.65\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}}
+		\textbf{HU-\ref{hu:registro}} & Un usuario quiere registrarse en la aplicación para poder planificar su viaje & 2\\
+		\textbf{HU-\ref{hu:identificarse}} & Un usuario quiere identificarse en la aplicación para  acceder a su contenido & 1\\
+		\textbf{HU-\ref{hu:ver_publicaciones}} & Un usuario quiere ver las publicaciones para saber cuáles le pueden interesar & 2\\
+		\textbf{HU-\ref{hu:subir}} & Un usuario quiere subir una publicación para compartir su experiencia & 3\\
+		\textbf{HU-\ref{hu:filtrar}.1} & Un usuario quiere filtrar la búsqueda de las publicaciones por lugar & 1/2 \\ 
+		\textbf{HU-\ref{hu:filtrar}.2} & Un usuario quiere filtrar la búsqueda de las publicaciones por fecha & 1/2 \\
+		\textbf{HU-\ref{hu:filtrar}.3} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de publicación (paquete, ruta, actividad, evento) & 1/2 \\
+		\textbf{HU-\ref{hu:filtrar}.4} & Un usuario quiere filtrar la búsqueda de las publicaciones por tipo de actividad (cultural, deportiva, etc)) & 1/2 \\
+		\textbf{HU-\ref{hu:personalizar}.1} & Un usuario quiere eliminar una actividad de un paquete & 1/2\\ 
+		\textbf{HU-\ref{hu:seleccionar}} & Un usuario quiere seleccionar un viaje/actividad para realizarlo & 3/2 \\
+	\end{longtable}
+\end{frame}
+}
+
+\begin{frame}
+	\frametitle{Carga de los desarrolladores}
+	\begin{table}[H]
+	  \centering
+	  \begin{adjustbox}{width=\textwidth}
+	\begin{tabular}{lrrrrr}
+	  \toprule
+	  \textbf{Desarrollador} & \textbf{Velocidad inicial} & \textbf{Dedicación} & \textbf{Carga de trabajo} & \textbf{Tareas aceptadas} \\
+	  & \textbf{(días ideales)} & \textbf{(\% de tiempo)} & \textbf{(días ideales)} & \textbf{ (cantidad)}\\
+	  \midrule
+	  MAP & 12 & 60 & 12.5 & 5\\
+	  SAB & 12 & 60 & 13 & 13\\
+	  PFC & 12 & 60 & 12.5 & 5\\
+	  MVGP & 12 & 60 & 13 & 11\\
+	  LMC & 12 & 60 & 12.2 & 10\\
+	  \bottomrule
+	\end{tabular}
+	\end{adjustbox}
+	\end{table}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Planificación primera semana}
+	\begin{table}[H]
+	\begin{adjustbox}{width=\textwidth}
+	\begin{tabular}{lrrrrr}
+	  \toprule
+	  \textbf{Desarrollador} & \textbf{Día 1} & \textbf{Día 2} & \textbf{Día 3} & \textbf{Día 4} \\
+	  \midrule
+	  MAP  &Tarea 1-1 & & Tarea 2-2 &  \\
+	  SAB &   Tarea 1-2  & Tarea 9.1-1, 9.1-3 &  & Tarea 9.2-1\\
+	  PMFC &Tarea 1-4 & &Tarea 3-1 \\
+	  MVGP & Tarea 1-1 &Tarea 11-1, 11-2 &Tarea 9.2-4 & Tarea 9.1-4 \\
+	  LMC & Tarea 1-3 & Tarea 2-1 & Tarea 4-1& Tarea 2-3, 3-3 \\
+	  \bottomrule
+	\end{tabular}
+	\end{adjustbox}
+	\end{table}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Planificación segunda semana}
+	\begin{table}[H]
+	\begin{adjustbox}{width=\textwidth}
+	\begin{tabular}{lrrrrr}
+	  \toprule
+	  \textbf{Desarrollador} & \textbf{Día 1} & \textbf{Día 2} & \textbf{Día 3} & \textbf{Día 4} \\
+	  \midrule
+	  MAP &Tarea 3-2  && & Tarea 9.2-2 \\
+	  SAB & Tarea 4-2  & Tarea 9.3-2, 9.3-4, 9.4-1 & Tarea 9.4-2, 9.4-5 10-2 \\
+	  PMFC & Tarea 4-3 &  &Tarea 11-5 & Tarea 4-5 \\
+	  MVGP &Tarea 9.2-3 9.2-4& Tarea 9.4-3, 11-4&Tarea 10-1 & \\
+	  LMC  &Tarea 11-3&& Tarea 4-4, 9.3-4, 10-3& Tarea 9.4-5, \\
+	  \bottomrule
+	\end{tabular}
+	\end{adjustbox}
+	\end{table}
 \end{frame}
 
 
