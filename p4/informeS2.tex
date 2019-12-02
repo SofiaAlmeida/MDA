@@ -1,0 +1,83 @@
+
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{../Imagenes/}}
+
+\usepackage[paper=portrait, pagesize]{typearea}
+\usepackage{titlepic}
+
+%%% Tablas
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[dvipsnames]{xcolor,colortbl}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{dollarbill}{rgb}{0.74, 0.92, 0.6}
+\renewcommand{\arraystretch}{1.7}
+
+%%%%%%%%%% Contador HU
+\newcounter{HUCounter}
+\newcommand{\hu}[1]{\refstepcounter{HUCounter}\textbf{\rmfamily HU-\theHUCounter}\label{#1}}
+
+%%% Referencias cruzadas HU
+\usepackage{xr}
+\externaldocument{../p3/HistoriasUsuario}
+\externaldocument{./plan_iteracion_1}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+{\scshape\LARGE Informes iteración 2\par}
+\vspace{1.5cm}
+
+\includegraphics[width=10cm] {Logo}
+
+\vspace{3cm}
+{\scshape\large \par}
+\vspace{1cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+\end{titlepage}
+
+\newpage
+
+\section*{Revisión de la iteración}
+Nos reunimos al terminar la iteración y, con nuestro prototipo delante, vamos comentando el trabajo realizado.\\
+
+Los objetivos que se han conseguido son: ver lista ``Mis publicaciones'', eliminar una publicación subida y modificarla, se ha desarrollado el apartado ``saber más'' incluyendo valoraciones y comentarios (con la posibilidad de valorar y comentar), ver la lista de ``A realizar'', eliminar una publicación a realizar y dentro de personalizar una publicación a realizar añadir una parada, búsqueda por texto integrada en la pantalla principal, añadir una actividad a ``Ya realizadas'' (aunque todavía no esté la interfaz de ``Ya realizadas'').\\
+
+Se cumplieron todos los objetivos sin problema tal y como se había planificado. Algunos de estos objetivos son de los añadidos en la iteración anterior, aunque inicialmente no estuviera marcado que se realizarían en esta iteración, el equipo supo reorganizarse adecuadamente para incluirlos.\\
+
+Al realizar la demostración del prototipo detectamos un problema: al hacer \textit{scroll down} la parte alta de la pantalla se superpone en ocasiones y las imágenes aparecen por encima de dicha barra. Lo solucionamos agrupando en \textit{Justinmind} los elementos que la forman y buscando una opción para bloquear ese elemento en la pantalla.\\
+
+Esta vez, durante el curso de la iteración no se detectaron nuevas historias de usuario ni modificaciones sobre las ya creadas.\\
+
+Valoramos positivamente el incremento realizado. Ahora el usuario tendrá más que un uso básico de la aplicación. Podrá interaccionar a un nivel más personal con la aplicación. Puede ver algunas listas referentes a las publicaciones que ha subido o a las actividades que quiere realizar.
+\newpage
+
+\section*{Retrospectiva de la iteración}
+Tras la revisión de la iteración, el equipo sigue con la reunión de retrospectiva. En esta reunión las sensaciones son positivas. Se ha trabajado mejor que en la iteración anterior, ya que se han aplicado las propuestas de mejora provenientes de la retrospectiva anterior.\\
+
+En esta iteración el equipo ya estaba totalmente sumergido en la metodología y en el sistema que se estaba desarrollando. Se realizó un mejor manejo de la herramienta \textit{Trello}, manteniéndolo actualizado al tiempo en que se iba trabajando. Además, el equipo ya estaba familiarizado con la herramienta \textit{Justinmind} y pudo realizar los prototipos sin mayor problema, teniendo en cuenta las consideraciones dichas en la iteración anterior.\\
+
+Las nuevas historias de usuario (provenientes de la revisión de la iteración anterior) fueron añadidas con total naturalidad a la iteración y se planificaron exactamente igual que el resto de historias de usuario, demostrando la flexibilidad del equipo.\\
+
+Este es un buen equipo que resuelve todas las dudas y problemas en cuanto se le plantean gracias a la buena comunicación que hay entre sus miembros.\\ 
+
+Sin embargo, el equipo es muy exigente y aspira a mejorar tanto la calidad de los prototipos creados como la metodología utilizada en el proceso.
+\end{document}
