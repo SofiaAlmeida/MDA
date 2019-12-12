@@ -1,5 +1,5 @@
 \documentclass[11pt]{article}
-\usepackage[spanish]{babel}
+\usepackage[spanish, es-tabla]{babel}
 \usepackage{fontspec}
 \usepackage{listings}
 \usepackage{graphicx}
@@ -61,13 +61,14 @@ En este documento veramos que procesos hay que seguir para aplicar FDD, sus vent
 \section{Procesos}
 
 La metodología FDD consta de cinco fases en su proceso: Son las siguientes:
+\subsection{Desarrollar el modelo global (\textit{Develop overall model})}
 
 \subsection {Construir lista de características (\textit{Build Feature List})}
 
-Esta etapa recibe como entrada el modelo de objetos y los requerimientos (\textit{feature list informal}) obtenidos en la etapa anterior.  Estos son agrupados según el área de dominio. Cada grupo de se denomina \textit{Major List Sets}. Esta lista a su vez es dividida en otros subconjuntos según la funcionalidad. Posteriormente, cada característica o funcionalidad es priorizada y por último aquellas más complejas son divididas en otras más pequeñas. Esta etapa nos aporta como salida la \textit{Feature List} que es revisada por los usuarios para su aprobación y validación. Las tareas llevadas a cabo en esta etapa se resumen en la siguiente tabla. \\
+Esta etapa recibe como entrada el modelo de objetos y los requerimientos (\textit{feature list informal}) obtenidos en la etapa anterior.  Estos son agrupados según el área de dominio. Cada grupo de se denomina \textit{Major List Sets}. Esta lista a su vez es dividida en otros subconjuntos según la funcionalidad. Posteriormente, cada característica o funcionalidad es priorizada y por último aquellas más complejas son divididas en otras más pequeñas. Esta etapa nos aporta como salida la \textit{Feature List} que es revisada por los usuarios para su aprobación y validación. Las tareas llevadas a cabo en esta etapa se resumen en la Tabla \ref{fig:BFL}. \\
 
 \begin{table}[H]
-\centering
+  \centering
 \begin{tabular}{ |p{6cm}|p{6cm}|  }
 	\hline
 	Tarea & Responsables \\
@@ -82,16 +83,16 @@ Esta etapa recibe como entrada el modelo de objetos y los requerimientos (\texti
 	División de las funcionalidades complejas    & \textit{Feature-List Team}\\
 	\hline
 \end{tabular}
-\caption{Tareas etapa de construcción de la lista de características.}
+\caption{Tareas etapa de construcción de la lista de características.}\label{fig:BFL}
 \end{table}
 
-\subsection{Planificado por características}
-El resultado final, de este paso, es un plan dedesarrollo, sujeto a revisión y aprobación por parte del gestor de desarrollo y del jefe de la arquitectura, la identificación de la clase y la identificación de los propietarios sobre el conjunto de características.
-Este paso gira entorno a la planificación el orden en el que se van a implementar las características, la forma de hacerlo y quien las va implementar, para ello se asignarán a los desarrolladores.
+\subsection{Planificado por características (\textit{Plan by feature})}
+El resultado final, de este paso, es un plan de desarrollo, sujeto a revisión y aprobación por parte del gestor de desarrollo y del jefe de la arquitectura, la identificación de la clase y la identificación de los propietarios sobre el conjunto de características.
+Este paso gira entorno a la planificación: el orden en el que se van a implementar las características, la forma de hacerlo y quién las va implementar, para ello se asignarán a los desarrolladores.
 Obviamente mientras planificamos consideramos diferentes aspectos como riesgos, complejidad, dependiencias, la carga de trabajo, etc, para evitar que surjan problemas complejos.
 
-En esta etapa se incluye la creación de un plan de alto nivel, en el cual la features list es ordenada en base a la
-prioridad y a la dependencia entre cada feature. Además, las clases identificadas en la primera etapa son
+En esta etapa se incluye la creación de un plan de alto nivel, en el cual la \textit{features list} es ordenada en base a la
+prioridad y a la dependencia entre cada \textit{feature}. Además, las clases identificadas en la primera etapa son
 asignadas a cada programador.
 
 En base a las características de la lista de la anterior etapa, el gestor del proyecto, el desarrollador y el programador jefe establecen hitos y diseñan un cronograma de diseño y construcción.
@@ -100,7 +101,16 @@ En base a las características de la lista de la anterior etapa, el gestor del p
 Finalmente se realiza una verificación del plan teniendo en cuentra la opinión de todos lo miembros del equipo. La salida es un plan de desarrollo incluyendo la fecha de finalización, para cada conjunto de características y cada característica indicar el programador jefe asignado, y las fechas de inicio y fin. Por último para cada clase indicar el correspondiente propietario de la clase.
 
 
+\subsubsection{Diseñando por características (\textit{Design by feature})}
+Esta etapa y la siguiente se realizan de forma iterativa, cada iteración debería durar entre unos pocos días y un máximo de dos semanas. Puede haber varios equipos de características trabajando simultáneamente en el diseño e implementación de su propio conjunto de características. 
 
+En esta etapa el \textit{chief Programmer}, aprovechando el conocimiento obtenido en las primeras etapas del proceso, selecciona las siguientes características a realizar entre las que tenga en su lista de características asignadas. A continuación, organiza los equipos de características identificando los \textit{class owners} (desarrolladores) que estarán involucrados en el desarrollo de las características seleccionadas y contacta con los expertos de dominio si es necesario. Parte del grupo puede trabajar en el diseño técnico mientras otros trabajan en la infraestructura, escribiendo clases, determinando los métodos y realizando los diagramas de secuencia correspondientes que el \textit{chief Programmer} añadirá al modelo global. Asimismo, cada \textit{class owner} actualizará la descripción de sus clases en base al diagrama de secuencia (añadiendo parámetros, tipos de retorno, mensajes enviados, etc).
+
+Antes de pasar a la siguiente fase todo el equipo revisará y verificará el diseño.
+
+Como salida de esta etapa se debe obtener: el diagrama de secuencia detallado, diagrama de clases actualizado, descripción de clases y métodos, notas del equipo significativas para el diseño.
+
+\subsubsection{(\textit{Build by feature})}
 
 
 
@@ -133,7 +143,7 @@ En XP y Scrum la documentación también es importante,
 
 \subsection*{FDD vs Scrum}
 %https://activecollab.com/blog/project-management/feature-driven-development
-Puntos en comun: Mejorar la comunicación, enfatizar las cualidades de los componentes del grupo, aumentar la colaboración.
+Puntos en común: Mejorar la comunicación, enfatizar las cualidades de los componentes del grupo, aumentar la colaboración.
 
 Por otro lado, FDD se centra en las prácticas de ingenierías específicas Scrum no especifica ninguna práctica de ingeniería en particular. Además, mientras que FDD tiene bucles de retroalimentación más largos, Scrum tiene ciclos más cortos.
 
@@ -141,11 +151,28 @@ Por otro lado, FDD se centra en las prácticas de ingenierías específicas Scru
 
 \section{Roles y responsabilidades}
 
+(Dejo esto por aquí porque no se nos escape...)
+
+There are six primary roles on an FDD project: Project Manager, Chief Architect, Development Manager, Chief Programmer, Class Owner, and Domain Expert. An individual will take on one or more roles on a project as you would expect.
+
+FDD also defines a collection of supporting roles, including:
+
+    Domain Manager
+    Release Manager
+    Language Guru
+    Build Engineer
+    Toolsmith
+    System Administrator
+    Tester
+    Deployer
+    Technical Writer
+
+
 \newpage
 \section{Bibliografía}
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{referencias.bib}
-%[type=inbook,heading=subbibliography,title={Libros}]
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{referencias.bib}
+[type=inbook,heading=subbibliography,title={Libros}]
 
 \end{document}
