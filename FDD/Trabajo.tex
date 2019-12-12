@@ -60,8 +60,33 @@ En este documento veramos que procesos hay que seguir para aplicar FDD, sus vent
 
 \section{Procesos}
 
-La metodología FDD consta de cinco fases en su proceso: Son las siguientes:
+La metodología FDD consta de cinco fases en su proceso. Son las siguientes:
+
 \subsection{Desarrollar el modelo global (\textit{Develop overall model})}
+En esta primera etapa los miembros del equipo de desarrollo trabajan juntos para construir un modelo del problema del dominio. Su objetivo es proponer el modelo para el área de dominio. El modelado FDD es una actividad interfuncional, iterativa y colaborativa. Los miembros del equipo (desarrollo, expertos en dominios y programadores principales) trabajan juntos para componer un modelo para el área de dominio y son guiados por un Arquitecto Jefe (\textit{Chief Arquitect}). La idea es tener diferentes equipos proponiendo diferentes modelos y luego, después de ser revisados, seleccionar uno de los modelos propuestos o una combinación de modelos y que se convierta en el modelo para esa área de dominio. A medida que se desarrolle el modelo y el equipo aprenda, se agregarán detalles. Esto ayuda al equipo a tener una visión general clara de todo el proyecto, así como una comunicación sólida. Las tareas llevadas a cabo en esta etapa se resumen en la Tabla \ref{fig:DOM}. 
+
+\begin{table}[H]
+  \centering
+\begin{tabular}{ |p{6cm}|p{6cm}|  }
+	\hline
+	Tarea & Responsables \\
+	\hline
+	Formación del
+	\textit{Model Team}  &    \textit{Project
+		Manager}\\
+	
+	\textit{Domain Walkthrough}  &    \textit{Modeling Team}\\
+	
+	Estudio de los documentos     &    \textit{Modeling Team}\\
+	
+	Construcción de una \textit{Feature List informal}  &    \textit{Chief Arquitect}, \textit{Chief} y \textit{Programmers}\\
+	Desarrollo del \textit{Modelo de Tareas} & \textit{Modeling Team} dividido en pequeños grupos\\
+	Desarrollo del \textit{Modelo Global}  &  \textit{Chief Arquitect} y \textit{Modeling Team}\\
+	Registro de alternaticas    & \textit{Chief Arquitect}, \textit{Chief} y \textit{Programmers}\\
+	\hline
+\end{tabular}
+\caption{Tareas etapa de construcción de la lista de características.}\label{fig:DOM}
+\end{table}
 
 \subsection {Construir lista de características (\textit{Build Feature List})}
 
@@ -148,6 +173,15 @@ Puntos en común: Mejorar la comunicación, enfatizar las cualidades de los comp
 Por otro lado, FDD se centra en las prácticas de ingenierías específicas Scrum no especifica ninguna práctica de ingeniería en particular. Además, mientras que FDD tiene bucles de retroalimentación más largos, Scrum tiene ciclos más cortos.
 
 \section{Ventajas}
+FDD minimiza la complejidad del sistema por lo que es una excelente solución para proyectos grandes y complejos, dando al equipo la capacidad de dividir el problema en problemas más pequeños que se pueden resolver en menos tiempo.
+
+La comprensión más profunda del sistema de software reduce el riesgo de encontrar problemas durante el desarrollo.
+
+La mayoría de los procesos requieren un flujo de comunicación constante y la realización frecuente de los informes de progreso en casi cualquier nivel del desarrollo del proyecto, permiten al equipo realizar un seguimiento del progreso y los resultados. Además, FDD permite que los miembros del equipo se comuniquen más fácilmente al tiempo que fomenta la creatividad e innovación del equipo.
+
+El hecho de que en FDD se realicen compilaciones regulares garantiza que se puedan identificar fácilmente errores en el código y permite mantener el proyecto actualizado regularmente, identificar cualquier error y que se pueda mostrar al cliente en cualquier momento. 
+
+En FDD se maximiza la calidad ya que el concepto de calidad no solo incluye la prueba del código, sino que también incluye estándares de codificación, auditorías de medición y métricas en el código.
 
 \section{Roles y responsabilidades}
 
