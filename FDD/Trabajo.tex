@@ -8,6 +8,10 @@
 \usepackage[paper=portrait, pagesize]{typearea}
 \usepackage{titlepic}
 
+% Listas
+\usepackage{amssymb}
+\usepackage{enumitem}
+\renewcommand{\labelitemi}{$bullet$}
 %%% Tablas
 \usepackage{longtable}
 \usepackage{tabularx}
@@ -126,7 +130,7 @@ En base a las características de la lista de la anterior etapa, el gestor del p
 Finalmente se realiza una verificación del plan teniendo en cuentra la opinión de todos lo miembros del equipo. La salida es un plan de desarrollo incluyendo la fecha de finalización, para cada conjunto de características y cada característica indicar el programador jefe asignado, y las fechas de inicio y fin. Por último para cada clase indicar el correspondiente propietario de la clase.
 
 
-\subsubsection{Diseñando por características (\textit{Design by feature})}
+\subsection{Diseñando por características (\textit{Design by feature})}
 Esta etapa y la siguiente se realizan de forma iterativa, cada iteración debería durar entre unos pocos días y un máximo de dos semanas. Puede haber varios equipos de características trabajando simultáneamente en el diseño e implementación de su propio conjunto de características. 
 
 En esta etapa el \textit{chief Programmer}, aprovechando el conocimiento obtenido en las primeras etapas del proceso, selecciona las siguientes características a realizar entre las que tenga en su lista de características asignadas. A continuación, organiza los equipos de características identificando los \textit{class owners} (desarrolladores) que estarán involucrados en el desarrollo de las características seleccionadas y contacta con los expertos de dominio si es necesario. Parte del grupo puede trabajar en el diseño técnico mientras otros trabajan en la infraestructura, escribiendo clases, determinando los métodos y realizando los diagramas de secuencia correspondientes que el \textit{chief Programmer} añadirá al modelo global. Asimismo, cada \textit{class owner} actualizará la descripción de sus clases en base al diagrama de secuencia (añadiendo parámetros, tipos de retorno, mensajes enviados, etc).
@@ -135,7 +139,7 @@ Antes de pasar a la siguiente fase todo el equipo revisará y verificará el dis
 
 Como salida de esta etapa se debe obtener: el diagrama de secuencia detallado, diagrama de clases actualizado, descripción de clases y métodos, notas del equipo significativas para el diseño.
 
-\subsubsection{(\textit{Build by feature})}
+\subsection{(\textit{Build by feature})}
 
 
 
@@ -185,21 +189,38 @@ En FDD se maximiza la calidad ya que el concepto de calidad no solo incluye la p
 
 \section{Roles y responsabilidades}
 
-(Dejo esto por aquí porque no se nos escape...)
+Los proyectos están formados por gente, procesos y tecnología. En esta sección describiremos cómo se organizan los participantes en un proyecto.\\
+La metodología FDD clasifica sus roles en tres categorías: clave, de apoyo y adicionales. Un miembro de un equipo puede tomar diferentes roles y un rol se puede compartir entre varias personas.\\
 
-There are six primary roles on an FDD project: Project Manager, Chief Architect, Development Manager, Chief Programmer, Class Owner, and Domain Expert. An individual will take on one or more roles on a project as you would expect.
+A continuación se exponen los seis roles clave junto con sus tareas y responsabilidades:
+\begin{itemize}
+\item \textit{Project Manager}. Es el líder administrativo y financiero del proyecto. Una de sus tareas es proteger al equipo de distracciones externas y permitir que el equipo trabaje en las condiciones apropiadas. Es responsable de señalar el progreso, manejar los presupuestos, buscar la plantilla, gestionar el equipo, espacio y recursos. Es el que tiene la última palabra sobre el alcance, planificación y personal del proyecto.
+\item \textit{Chief Architect}. El jefe de diseño es responsable del diseño global del sistema y de llevar a cabo las sesiones de diseño del sistema con el equipo. Asimismo, toma todas las decisiones finales en los asuntos de diseño. Este puesto requiere de habilidades técnicas y de modelado además de capacidad de asesoramiento. Si es necesario este rol se puede dividir entre arquitecto del dominio (\textit{Domain Architect}) y arquitecto técnico (\textit{Tecnical Arquitect}).
+\item \textit{Development Manager}
+\item \textit{Chief Programmer}
+\item \textit{Class Owner}
+\item \textit{Domain Expert}
+\end{itemize}
 
-FDD also defines a collection of supporting roles, including:
+Entre los roles de apoyo de FDD se incluyen:
 
-    Domain Manager
-    Release Manager
-    Language Guru
-    Build Engineer
-    Toolsmith
-    System Administrator
-    Tester
-    Deployer
-    Technical Writer
+\begin{itemize}
+\item \textit{Domain Manager}
+\item \textit{Release Manager}
+\item \textit{Language Guru}
+\item \textit{Build Engineer}
+\item \textit{Toolsmith}
+\item \textit{System Administrator}
+\end{itemize}
+
+De forma adicional se tienen los siguientes roles:
+
+\begin{itemize}
+\item \textit{Tester}
+\item \textit{Deployer}
+\item \textit{Technical Writer}
+
+\end{itemize}
 
 
 \newpage
@@ -207,6 +228,6 @@ FDD also defines a collection of supporting roles, including:
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{referencias.bib}
-[type=inbook,heading=subbibliography,title={Libros}]
+%[type=inbook,heading=subbibliography,title={Libros}]
 
 \end{document}
