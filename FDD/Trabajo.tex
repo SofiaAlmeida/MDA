@@ -11,7 +11,7 @@
 % Listas
 \usepackage{amssymb}
 \usepackage{enumitem}
-\renewcommand{\labelitemi}{$bullet$}
+\renewcommand{\labelitemi}{$\bullet$}
 %%% Tablas
 \usepackage{longtable}
 \usepackage{tabularx}
@@ -197,9 +197,12 @@ A continuación se exponen los seis roles clave junto con sus tareas y responsab
 \item \textit{Project Manager}. Es el líder administrativo y financiero del proyecto. Una de sus tareas es proteger al equipo de distracciones externas y permitir que el equipo trabaje en las condiciones apropiadas. Es responsable de señalar el progreso, manejar los presupuestos, buscar la plantilla, gestionar el equipo, espacio y recursos. Es el que tiene la última palabra sobre el alcance, planificación y personal del proyecto.
 \item \textit{Chief Architect}. El jefe de diseño es responsable del diseño global del sistema y de llevar a cabo las sesiones de diseño del sistema con el equipo. Asimismo, toma todas las decisiones finales en los asuntos de diseño. Este puesto requiere de habilidades técnicas y de modelado además de capacidad de asesoramiento. Si es necesario este rol se puede dividir entre arquitecto del dominio (\textit{Domain Architect}) y arquitecto técnico (\textit{Tecnical Arquitect}).
 \item \textit{Development Manager}
-\item \textit{Chief Programmer}
-\item \textit{Class Owner}
-\item \textit{Domain Expert}
+\item \textit{Chief Programmer}. Es un programador con cierta experiencia ya que ha pasado por todo el proceso de desarrollo varias veces. Se encarga del análisis de requisitos a un alto nivel, de actividades relacionadas con el diseño y de la dirección de equipos pequeños (3 a 6 programadores) para el análisis, diseño y desarrollo de nuevas
+funcionalidades. También escoge las funcionalidades a desarrollar de la lista, identifica las clases y el \textit{Class Owner} que se necesita en el equipo para la
+iteración. Con la ayuda de otros \textit{Chief Programmers} resuelve problemas técnicos y de recursos, y sigue el progreso
+del equipo.
+\item \textit{Class Owner}. Trabaja bajo la dirección del \textit{Chief Programmer} en tareas de diseño, programación, pruebas y documentación. Es el responsable de las clases que se asignaron y participa en la decisión de qué clase será incluida en la lista de características de la próxima iteración.
+\item \textit{Domain Expert}. Son usuarios, patrocinadores, analistas o una mezcla de ellos. Son los que tienen el conocimiento base acerca del software que se está desarrollando y por ello su participación es crítica para el éxito del sistema.
 \end{itemize}
 
 Entre los roles de apoyo de FDD se incluyen:
@@ -209,19 +212,21 @@ Entre los roles de apoyo de FDD se incluyen:
 \item \textit{Release Manager}
 \item \textit{Language Guru}
 \item \textit{Build Engineer}
-\item \textit{Toolsmith}
-\item \textit{System Administrator}
+\item \textit{Toolsmith}. Construye herramientas específicas para el desarrollo, conversión de datos y realización de pruebas. Puede trabajar en la preparación y mantenimiento tanto de bases de datos o páginas web destinadas al proyecto.
+\item \textit{System Administrator}. Configura, administra y repara los servidores, equipos de trabajo, desarrollo y pruebas utilizados. 
 \end{itemize}
 
 De forma adicional se tienen los siguientes roles:
 
 \begin{itemize}
 \item \textit{Tester}
-\item \textit{Deployer}
-\item \textit{Technical Writer}
+\item \textit{Deployer}. Convierte la información existente al formato requerido por el sistema y participa en el despliegue físico de los nuevos productos. 
+\item \textit{Technical Writer}. Escribe la documentación para los usuarios.
 
 \end{itemize}
 
+\section{Prácticas}
+% Sadhna Goyal. Major seminar on feature driven development. In Technical University
 
 \newpage
 \section{Bibliografía}
