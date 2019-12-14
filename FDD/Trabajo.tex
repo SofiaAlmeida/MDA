@@ -57,7 +57,8 @@ Lidia Martín Chica
 \section{Introducción}
 
 Feature-Driven Development (FDD), es una metodología que ayuda a crear software mediante un ciclo de vida iterativo incremental que esta orientado a equipos más grandes, con más personas que aquellos donde normalmente se utilizan otras metodologias como SCRUM. FDD ve necesaria la figura del jefe de proyecto y una fase donde se define la arquitectura. \\
-En este documento veramos que procesos hay que seguir para aplicar FDD, sus ventajas y los roles con sus respectivas responsabilidades.
+
+En este documento veramos qué procesos hay que seguir para aplicar FDD, sus ventajas y los roles con sus respectivas responsabilidades.
 
 
 
@@ -145,7 +146,7 @@ Como salida de esta etapa se debe obtener: el diagrama de secuencia detallado, d
 
 \section{Comparación con otros métodos}
 %https://apiumhub.com/tech-blog-barcelona/feature-driven-development/
-FDD es una mexcla en tre eXtremeProgramming y Scrum, añadiendo técnicas de Domain Driven Design
+FDD es una mexcla entre eXtremeProgramming y Scrum, añadiendo técnicas de Domain Driven Design. %TODO explicar en una línea qué es esto
 
 % página 182 del libro agileSoftware Construction
 \subsection*{FDD vs XP}
@@ -196,9 +197,8 @@ A continuación se exponen los seis roles clave junto con sus tareas y responsab
 \begin{itemize}
 \item \textit{Project Manager}. Es el líder administrativo y financiero del proyecto. Una de sus tareas es proteger al equipo de distracciones externas y permitir que el equipo trabaje en las condiciones apropiadas. Es responsable de señalar el progreso, manejar los presupuestos, buscar la plantilla, gestionar el equipo, espacio y recursos. Es el que tiene la última palabra sobre el alcance, planificación y personal del proyecto.
 \item \textit{Chief Architect}. El jefe de diseño es responsable del diseño global del sistema y de llevar a cabo las sesiones de diseño del sistema con el equipo. Asimismo, toma todas las decisiones finales en los asuntos de diseño. Este puesto requiere de habilidades técnicas y de modelado además de capacidad de asesoramiento. Si es necesario este rol se puede dividir entre arquitecto del dominio (\textit{Domain Architect}) y arquitecto técnico (\textit{Tecnical Arquitect}).
-\item \textit{Development Manager}
-\item \textit{Chief Programmer}. Es un programador con cierta experiencia ya que ha pasado por todo el proceso de desarrollo varias veces. Se encarga del análisis de requisitos a un alto nivel, de actividades relacionadas con el diseño y de la dirección de equipos pequeños (3 a 6 programadores) para el análisis, diseño y desarrollo de nuevas
-funcionalidades. También escoge las funcionalidades a desarrollar de la lista, identifica las clases y el \textit{Class Owner} que se necesita en el equipo para la
+\item \textit{Development Manager}. Es el responsable de liderar las actividades de desarrollo diarias y resolver los problemas que ocurran entre los miembros del equipo. Es el encargado de resolver los conflictos por los recursos cuando cuando los \textit{Chief Programmers} no consigan ponerse de acuerdo. Este rol se puede combinar con el de \textit{chief architect} o \textit{project manager}.
+\item \textit{Chief Programmer}. Es un programador con cierta experiencia ya que ha pasado por todo el proceso de desarrollo varias veces. Se encarga del análisis de requisitos a un alto nivel, de actividades relacionadas con el diseño y de la dirección de equipos pequeños (3 a 6 programadores) para el análisis, diseño y desarrollo de nuevas funcionalidades. También escoge las funcionalidades a desarrollar de la lista, identifica las clases y el \textit{Class Owner} que se necesita en el equipo para la
 iteración. Con la ayuda de otros \textit{Chief Programmers} resuelve problemas técnicos y de recursos, y sigue el progreso
 del equipo.
 \item \textit{Class Owner}. Trabaja bajo la dirección del \textit{Chief Programmer} en tareas de diseño, programación, pruebas y documentación. Es el responsable de las clases que se asignaron y participa en la decisión de qué clase será incluida en la lista de características de la próxima iteración.
@@ -208,10 +208,10 @@ del equipo.
 Entre los roles de apoyo de FDD se incluyen:
 
 \begin{itemize}
-\item \textit{Domain Manager}
-\item \textit{Release Manager}
-\item \textit{Language Guru}
-\item \textit{Build Engineer}
+\item \textit{Domain Manager}. Lidera a los expertos en el dominio y resuelve sus diferencias de opinión respecto a los requisitos del sistema.
+\item \textit{Release Manager}. Controla el progreso del proceso asegurándose de que los \textit{chief programmers} informen sobre su progreso semanalmente, revisando sus informes y teniendo reuniones cortas con ellos. Entonces informará directamente al \textit{project manager}.
+\item \textit{Language Lawyer/Guru}. Es un miembro del equipo responsable de tener un amplio conocimiento sobre un lenguaje o tecnología concreta. Esta papel tiene más importancia cuando el equipo se enfrenta a una nueva tecnología.
+\item \textit{Build Engineer}. Es el responsable de configurar, mantener y llevar a cabo el proceso de producción incluyendo el mantenimiento de las versiones y publicación de la documentación.
 \item \textit{Toolsmith}. Construye herramientas específicas para el desarrollo, conversión de datos y realización de pruebas. Puede trabajar en la preparación y mantenimiento tanto de bases de datos o páginas web destinadas al proyecto.
 \item \textit{System Administrator}. Configura, administra y repara los servidores, equipos de trabajo, desarrollo y pruebas utilizados. 
 \end{itemize}
@@ -219,7 +219,7 @@ Entre los roles de apoyo de FDD se incluyen:
 De forma adicional se tienen los siguientes roles:
 
 \begin{itemize}
-\item \textit{Tester}
+\item \textit{Tester}. Se encargan de verificar de forma independiente de que el sistema cumple los requisitos del usuario y que realiza esas funciones de la manera adecuada. Puede ser una persona independiente o no del equipo del proyecto.
 \item \textit{Deployer}. Convierte la información existente al formato requerido por el sistema y participa en el despliegue físico de los nuevos productos. 
 \item \textit{Technical Writer}. Escribe la documentación para los usuarios.
 
