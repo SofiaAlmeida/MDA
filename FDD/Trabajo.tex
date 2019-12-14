@@ -117,18 +117,12 @@ Esta etapa recibe como entrada el modelo de objetos y los requerimientos (\texti
 \end{table}
 
 \subsection{Planificado por características (\textit{Plan by feature})}
-El resultado final, de este paso, es un plan de desarrollo, sujeto a revisión y aprobación por parte del gestor de desarrollo y del jefe de la arquitectura, la identificación de la clase y la identificación de los propietarios sobre el conjunto de características.
-Este paso gira entorno a la planificación: el orden en el que se van a implementar las características, la forma de hacerlo y quién las va implementar, para ello se asignarán a los desarrolladores.
-Obviamente mientras planificamos consideramos diferentes aspectos como riesgos, complejidad, dependiencias, la carga de trabajo, etc, para evitar que surjan problemas complejos.
+Este paso gira entorno a la planificación, esto es, el orden en el que se van a implementar las funcionalidad, la forma de hacerlo y quién las va implementar, asignando tareas a los desarrolladores.
+Durante la planificación consideramos diferentes aspectos como riesgos, complejidad, dependiencias, la carga de trabajo, etc, para evitar que surjan problemas complejos.
 
-En esta etapa se incluye la creación de un plan de alto nivel, en el cual la \textit{features list} es ordenada en base a la
-prioridad y a la dependencia entre cada \textit{feature}. Además, las clases identificadas en la primera etapa son
-asignadas a cada programador.
+En esta etapa se incluye la creación de un plan de alto nivel, en el cual la \textit{features list} se ordena en base a la prioridad y a la dependencia entre cada funcionalidad. A continuación, el gestor del proyecto, el desarrollador y el programador jefe establecen hitos y diseñan un cronograma de diseño y construcción.
 
-En base a las características de la lista de la anterior etapa, el gestor del proyecto, el desarrollador y el programador jefe establecen hitos y diseñan un cronograma de diseño y construcción.
-
-
-Finalmente se realiza una verificación del plan teniendo en cuentra la opinión de todos lo miembros del equipo. La salida es un plan de desarrollo incluyendo la fecha de finalización, para cada conjunto de características y cada característica indicar el programador jefe asignado, y las fechas de inicio y fin. Por último para cada clase indicar el correspondiente propietario de la clase.
+Finalmente se realiza una verificación del plan, por parte del gestor del desarrollo y del jefe del producto, teniendo en cuenta la opinión de todos lo miembros del equipo. La salida es un plan de desarrollo incluyendo la fecha de finalización, para cada conjunto de funcionalidades y para cada funcionalidad indicar el programador jefe asignado, y las fechas de inicio y fin. Por último para cada clase indicar el correspondiente programador de la clase.
 
 
 \subsection{Diseñando por características (\textit{Design by feature})}
@@ -145,37 +139,30 @@ Como salida de esta etapa se debe obtener: el diagrama de secuencia detallado, d
 
 
 \section{Comparación con otros métodos}
-%https://apiumhub.com/tech-blog-barcelona/feature-driven-development/
-FDD es una mexcla entre eXtremeProgramming y Scrum, añadiendo técnicas de Domain Driven Design. %TODO explicar en una línea qué es esto
+FDD es una mezcla entre eXtremeProgramming y Scrum, añadiendo técnicas de Domain Driven Design\footnote{Diseño guiado por el dominio (DDD), es un enfoque para el desarrollo de software con necesidades complejas mediante una conexión entre la implementación y los conceptos del modelo y núcleo del negocio. El DDD no es una tecnología ni una metodología, este provee una estructura de prácticas y terminologías para tomar decisiones de diseño.}. A continuación se muestran los puntos en los que se diferencia FDD con XP y Scrum.
 
-% página 182 del libro agileSoftware Construction
-\subsection*{FDD vs XP}
-\textit{Feature Driven Development} da una forma de contrlar la naturaleza iterativa e incremental de los proyectos ágiles, pero sin decir nada sobre como implementar esas características.
 
-Estas características se pueden implementar de diversas formas con distintas técnicas.
-En un modelo de desarrollo donde se usa FDD para los detalles de la iteración y en donde las características se tratan como tareas a realizar.
-Usamos métodos ágiles para modelar las tareas que se van a realizar, y usamos XP para implementar los requisitos. Además notemos que en el análisis explícito tiene lugar el diseño o el trabajo de modelado para determinar las características que habría que implementar o dividir en varias tareas. 
-XP utiliza el trabajo en parejas y FDD no, pero se puede incluir. 
-FDD tiene como objetivo controlar
-proyectos adaptativos, ágiles e iterativos que pueden o no estar basados en XP.
-%Se podría incluir la imagen de la página 179, método ágil con FDD
-
-%https://apiumhub.com/tech-blog-barcelona/feature-driven-development/
 \subsection*{Comunicación}
 Los métodos ágiles se centran bastante en la comunicación entre los mienbros del equipo y el resto de personas interesadas en el proyecto.
 
-En XP y Scrum la documentación también es importante, 
-\subsection*{Centro los usuarios}
+En XP y Scrum la documentación también es importante.
+
+\subsection*{Centro de usuarios}
+
+El \textit{software} debe diseñarse y desarrollarse por un centro de usuarios. Con XP por ejemplo, se necesita la participación de los clientes durante el desarrollo así como iteraciones cortas, al final de las cuales el cliente puede probar el \textit{software}.
+
 \subsection*{Duración del sprint}
+Lo normal es usar iteraciones cortas, por ejemplo entre 2 y 10 días. A diferencia de Scrum que dura entre 2 y 4 semans y XP que puede durar 6 semanas.
+
 \subsection*{Reuniones}
+Tanto la comunicación como las reuniones son importantes en los métodos ágiles. Con Srum y XP hay reuniones diarias donde participan todos los miembros del equipo y comentan en que punto del proyecto se encuentran. 
+
+En FDD es un poco diferente por que en general la información se comunica mediante la documentación.
+
 \subsection*{Tamaño del proyecto}
 
+Dependiendo de cada proyecto hay que elegir que método ágil elegir. Para proyectos cortos y no muy complejos, habría que elegir XP, mientra que para proyectos más complejos y largos es mejor Scrum y FDD.
 
-\subsection*{FDD vs Scrum}
-%https://activecollab.com/blog/project-management/feature-driven-development
-Puntos en común: Mejorar la comunicación, enfatizar las cualidades de los componentes del grupo, aumentar la colaboración.
-
-Por otro lado, FDD se centra en las prácticas de ingenierías específicas Scrum no especifica ninguna práctica de ingeniería en particular. Además, mientras que FDD tiene bucles de retroalimentación más largos, Scrum tiene ciclos más cortos.
 
 \section{Ventajas}
 FDD minimiza la complejidad del sistema por lo que es una excelente solución para proyectos grandes y complejos, dando al equipo la capacidad de dividir el problema en problemas más pequeños que se pueden resolver en menos tiempo.
@@ -234,5 +221,6 @@ De forma adicional se tienen los siguientes roles:
 \bibliographystyle{plain}
 \bibliography{referencias.bib}
 %[type=inbook,heading=subbibliography,title={Libros}]
+%TODO: Añadirlo a la bibliografía https://es.wikipedia.org/wiki/Dise%C3%B1o_guiado_por_el_dominio
 
 \end{document}
