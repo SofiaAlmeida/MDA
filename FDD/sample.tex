@@ -1,0 +1,347 @@
+\documentclass[12pt]{beamer}
+%\usepackage{fontspec}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage{authblk}
+%Código
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{caption}
+\captionsetup[lstlisting]{labelformat=empty}% redefines the caption setup of the figures environment in the beamer class.
+\captionsetup[figure]{labelformat=empty}
+\usepackage{spverbatim}
+\usepackage{fancyvrb}
+\usepackage{fvextra}
+%Imágenes
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\usepackage{float}
+\usepackage{adjustbox}
+
+
+
+% the various libraries we will be using
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[none]{hyphenat}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% macro
+\def\BeginColumn#1{\begin{columns}\column{#1\textwidth}}
+\def\Column#1{\column{#1\textwidth}}
+\def\EndColumn{\end{columns}}
+\providecommand{\tightlist}{%
+    \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% define colours
+% taken from pickton on Adobe Kuler:
+% https://kuler.adobe.com/Some-Kind-Of-Execushares-color-theme-3837185/
+\definecolor{ExecusharesBlue}{RGB}{153,204,255}
+\definecolor{ExecusharesBlack}{RGB}{43,40,40}
+\definecolor{ExecusharesWhite}{RGB}{255,255,243}
+\definecolor{ExecusharesGrey}{RGB}{107,110,108}
+
+% set colours
+\setbeamercolor{itemize item}{fg=ExecusharesBlue}
+\setbeamercolor{enumerate item}{fg=ExecusharesBlue}
+\setbeamercolor{alerted text}{fg=ExecusharesBlue}
+\setbeamercolor{section in toc}{fg=ExecusharesBlack}
+
+% set fonts
+\setbeamerfont{itemize/enumerate body}{size=\large}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\small}
+
+% make the itemize bullets pixelated >
+\setbeamertemplate{itemize item}{
+  \tikz{
+    \draw[fill=ExecusharesBlue,draw=none] (0, 0) rectangle(0.1, 0.1);
+    \draw[fill=ExecusharesBlue,draw=none] (0.1, 0.1) rectangle(0.2, 0.2);
+    \draw[fill=ExecusharesBlue,draw=none] (0, 0.2) rectangle(0.1, 0.3);
+  }
+}
+% make the subitems also pixelated >, but a little smaller and Blue
+\setbeamertemplate{itemize subitem}{
+  \tikz{
+    \draw[fill=ExecusharesBlue,draw=none] (0, 0) rectangle(0.075, 0.075);
+    \draw[fill=ExecusharesBlue,draw=none] (0.075, 0.075) rectangle(0.15, 0.15);
+    \draw[fill=ExecusharesBlue,draw=none] (0, 0.15) rectangle(0.075, 0.225);
+  }
+}
+
+% disable navigation
+\setbeamertemplate{navigation symbols}{}
+
+% custom draw the title page above
+\setbeamertemplate{title page}{}
+
+% again, manually draw the frame title above
+\setbeamertemplate{frametitle}{}
+
+% disable "Figure:" in the captions
+\setbeamertemplate{caption}{\tiny\insertcaption}
+%\setbeamertemplate{caption label separator}{ }
+
+% since I don't know a better way to do this, these are all switches
+% doing `\setcounter{showProgressBar}{0}` will turn the progress bar off (I turn it off for Appendix slides)
+% etc
+\newcounter{showProgressBar}
+\setcounter{showProgressBar}{1}
+\newcounter{showSlideNumbers}
+\setcounter{showSlideNumbers}{1}
+\newcounter{showSlideTotal}
+\setcounter{showSlideTotal}{1}
+
+% use \makeatletter for our progress bar definitions
+% progress bar idea from http://tex.stackexchange.com/a/59749/44221
+% slightly adapted for visual purposes here
+\makeatletter
+\newcount\progressbar@tmpcounta% auxiliary counter
+\newcount\progressbar@tmpcountb% auxiliary counter
+\newdimen\progressbar@pbwidth %progressbar width
+\newdimen\progressbar@tmpdim % auxiliary dimension
+
+\newdimen\slidewidth % auxiliary dimension
+\newdimen\slideheight % auxiliary dimension
+
+% make the progress bar go across the screen
+%\progressbar@pbwidth=12.8cm
+\progressbar@pbwidth=\the\paperwidth
+\slidewidth=\the\paperwidth
+\slideheight=\the\paperheight
+
+% use tikz to draw everything
+% it may not be the best, but it's easy to work with
+% and looks good
+% TODO: base title slide and contents slide on something other than slide numbers :/
+\setbeamertemplate{background}{
+  % deal with progress bar stuff
+  % (calculate where it should go)
+  \progressbar@tmpcounta=\insertframenumber
+  \progressbar@tmpcountb=\inserttotalframenumber
+  % \advance\progressbar@tmpcounta by -1
+  % \advance\progressbar@tmpcountb by -1
+  \progressbar@tmpdim=\progressbar@pbwidth
+  \multiply\progressbar@tmpdim by \progressbar@tmpcounta
+  \divide\progressbar@tmpdim by \progressbar@tmpcountb
+
+  \begin{tikzpicture}
+    % set up the entire slide as the canvas
+    \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+
+    % the background
+    \fill[color=ExecusharesWhite] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+
+    % separate the drawing based on if we're the first (title) slide or not
+    \ifnum\thepage=1\relax
+      % the title page
+      % draw the fills
+      \fill[color=ExecusharesBlue] (0, 4cm) rectangle(\slidewidth,\slideheight);
+
+      % draw the actual text
+      \node[anchor=south,text width=\slidewidth-1cm,inner xsep=0.5cm] at (0.5\slidewidth,4cm) {\color{ExecusharesWhite}\Huge\textbf{\inserttitle}};
+      \node[anchor=north east,text width=\slidewidth-1cm,align=right] at (\slidewidth-0.4cm,4cm) {\color{ExecusharesBlack}\tiny\insertsubtitle};
+      \node[above] at(0.5\slidewidth,2.3cm) {\color{ExecusharesBlack}\tiny };
+      \node at (0.5\slidewidth,2cm) {\color{ExecusharesBlack}\Large\insertauthor};
+
+      % add the date in the corner
+      \node[anchor=south east] at(\slidewidth,0cm) {\color{ExecusharesGrey}\tiny\insertdate};
+    \else
+      % NOT the title page
+      % title bar
+      \fill[color=ExecusharesBlue] (0, \slideheight-1cm) rectangle(\slidewidth,\slideheight);
+
+      % swap the comment on these to add section titles to slide titles
+      %\node[anchor=north,text width=11.8cm,inner xsep=0.5cm,inner ysep=0.25cm] at (6.4cm,9.6cm) {\color{ExecusharesWhite}\Large\textbf{\insertsectionhead: \insertframetitle}};
+      \node[anchor=north,text width=\slidewidth-1cm,inner xsep=0.5cm,inner ysep=0.25cm] at (0.5\slidewidth,\slideheight) {\color{ExecusharesWhite}\huge\textbf{\insertframetitle}};
+      
+      % if we're showing a progress bar, show it
+      % (I disable the progress bar and slide numbers for the "Appendix" slides)
+      \ifnum \value{showProgressBar}>0\relax%
+        % the the progress bar icon in the middle of the screen
+        \draw[fill=ExecusharesGrey,draw=none] (0cm,0cm) rectangle(\slidewidth,0.25cm);
+        \draw[fill=ExecusharesBlue,draw=none] (0cm,0cm) rectangle(\progressbar@tmpdim,0.25cm);
+
+        % bottom information
+        \node[anchor=south west] at(0cm,0.25cm) {\color{ExecusharesGrey}\tiny\insertsection};
+        % if slide numbers are active
+        \ifnum \value{showSlideNumbers}>0\relax%
+          % if slide totals are active
+          \ifnum \value{showSlideTotal}>0\relax%
+            % draw both slide number and slide total
+            \node[anchor=south east] at(\slidewidth,0.25cm) {\color{ExecusharesGrey}\tiny\insertframenumber/\inserttotalframenumber};
+          \else
+            % slide totals aren't active, don't draw them
+            \node[anchor=south east] at(\slidewidth,0.25cm) {\color{ExecusharesGrey}\tiny\insertframenumber};
+          \fi
+        \fi
+      % don't show the progress bar?
+      \else
+        % section title in the bottom left
+        \node[anchor=south west] at(0cm,0cm) {\color{ExecusharesGrey}\tiny\insertsection};
+        % if we're showing slide numbers
+        \ifnum \value{showSlideNumbers}>0\relax%
+          % if slide totals are active
+          \ifnum \value{showSlideTotal}>0\relax%
+            % draw both slide number and slide total
+            \node[anchor=south east] at(\slidewidth,0cm) {\color{ExecusharesGrey}\tiny\insertframenumber/\inserttotalframenumber};
+          \else
+            % slide totals aren't active, don't draw them
+            \node[anchor=south east] at(\slidewidth,0cm) {\color{ExecusharesGrey}\tiny\insertframenumber};
+          \fi
+        \fi
+      \fi
+    \fi
+  \end{tikzpicture}
+}
+\makeatother
+
+% add section titles
+\AtBeginSection{\frame{\sectionpage}}
+\setbeamertemplate{section page}
+{
+  \begin{tikzpicture}
+    % set up the entire slide as the canvas
+    \useasboundingbox (0,0) rectangle(\slidewidth,\slideheight);
+    %\fill[color=ExecusharesWhite] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+    \fill[color=ExecusharesWhite] (-1cm, 2cm) rectangle (\slidewidth, \slideheight+0.1cm);
+    \fill[color=ExecusharesBlue] (-1cm, 0.5\slideheight-1cm) rectangle(\slidewidth, 0.5\slideheight+1cm);
+    \node[text width=\the\paperwidth-1cm,align=center] at (0.4\slidewidth, 0.5\slideheight) {\color{ExecusharesWhite}\Huge\textbf{\insertsection}};
+  \end{tikzpicture}
+}
+
+% source code syntax highlight
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+
+\title{Metodología Ágil: Feature Driven Development}
+\author[Author One at al.]{\makebox[0pt]{Miguel Albertí Pons \and Sofía Almeida \and Pedro Flores \and Victoria Granados \and Lidia Martín Chica}} 
+%\date{\today}
+
+
+\setbeamertemplate{frametitle continuation}{\gdef\beamer@frametitle{}}
+
+\begin{document}
+\frame{\titlepage}
+
+\frame{\tableofcontents}
+
+\section{Introducción}\label{intro}
+\large
+\begin{frame}[fragile]{Introducción}
+.
+\end{frame}
+
+\section{Procesos}\label{proc}
+\large
+\begin{frame}[fragile]{Procesos}
+%Foto de los procesos
+\end{frame}
+
+
+\begin{frame}[fragile]{Desarrollar el modelo global}
+%Completarlo
+\end{frame}
+
+%Comprobar título
+\begin{frame}[fragile]{Construir lista de características}
+%Completarlo
+\end{frame}
+
+
+\begin{frame}[fragile]{Planificado por características}
+Orden en el que se implementarán las características, la forma y quién las implementará.\\
+
+Puntos a tener en cuenta: riesgos, complejidad, dependencias, carga de trabajo, etc.
+\end{frame}
+
+\begin{frame}[fragile]{Planificado por características}
+\begin{itemize}
+	\item Crear de un plan de alto nivel con \textit{features list}.
+	\item Priorizar de la \textit{features list}.
+	\item Establecer hitos y diseñar un cronograma (gestor del proyecto, el desarrollador y el programador jefe).
+	\item Verificación del plan (gestor del desarrollo y del jefe del producto).
+	\item Plan de desarrollo incluye las fechas de inicio y fin para las características e indicar el programador jefe asignado.
+	\item Indicar de cada clase el programador.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Diseñando por características}
+%Completarlo
+\end{frame}
+
+%Se comparará con Scrum y XP
+\section{Comparación con otros métodos}\label{compa}
+\large
+\begin{frame}[fragile]{Comparación con otros métodos}
+
+\begin{itemize}
+	\item \textbf{Comunicación}: Es importante en Scrum, XP y FDD.
+	\item \textbf{Centro de usuarios}: En XP y FDD necesita la participación de los clientes.
+	\item \textbf{Duración del sprint}: En FDD de 2 a 10 días, Scrum entre 2 y 4 semanas, y en XP 6 semanas.
+	\item \textbf{Reuniones}: En Srum y XP hay reuniones diarias y en FDD está la documentación.
+	\item \textbf{Tamaño del proyecto}: XP proyectos cortos y no muy complejos. Scrum y FDD proyectos más complejos y largos.
+\end{itemize}
+
+\end{frame}
+
+\section{Roles y responsabilidades}\label{rol}
+\large
+\begin{frame}[fragile]{Roles}
+%Completarlo
+\end{frame}
+
+\begin{frame}[fragile]{Responsabilidades}
+%Completarlo
+\end{frame}
+
+\section{Prácticas}
+\large
+\begin{frame}[fragile]{Prácticas}
+%Completarlo
+\end{frame}
+
+\end{document}
