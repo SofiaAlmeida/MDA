@@ -14,11 +14,13 @@
 \usepackage{fvextra}
 %Imágenes
 \usepackage{graphicx}
-\graphicspath{{img/}}
+\graphicspath{{./img/}}
 \usepackage{float}
 \usepackage{adjustbox}
 
-
+%%% Gráficos
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
 
 % the various libraries we will be using
 \usepackage{tikz}
@@ -26,7 +28,7 @@
 \usepackage[none]{hyphenat}
 \usepackage{longtable}
 \usepackage{booktabs}
-
+\usepackage{bookmark}
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -202,6 +204,8 @@
 }
 \makeatother
 
+
+\usepackage{multicol}
 % add section titles
 \AtBeginSection{\frame{\sectionpage}}
 \setbeamertemplate{section page}
@@ -257,61 +261,75 @@
 \newcommand{\NormalTok}[1]{{#1}}
 
 \title{Metodología Ágil: Feature Driven Development}
-\author[Author One at al.]{\makebox[0pt]{Miguel Albertí Pons \and Sofía Almeida \and Pedro Flores \and Victoria Granados \and Lidia Martín Chica}} 
-%\date{\today}
+%\author[Author One at al.]{\makebox[0pt]{Miguel Albertí Pons \and Sofía Almeida \and Pedro Flores \and Victoria Granados \and Lidia Martín Chica}}
 
+\author[Author One at al.]{\makebox[0pt]{Miguel \and Sofía \and Pedro \and Victoria \and Lidia}} 
+\date{}
+
+%\author[Author One at al.]{\makebox[0pt]{Miguel Albertí Pons \and Sofía Almeida \and Pedro Flores \and Victoria Granados \and Lidia Martín Chica}} 
 
 \setbeamertemplate{frametitle continuation}{\gdef\beamer@frametitle{}}
 
 \begin{document}
-\frame{\titlepage}
+
+\frame{}
+%\maketitle
+%% \begin{frame}
+%%   \titlepage
+%% \end{frame}
+
 
 \frame{\tableofcontents}
 
 \section{Introducción}\label{intro}
 \large
 \begin{frame}[fragile]{Introducción}
-.
+asdf
 \end{frame}
 
 \section{Procesos}\label{proc}
 \large
 \begin{frame}[fragile]{Procesos}
-%Foto de los procesos
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{lifecycle}
+    %\caption{Número de instancias de cada clase}
+   % \label{fig}
+\end{figure}
 \end{frame}
 
 
-\begin{frame}[fragile]{Desarrollar el modelo global}
-%Completarlo
-\end{frame}
+%% \begin{frame}[fragile]{Desarrollar el modelo global}
+%% %Completarlo
+%% \end{frame}
 
-%Comprobar título
-\begin{frame}[fragile]{Construir lista de características}
-%Completarlo
-\end{frame}
-
-
-\begin{frame}[fragile]{Planificado por características}
-Orden en el que se implementarán las características, la forma y quién las implementará.\\
-
-Puntos a tener en cuenta: riesgos, complejidad, dependencias, carga de trabajo, etc.
-\end{frame}
-
-\begin{frame}[fragile]{Planificado por características}
-\begin{itemize}
-	\item Crear de un plan de alto nivel con \textit{features list}.
-	\item Priorizar de la \textit{features list}.
-	\item Establecer hitos y diseñar un cronograma (gestor del proyecto, el desarrollador y el programador jefe).
-	\item Verificación del plan (gestor del desarrollo y del jefe del producto).
-	\item Plan de desarrollo incluye las fechas de inicio y fin para las características e indicar el programador jefe asignado.
-	\item Indicar de cada clase el programador.
-\end{itemize}
-\end{frame}
+%% %Comprobar título
+%% \begin{frame}[fragile]{Construir lista de características}
+%% %Completarlo
+%% \end{frame}
 
 
-\begin{frame}[fragile]{Diseñando por características}
-%Completarlo
-\end{frame}
+%% \begin{frame}[fragile]{Planificado por características}
+%% Orden en el que se implementarán las características, la forma y quién las implementará.\\
+
+%% Puntos a tener en cuenta: riesgos, complejidad, dependencias, carga de trabajo, etc.
+%% \end{frame}
+
+%% \begin{frame}[fragile]{Planificado por características}
+%% \begin{itemize}
+%% 	\item Crear de un plan de alto nivel con \textit{features list}.
+%% 	\item Priorizar de la \textit{features list}.
+%% 	\item Establecer hitos y diseñar un cronograma (gestor del proyecto, el desarrollador y el programador jefe).
+%% 	\item Verificación del plan (gestor del desarrollo y del jefe del producto).
+%% 	\item Plan de desarrollo incluye las fechas de inicio y fin para las características e indicar el programador jefe asignado.
+%% 	\item Indicar de cada clase el programador.
+%% \end{itemize}
+%% \end{frame}
+
+
+%% \begin{frame}[fragile]{Diseñando por características}
+%% %Completarlo
+%% \end{frame}
 
 %Se comparará con Scrum y XP
 \section{Comparación con otros métodos}\label{compa}
