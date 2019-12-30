@@ -1,0 +1,56 @@
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\usepackage[spanish]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{../Imagenes/}}
+
+\usepackage{titlepic}
+\usepackage{hyperref}
+
+%%% Tablas
+\usepackage{longtable}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+%% \usepackage{longtablex}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.7}
+
+%%%%%%%%%% Contador HU
+\newcounter{HUCounter}
+\newcommand{\hu}[1]{\refstepcounter{HUCounter}\textbf{\rmfamily HU-\theHUCounter}\label{#1}}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{4.5cm}
+{\scshape\LARGE Información para acceder a la web \par}
+\vspace{1.5cm}
+
+\includegraphics[width=10cm]{Logo}
+
+\vspace{3cm}
+{\scshape\large \par}
+\vspace{0.5cm}
+
+{Miguel Albertí Pons\\
+Sofía Almeida Bruno\\
+Pedro Manuel Flores Crespo\\
+María Victoria Granados Pozo\\
+Lidia Martín Chica
+\par}
+
+\end{titlepage}
+\newpage
+
+\section{Enlace a la página web}
+El siguiente enlace lleva directamente a la web donde hemos creado nuestra página web: 
+
+\url{..........} 
+
+La página web se ha dividido en tres secciones. La primera de ellas es la página de Inicio. En ella se describen las principales ventajas que tiene el uso de nuestra aplicación. La segunda incluye fotografías con los tableros Kanban que se han generado durante las dos iteraciones que se han llevado a cabo para su desarrollo. La tercera y ultima incluye en enlace al repositorio con toda la información del proyecto y capturas de pantalla de los prototipos construidos.
+\end{document}
